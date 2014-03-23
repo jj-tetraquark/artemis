@@ -2,4 +2,4 @@ Import('env')
 
 files = Glob('*.cpp')
 objects = env.Object(source = files)
-env.SharedLibrary(target = 
+env.SharedLibrary(target = 'ArduinoMocks', source = objects)
