@@ -47,3 +47,5 @@ float analogRead(uint8_t pin) {
 void delay(uint32_t delay) {
 	// Does nothing.
 }
+
+void init() {}

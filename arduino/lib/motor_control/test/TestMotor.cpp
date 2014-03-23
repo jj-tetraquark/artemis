@@ -8,6 +8,7 @@ BOOST_AUTO_TEST_SUITE(BlinkerTests)
 
 BOOST_AUTO_TEST_CASE(TestConstruction)
 {
+
 }
 
 

@@ -31,7 +31,8 @@
 #define MOCKWPROGRAM_H_
 
 #include "inttypes.h"
-#include <exception>
+#include <string>
+#include <stdexcept>
 
 // Compiler warning to indicate test header being used to catch include errors.
 // Remove this if you're confident everything works as planned.
@@ -144,6 +145,7 @@ uint32_t random(uint32_t max);
   environment.
  */
 void clear_pins(void);
+
 
 class MockSerial {
 public:
@@ -263,7 +265,7 @@ extern MockSerial Serial;
 
 
 struct NoSuchPinException : public std::logic_error {
-    NoSuchPinException(uint8_t pin) : std::logic_error("Pin " + std::string(pin) + " does not exist")
+    NoSuchPinException(uint8_t pin) : std::logic_error("Pin " + std::to_string(pin) +  " does not exist")
     {}
 };
 

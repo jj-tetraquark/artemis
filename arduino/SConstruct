@@ -1,3 +1,9 @@
-env = Environment(CPPFLAGS='--std=c++11')
-SConscript('SConscript', variant_dir='build', duplicate=0)
-SConscript('tests/SConscript', variant_dir='tests/build', exports = ['env'], duplicate=0 )
+import os
+
+env = Environment(CC = 'g++',
+                  CPPFLAGS='--std=c++11')
+
+for root, subdirs, files in os.walk(os.curdir):
+    for filename in files:
+        if filename == "SConscript":
+            SConscript(os.path.join(root, filename), variant_dir= os.path.join(root, "build"), duplicate = 0, exports='env')

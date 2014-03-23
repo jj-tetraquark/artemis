@@ -1,5 +1,7 @@
 env = Environment(tools=["default", "arduino"],
-                          UPLOAD_PORT="/dev/ttyACM0")
+                  UPLOAD_PORT="/dev/ttyACM0",
+                )
+
 env.ConfigureBoard("uno")
 core = env.ArduinoCore()
 
