@@ -1,0 +1,8 @@
+Import('env')
+env.Append(CPPPATH = ['#lib/motor_control', 
+                      '#lib/arduino_mocks'],
+           LIBS = 'boost_unit_test_framework'
+)
+
+
+env.Program(target= 'test_ut', source = ['TestMotor.cpp'])
