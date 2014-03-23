@@ -1,0 +1,7 @@
+env = Environment(tools=["default", "arduino"],
+                          UPLOAD_PORT="/dev/ttyACM0")
+env.ConfigureBoard("uno")
+core = env.ArduinoCore()
+
+sketch = env.Sketch("firmware", ["main.cpp", core])
+env.Upload(sketch)
