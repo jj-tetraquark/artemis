@@ -1,9 +1,13 @@
-env = Environment(tools=["default", "arduino"],
-                  UPLOAD_PORT="/dev/ttyACM0",
+Import('ardenv')
+
+ardenv.Append( CPPPATH = ['#lib/motor_control'
+                            ],
                 )
 
-env.ConfigureBoard("uno")
-core = env.ArduinoCore()
+ardenv.ConfigureBoard("uno")
+core = ardenv.ArduinoCore()
 
-sketch = env.Sketch("artemis_arduino", ["main.cpp", core])
-env.Upload(sketch)
+motor_control = ardenv.ArduinoLibrary('motor_control', '#lib/motor_control')
+
+sketch = ardenv.Sketch("artemis_arduino", ["main.cpp", motor_control, core])
+ardenv.Upload(sketch)

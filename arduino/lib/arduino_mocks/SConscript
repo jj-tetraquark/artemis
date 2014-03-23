@@ -2,4 +2,4 @@ Import('env')
 
 files = Glob('*.cpp')
 objects = env.Object(source = files)
-env.Library(target = 'ArduinoMocks', source = objects)
+env.Library(target = 'arduino_mocks', source = objects)

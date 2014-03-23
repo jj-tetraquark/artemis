@@ -3,7 +3,12 @@ import os
 env = Environment(CC = 'g++',
                   CPPFLAGS='--std=c++11')
 
+ardenv = Environment(tools=["default", "arduino"],
+                  UPLOAD_PORT="/dev/ttyACM0",
+                )
+ardenv.ConfigureBoard('uno')
+
 for root, subdirs, files in os.walk(os.curdir):
     for filename in files:
         if filename == "SConscript":
-            SConscript(os.path.join(root, filename), variant_dir= os.path.join(root, "build"), duplicate = 0, exports='env')
+            SConscript(os.path.join(root, filename), variant_dir= os.path.join(root, "build"), duplicate = 0, exports=['env', 'ardenv'])

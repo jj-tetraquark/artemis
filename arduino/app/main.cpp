@@ -1,5 +1,7 @@
 #include <Arduino.h>
+#include "Motor.h"
 
+Motor leftMotor(2,3);
 
 void loop() {
 }
