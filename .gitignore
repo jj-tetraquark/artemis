@@ -5,3 +5,4 @@ build/
 *.hex
 *.elf
 *.a
+syntastic_conf

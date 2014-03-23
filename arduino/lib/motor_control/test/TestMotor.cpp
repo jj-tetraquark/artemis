@@ -4,11 +4,12 @@
 #include "Motor.h"
 
 
-BOOST_AUTO_TEST_SUITE(BlinkerTests)
+BOOST_AUTO_TEST_SUITE(MotorTests)
 
 BOOST_AUTO_TEST_CASE(TestConstruction)
 {
-
+    // Create a motor object with speed pin and direction pin
+    Motor testMotor(1, 2);
 }
 
 

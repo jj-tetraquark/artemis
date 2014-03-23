@@ -1,7 +1,10 @@
 Import('env')
 env.Append(CPPPATH = ['#lib/motor_control', 
                       '#lib/arduino_mocks'],
-           LIBS = 'boost_unit_test_framework'
+           LIBS = ['boost_unit_test_framework',
+                   'motor_control'
+                   ],
+           LIBPATH = ['#lib/motor_control/build']
 )
 
 
