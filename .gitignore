@@ -1,2 +1,4 @@
 .sconsign.dblite
 *.pyc
+arduino/build/build arduino/build/firmware.elf arduino/build/firmware.hex arduino/build/main.o
+arduino/build
