@@ -53,12 +53,12 @@ void init() {}
 // TODO - move out of here
 
 Pin::Pin() {
-    m_initialized = false;
+    Reset();
 }
 
 void Pin::Reset() {
    m_initialized = false;
-   m_value = 0;
+   m_value = 0x0;
 }
 
 void Pin::SetMode(uint8_t io) {

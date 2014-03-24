@@ -4,11 +4,22 @@
 
 class Motor {
 public:
+    enum class Direction {
+        FORWARDS,
+        BACKWARDS
+    };
+
     Motor(int directionPin, int pwmPin);
 
+    void ChangeDirection();
+    void SetDirectionForwards();
+    void SetDirectionBackwards();
+    
+
 private:
-    uint8_t m_directionPin;
-    uint8_t m_pwmPin;
+    Direction m_direction;
+    const uint8_t m_directionPin;
+    const uint8_t m_pwmPin;
 };
 
 #endif // end of include guard: MOTOR_H 
