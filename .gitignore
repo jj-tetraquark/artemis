@@ -6,3 +6,4 @@ build/
 *.elf
 *.a
 syntastic_conf
+tags

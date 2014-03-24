@@ -1,10 +1,3 @@
-/*
- * MockWProgram.cpp
- *
- *  Created on: Oct 4, 2011
- *      Author: nick
- */
-
 #include "MockWProgram.hpp"
 
 /*
@@ -13,12 +6,14 @@
  * digital_pins and analog_pins. Note that delay does nothing.
  */
 
-uint8_t digital_pins[14] = { 0x00 };
-float analog_pins[6] = { 0.0 };
+// Delicious globals TT__TT
+Arduino ArduinoUno;
 
-void clear_pins(void){
-	digital_pins[14] = { 0x00 };
-	analog_pins[6] = { 0.0 };
+
+void clear_pins(void) {
+    for(auto pin : ArduinoUno.DigitalPins) {
+        pin.Reset();
+    }
 }
 
 void pinMode(uint8_t pin, uint8_t mode) {
@@ -28,6 +23,7 @@ void pinMode(uint8_t pin, uint8_t mode) {
 	if (mode != OUTPUT && mode != INPUT) {
 		throw InvalidPinValueException();
 	}
+    ArduinoUno.DigitalPins[pin].SetMode(mode);
 }
 
 void digitalWrite(uint8_t pin, uint8_t level) {
@@ -37,11 +33,13 @@ void digitalWrite(uint8_t pin, uint8_t level) {
 	if (level != LOW && level != HIGH) {
 		throw InvalidPinValueException();
 	}
-	digital_pins[pin] = level;
+    if (!ArduinoUno.DigitalPins[pin].IsInitialized())
+        throw UninitializedPinException(pin);
+    ArduinoUno.DigitalPins[pin].SetValue(level);
 }
 
 float analogRead(uint8_t pin) {
-	return analog_pins[pin];
+	return ArduinoUno.AnalogPins[pin];
 }
 
 void delay(uint32_t delay) {
@@ -49,3 +47,25 @@ void delay(uint32_t delay) {
 }
 
 void init() {}
+
+
+// Pin definitions
+// TODO - move out of here
+
+Pin::Pin() {
+    m_initialized = false;
+}
+
+void Pin::Reset() {
+   m_initialized = false;
+   m_value = 0;
+}
+
+void Pin::SetMode(uint8_t io) {
+    m_IO = io;
+    m_initialized = true;
+}
+
+void Pin::SetValue(uint8_t value) {
+    m_value = value;
+}

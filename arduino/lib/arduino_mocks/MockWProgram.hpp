@@ -1,31 +1,31 @@
 /*
-    Ardutest - An Arduino mocks library for unit testing.  
+   Ardutest - An Arduino mocks library for unit testing.  
 
-    Copyright (C) 2011 Mind Studios, Inc.
+   Copyright (C) 2011 Mind Studios, Inc.
 
-    This library is free software; you can redistribute it and/or modify it
-    under the terms of the GNU Lesser General Public License as published by the
-    Free Software Foundation; either version 2.1 of the License, or (at your
-    option) any later version.
+   This library is free software; you can redistribute it and/or modify it
+   under the terms of the GNU Lesser General Public License as published by the
+   Free Software Foundation; either version 2.1 of the License, or (at your
+   option) any later version.
 
-    This library is distributed in the hope that it will be useful, but WITHOUT
-    ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
-    FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser General Public License
-    for more details.
+   This library is distributed in the hope that it will be useful, but WITHOUT
+   ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+   FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser General Public License
+   for more details.
 
-    You should have received a copy of the GNU Lesser General Public License
-    along with this library; if not, write to the Free Software Foundation,
-    Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
+   You should have received a copy of the GNU Lesser General Public License
+   along with this library; if not, write to the Free Software Foundation,
+   Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
 
-    Mind Studios, Inc., hereby disclaims all copyright interest in the library
-    Ardutest (an Arduino mocks library for unit testing) written by Nick
-    Pascucci.
- */
+   Mind Studios, Inc., hereby disclaims all copyright interest in the library
+   Ardutest (an Arduino mocks library for unit testing) written by Nick
+   Pascucci.
+   */
 
 /*!
   \file
   Mock version of WProgram.h for development machine unit testing.
- */
+  */
 
 #ifndef MOCKWPROGRAM_H_
 #define MOCKWPROGRAM_H_
@@ -93,184 +93,143 @@
 #define bitWrite(value, bit, bitvalue) (bitvalue ? bitSet(value, bit) : bitClear(value, bit))
 
 /*
-  Mock Arduino functions. 
- */
+   Mock Arduino functions. 
+   */
 
-/*!
-  \brief Change the I/O mode of a pin. 
-
-  This function only validates the arguments, it does not perform actual 
-  switching. We're working on it. Currently rejects pins < 0 or > 13.
-
-  \param pin The pin number to set.
-  \param mode The mode to set it to.
- */
 void pinMode(uint8_t pin, uint8_t mode);
-
-/*!
-  \brief Write a pin low or high.
-
-  \param pin The pin to write to.
-  \param level High or Low
- */
 void digitalWrite(uint8_t pin, uint8_t level);
-
-/*!
-  \brief Read an analog value from the given pin. 
-
-  This function reads from the analog_pins array. Set the value in this array
-  prior to reading, else this will return the last value (probably 0).
-
-  \param pin The pin to read.
- */
 float analogRead(uint8_t pin);
 
-/*!
-  \brief Not implemented.
- */
+//TODO - implement
 void delay(uint32_t millis);
 
-/*!
-  \brief Not implemented.
- */
+//TODO - implement
 void randomSeed(float seed);
 
-/*!
-  \brief Not implemented.
- */
+//TODO - implement
 uint32_t random(uint32_t max);
 
-/*!
-  \brief Reset all pins to 0. Call this in your setUp() method prepare the test
-  environment.
- */
-void clear_pins(void);
+void clear_pins();
+
+class Pin {
+public:
+    Pin(); 
+    void     SetMode(uint8_t io); // really this should be an enum;
+    void     SetValue(uint8_t newValue);
+    void     Reset();
+    uint8_t  GetValue() { return m_value; }
+    bool     IsInitialized() { return m_initialized; }
+     
+private:
+    bool     m_initialized;
+    uint8_t  m_IO;        
+    uint8_t  m_value; // can be HIGH, LOW or 0 - 255 depending on if pwm
+};
+
+struct Arduino {
+    Pin DigitalPins[14];
+    float AnalogPins[6]; // TODO - make an AnalogPin class
+};
 
 
 class MockSerial {
 public:
-  // These values are public so they can be inspected by tests.
-  
-  /*!
-    \brief The output buffer array.
-   */
-  uint8_t * _out_buf;
+    // The output buffer array.
+    uint8_t * _out_buf;
 
-  /*!
-    \brief The next open output buffer position.
-   */
-  uint16_t _out_ptr;
+    // The next open output buffer position.
+    uint16_t _out_ptr;
 
-  /*!
-    \brief The input buffer array.
-   */
-  uint8_t * _in_buf;
+    // The input buffer array.
+    uint8_t * _in_buf;
 
-  /*!
-    \brief The next input buffer position which will be returned by a call to read().
-   */
-  uint16_t _in_ptr;
+    // The next input buffer position which will be returned by a call to read().
+    uint16_t _in_ptr;
 
-  /*!
-    \brief The current baud rate.
-   */
-  uint32_t _baud;
+    // The current baud rate.
+    uint32_t _baud;
 
-  /*!
-    \brief The size of the input data.
-   */
-  uint16_t _size;
+    // The size of the input data.
+    uint16_t _size;
 
-  /*!
-    \brief Set the input buffer data.
+    /*!
+      \brief Set the input buffer data.
 
-    \param new_buf A pointer to a byte array containing the input data.
-    \param size The size of the input array.
-   */
-  void set_input_buffer(uint8_t * new_buf, uint16_t size);
+      \param new_buf A pointer to a byte array containing the input data.
+      \param size The size of the input array.
+      */
+    void set_input_buffer(uint8_t * new_buf, uint16_t size);
 
-  /*!
-    \brief Reset the serial buffers.
-   */
-  void reset(void);
+    //brief Reset the serial buffers.
+    void reset(void);
 
-  // These form the primary interface for Serial.
-  /*!
-    \brief Creates a new mock serial buffer with its own buffer.
-   */
-  MockSerial();
+    // These form the primary interface for Serial.
+    // Creates a new mock serial buffer with its own buffer.
+    MockSerial();
 
-  /*!
-    \brief End the serial communications. This is a no-op.
-   */
-  void end(void);
+    // End the serial communications. This is a no-op.
+    void end(void);
 
-  /*!
-    \brief Begin serial communications. 
+    /*!
+      \brief Begin serial communications. 
 
-    This sets the current baud rate, but is otherwise a no-op.
+      This sets the current baud rate, but is otherwise a no-op.
 
-    \param baud The baud rate to communicate at.
-   */
-  void begin(uint32_t baud);
+      \param baud The baud rate to communicate at.
+      */
+    void begin(uint32_t baud);
 
-  /*!
-    \brief \brief Check the number of bytes available in the input buffer.
+    /*!
+      \brief \brief Check the number of bytes available in the input buffer.
 
-    \return The number of bytes available for read.
-   */
-  uint32_t available(void);
+      \return The number of bytes available for read.
+      */
+    uint32_t available();
 
-  /*!
-    \brief Read a byte from the input buffer.
+    /*!
+      \brief Read a byte from the input buffer.
 
-    \return The next byte from the input buffer.
-   */
-  int read(void);
+      \return The next byte from the input buffer.
+      */
+    int read();
 
-  /*!
-    \brief Write a byte to the output buffer.
+    /*!
+      \brief Write a byte to the output buffer.
 
-    \param value The byte to write.
-   */
-  void write(uint8_t value);
+      \param value The byte to write.
+      */
+    void write(uint8_t value);
 
-  /*!
-    \brief Write a byte array to the output buffer.
-    
-    \param values An array of values to write.
-    \param length The length of the array.
-   */
-  void write(uint8_t * values, uint32_t length);
+    /*!
+      \brief Write a byte array to the output buffer.
+
+      \param values An array of values to write.
+      \param length The length of the array.
+      */
+    void write(uint8_t * values, uint32_t length);
 };
 
 /*
  * These variables allow you to inspect and set the MCU state in tests.
  */
 
-/*!
-  \brief The state of the digital pins.
- */
-extern uint8_t digital_pins[];
-
-/*!
-  \brief The state of the analog pins.
- */
-extern float analog_pins[];
-
-/*!
-  \brief Shared Serial object.
- */
+// Shared Serial object.
 extern MockSerial Serial;
 
+extern Arduino ArduinoUno;
 
 struct NoSuchPinException : public std::logic_error {
-    NoSuchPinException(uint8_t pin) : std::logic_error("Pin " + std::to_string(pin) +  " does not exist")
+    NoSuchPinException(int pinNumber) : std::logic_error("Pin " + std::to_string(pinNumber) +  " does not exist")
     {}
 };
 
 struct InvalidPinValueException : public std::logic_error {
-    InvalidPinValueException() : std::logic_error("Invalid digital value")
+    InvalidPinValueException() : std::logic_error("Invalid pin value")
+    {}
+};
+
+struct UninitializedPinException : public std::logic_error {
+    UninitializedPinException(int pinNumber) : std::logic_error("Tried to read/write to pin uninitialized pin " + std::to_string(pinNumber))
     {}
 };
 
