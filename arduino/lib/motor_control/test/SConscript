@@ -12,4 +12,4 @@ env.Append(CPPPATH = ['#lib/motor_control',
 )
 
 
-env.Program(target= 'test_ut', source = ['TestMotor.cpp'])
+env.Program(target= 'test_ut', source = 'MotorControllerTests.cpp')

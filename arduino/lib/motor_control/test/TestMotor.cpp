@@ -1,5 +1,3 @@
-#define BOOST_TEST_DYN_LINK
-#define BOOST_TEST_MODULE MotorTest
 #include <boost/test/unit_test.hpp>
 #include <Arduino.h>
 #include "Motor.h"
@@ -69,13 +67,14 @@ BOOST_AUTO_TEST_CASE(TestMotorSetSpeedWrapAround) {
     BOOST_CHECK_EQUAL(ArduinoUno.DigitalPins[3].GetValue(), 255);
 }
 
-BOOST_AUTO_TEST_SUITE_END();
+BOOST_AUTO_TEST_CASE(TestMotorStop) {
+    Motor testMotor(2, 3);
+    testMotor.SetSpeed(100);
+    BOOST_CHECK_EQUAL(ArduinoUno.DigitalPins[3].GetValue(), 255);
 
-
-BOOST_AUTO_TEST_SUITE(TestTwoWheelMotorController)
-
-BOOST_AUTO_TEST_CASE(TwoWheelMotorControllerInheritsFromBaseClass) {
-    MotorController testController = new TwoWheelMotorController;
+    testMotor.Stop();
+    BOOST_CHECK_EQUAL(ArduinoUno.DigitalPins[3].GetValue(), 0);
+    
 }
 
 BOOST_AUTO_TEST_SUITE_END();
