@@ -39,3 +39,7 @@ void Motor::SetSpeed(int speed) {
     int eightBitValue = 255*(float(speed)/100);
     analogWrite(m_pwmPin, eightBitValue);
 }
+
+void Motor::Stop() {
+    SetSpeed(0);
+}

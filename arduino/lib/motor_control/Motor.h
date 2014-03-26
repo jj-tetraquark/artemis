@@ -15,7 +15,7 @@ public:
     void SetDirectionForwards();
     void SetDirectionBackwards();
     void SetSpeed(int speed);
-    
+    void Stop();
 
 private:
     Direction m_direction;
