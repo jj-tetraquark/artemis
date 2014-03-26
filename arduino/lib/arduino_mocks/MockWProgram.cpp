@@ -16,10 +16,14 @@ void clear_pins(void) {
     }
 }
 
-void pinMode(uint8_t pin, uint8_t mode) {
+void checkPinIsValid(uint8_t pin) {
 	if (pin < 0 || pin > 13) {
 		throw NoSuchPinException(pin);
 	}
+}
+
+void pinMode(uint8_t pin, uint8_t mode) {
+    checkPinIsValid(pin);
 	if (mode != OUTPUT && mode != INPUT) {
 		throw InvalidPinValueException();
 	}
@@ -27,14 +31,20 @@ void pinMode(uint8_t pin, uint8_t mode) {
 }
 
 void digitalWrite(uint8_t pin, uint8_t level) {
-	if (pin < 0 || pin > 13) {
-		throw NoSuchPinException(pin);
-	}
+    checkPinIsValid(pin);
 	if (level != LOW && level != HIGH) {
 		throw InvalidPinValueException();
 	}
     if (!ArduinoUno.DigitalPins[pin].IsInitialized())
         throw UninitializedPinException(pin);
+    ArduinoUno.DigitalPins[pin].SetValue(level);
+}
+
+void analogWrite(uint8_t pin, uint8_t level) {
+    checkPinIsValid(pin);
+    if (level < 0 || level > 255) {
+        throw InvalidPinValueException();
+    }
     ArduinoUno.DigitalPins[pin].SetValue(level);
 }
 

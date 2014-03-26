@@ -98,6 +98,7 @@
 
 void pinMode(uint8_t pin, uint8_t mode);
 void digitalWrite(uint8_t pin, uint8_t level);
+void analogWrite(uint8_t pin, uint8_t level);
 float analogRead(uint8_t pin);
 
 //TODO - implement
@@ -110,6 +111,7 @@ void randomSeed(float seed);
 uint32_t random(uint32_t max);
 
 void clear_pins();
+void checkPinIsValid(uint8_t pin);
 
 class Pin {
 public:
