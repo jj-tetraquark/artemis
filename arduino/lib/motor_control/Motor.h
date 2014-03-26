@@ -14,6 +14,7 @@ public:
     void ChangeDirection();
     void SetDirectionForwards();
     void SetDirectionBackwards();
+    void SetSpeed(int speed);
     
 
 private:

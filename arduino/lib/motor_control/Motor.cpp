@@ -26,3 +26,16 @@ void Motor::SetDirectionBackwards() {
     m_direction = Direction::BACKWARDS;
     digitalWrite(m_directionPin, HIGH);
 }
+
+// Motor speed is taken as a percentage
+void Motor::SetSpeed(int speed) {
+    // protect against wraparound
+    if (speed < 0) {
+        speed = 0;
+    }
+    if (speed > 100) {
+        speed = 100;
+    }
+    int eightBitValue = 255*(float(speed)/100);
+    analogWrite(m_pwmPin, eightBitValue);
+}
