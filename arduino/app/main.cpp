@@ -2,12 +2,27 @@
 #include "Motor.h"
 
 Motor leftMotor(2,3);
+Motor rightMotor(8,9);
 
 void loop() {
+    leftMotor.ChangeDirection();
+    rightMotor.ChangeDirection();
+    for(int speed = 0; speed < 100; speed++) {
+        delay(5);
+        leftMotor.SetSpeed(speed);
+        rightMotor.SetSpeed(speed);
+    }
+    for(int speed = 100; speed > 0; speed--) {
+        delay(5);
+        leftMotor.SetSpeed(speed);
+        rightMotor.SetSpeed(speed);
+    }
 }
 
 int main()
 {
+    leftMotor.SetDirectionForwards();
+    rightMotor.SetDirectionBackwards();
     init();
     while(true)
         loop();
