@@ -1,0 +1,5 @@
+Import('env')
+
+files = Glob('*.cpp')
+objects = env.Object(source = files)
+env.Library(target = 'odometry', source = objects)

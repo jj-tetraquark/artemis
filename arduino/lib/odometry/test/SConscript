@@ -1,0 +1,14 @@
+Import('env')
+env.Append(CPPPATH = ['#lib/odometry', 
+                      '#lib/arduino_mocks'],
+           LIBS = ['boost_unit_test_framework',
+                   'arduino_mocks',
+                   'odometry',
+                   ],
+           LIBPATH = ['#lib/odometry/build',
+                      '#lib/arduino_mocks/build' 
+           ]
+)
+
+
+env.Program(target= 'test_ut', source = 'OdometryTests.cpp')
