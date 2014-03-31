@@ -3,9 +3,9 @@
 
 class OdometryManager {
 public:
+    virtual int GetLinearVelocity() = 0;
+    virtual float GetAngularVelocity() = 0;
 
-private:
-    /* data */
 };
 
 

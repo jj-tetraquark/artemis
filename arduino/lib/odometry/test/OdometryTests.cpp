@@ -8,6 +8,9 @@ BOOST_AUTO_TEST_SUITE(TestOdometry)
 
 BOOST_AUTO_TEST_CASE(TestOdometryManagerContruction) {
     OdometryManager* odoManager = new TwoWheelOdometryManager;
+    // should be able to call these methods
+    odoManager->GetLinearVelocity();
+    odoManager->GetAngularVelocity();
 }
     
 BOOST_AUTO_TEST_SUITE_END()
