@@ -17,8 +17,8 @@ BOOST_AUTO_TEST_CASE(TestOdometryManagerContruction) {
 }
 
 BOOST_AUTO_TEST_CASE(TestRotaryEncoderConstruction) {
-    //RotaryEncoder has a BaseEncoder interface
-    Encoder* encoder = new RotaryEncoder;
+    //RotaryEncoder has an Encoder interface
+    Encoder* encoder = new RotaryEncoder(0);
 }
     
 BOOST_AUTO_TEST_SUITE_END()
