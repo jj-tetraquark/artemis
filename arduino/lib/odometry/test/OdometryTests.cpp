@@ -8,20 +8,23 @@
 
 BOOST_AUTO_TEST_SUITE(TestOdometry)
 
-BOOST_AUTO_TEST_CASE(TestOdometryManagerContruction) {
+BOOST_AUTO_TEST_CASE(TestOdometryManagerContructionAndInterface) {
     // TwoWheelOdometryManager expects two encoders and dimensions for the robot.
     // It should also be useable through the generic OdometryManager interface
 
-    OdometryManager* odoManager = new TwoWheelOdometryManager(1,1, RotaryEncoder(0), RotaryEncoder(1));
+    OdometryManager* odoManager = new TwoWheelOdometryManager(1,1, new RotaryEncoder(0), new RotaryEncoder(1));
     // should be able to call these methods
     odoManager->GetLinearVelocity();
     odoManager->GetAngularVelocity();
     delete odoManager;
 }
 
-BOOST_AUTO_TEST_CASE(TestRotaryEncoderConstruction) {
+BOOST_AUTO_TEST_CASE(TestRotaryEncoderConstructionAndInterface) {
     //RotaryEncoder has an Encoder interface
     Encoder* encoder = new RotaryEncoder(0);
+
+    //should be able to call these methods
+    encoder->GetFrequency();
 }
     
 BOOST_AUTO_TEST_SUITE_END()

@@ -1,6 +1,6 @@
 #include "TwoWheelOdometryManager.h"
 
-TwoWheelOdometryManager::TwoWheelOdometryManager(int width, int wheelRadius, Encoder leftEncoder, Encoder rightEncoder) {
+TwoWheelOdometryManager::TwoWheelOdometryManager(int width, int wheelRadius, Encoder* leftEncoder, Encoder* rightEncoder) {
     // pass
 }
 

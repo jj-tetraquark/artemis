@@ -4,6 +4,7 @@
 class Encoder 
 {
 public:
+    virtual float GetFrequency() const = 0;
 
 };
 

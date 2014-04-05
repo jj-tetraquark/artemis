@@ -8,6 +8,8 @@ class RotaryEncoder : public Encoder
 public:
     RotaryEncoder(uint8_t interrupt);
 
+    virtual float GetFrequency() const;
+
 };
 
 

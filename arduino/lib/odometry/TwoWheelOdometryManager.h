@@ -7,7 +7,7 @@
 class TwoWheelOdometryManager : public OdometryManager
 {
 public:
-    TwoWheelOdometryManager(int width, int wheelRadius, Encoder leftEncoder, Encoder rightEncoder);
+    TwoWheelOdometryManager(int width, int wheelRadius, Encoder* leftEncoder, Encoder* rightEncoder);
     virtual int GetLinearVelocity();
     virtual float GetAngularVelocity();
 
