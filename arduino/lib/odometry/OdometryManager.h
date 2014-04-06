@@ -3,8 +3,8 @@
 
 class OdometryManager {
 public:
-    virtual int GetLinearVelocity() = 0;
-    virtual float GetAngularVelocity() = 0;
+    virtual int GetLinearVelocity() const = 0;
+    virtual float GetAngularVelocity() const = 0;
 
 };
 

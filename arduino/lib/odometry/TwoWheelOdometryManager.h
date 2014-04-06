@@ -9,11 +9,14 @@ class TwoWheelOdometryManager : public OdometryManager
 {
 public:
     TwoWheelOdometryManager(int width, int wheelRadius, Encoder* leftEncoder, Encoder* rightEncoder);
-    virtual int GetLinearVelocity();
-    virtual float GetAngularVelocity();
+    virtual int GetLinearVelocity() const;
+    virtual float GetAngularVelocity() const;
 
 private:
-    /* data */
+    int m_width;
+    int m_wheelRadius;
+    std::shared_ptr<Encoder> m_leftEncoder;
+    std::shared_ptr<Encoder> m_rightEncoder;
 };
 
 #endif /* end of include guard: TWO_WHEEL_ODOMETRY_MANAGER */
