@@ -21,11 +21,14 @@ float TwoWheelOdometryManager::GetAngularVelocity() const {
 }
 
 float TwoWheelOdometryManager::LeftWheelVelocity() const {
-    float velocity = m_leftEncoder->GetFrequency() * m_wheelCircumference;
-    return velocity * (m_leftEncoder->GetDirection() == Encoder::Direction::FORWARDS ? 1 : -1);
+    return GetWheelVelocity(m_leftEncoder);
 }
 
 float TwoWheelOdometryManager::RightWheelVelocity() const {
-    float velocity = m_rightEncoder->GetFrequency() * m_wheelCircumference;
-    return velocity * (m_rightEncoder->GetDirection() == Encoder::Direction::FORWARDS ? 1 : -1);
+    return GetWheelVelocity(m_rightEncoder);
+}
+
+float TwoWheelOdometryManager::GetWheelVelocity(std::shared_ptr<Encoder> encoder) const {
+    float velocity = encoder->GetFrequency() * m_wheelCircumference;
+    return velocity * (encoder->GetDirection() == Encoder::Direction::FORWARDS ? 1 : -1);
 }

@@ -15,6 +15,7 @@ public:
 private:
     float LeftWheelVelocity() const;
     float RightWheelVelocity() const;
+    float GetWheelVelocity(std::shared_ptr<Encoder> encoder) const;
 
     int m_width;
     int m_wheelRadius;
