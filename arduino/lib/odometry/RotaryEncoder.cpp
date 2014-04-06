@@ -7,3 +7,6 @@ RotaryEncoder::RotaryEncoder(uint8_t interrupt) {
 float RotaryEncoder::GetFrequency() const {
 
 }
+
+Encoder::Direction RotaryEncoder::GetDirection() const {
+}

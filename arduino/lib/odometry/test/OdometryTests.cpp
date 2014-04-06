@@ -35,6 +35,8 @@ BOOST_AUTO_TEST_CASE(TestGetLinearVelocity) {
     
     float wheelCircumference = 2 * M_PI * 50;
     // implement unicylce model. v = R/2(v_l + v_r)
+
+    // going straight
     for(float i = 0; i < 2; i += 0.1) {
         leftEncoder->SetFrequency(i);
         rightEncoder->SetFrequency(i);

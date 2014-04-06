@@ -9,6 +9,7 @@ public:
     RotaryEncoder(uint8_t interrupt);
 
     virtual float GetFrequency() const;
+    virtual Direction GetDirection() const;
 
 };
 
