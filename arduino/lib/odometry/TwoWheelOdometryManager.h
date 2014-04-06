@@ -13,8 +13,12 @@ public:
     virtual float GetAngularVelocity() const;
 
 private:
+    float LeftWheelSpeed() const;
+    float RightWheelSpeed() const;
+
     int m_width;
     int m_wheelRadius;
+    float m_wheelCircumference;
     std::shared_ptr<Encoder> m_leftEncoder;
     std::shared_ptr<Encoder> m_rightEncoder;
 };
