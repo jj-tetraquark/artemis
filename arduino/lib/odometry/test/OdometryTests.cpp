@@ -27,16 +27,14 @@ BOOST_AUTO_TEST_CASE(TestGetLinearVelocity) {
     std::shared_ptr<MockEncoder> leftEncoder(new MockEncoder);
     std::shared_ptr<MockEncoder> rightEncoder(new MockEncoder);
     
-    leftEncoder->SetFrequency(1.5);
-    rightEncoder->SetFrequency(1.5);
-
-    BOOST_CHECK_EQUAL(leftEncoder->GetFrequency(), 1.5);
     TwoWheelOdometryManager odometryManager(100, 50, leftEncoder.get(), rightEncoder.get());
     
     float wheelCircumference = 2 * M_PI * 50;
     // implement unicylce model. v = R/2(v_l + v_r)
 
     // going straight
+    leftEncoder->SetDirection(Encoder::Direction::FORWARDS);
+    rightEncoder->SetDirection(Encoder::Direction::FORWARDS);
     for(float i = 0; i < 2; i += 0.1) {
         leftEncoder->SetFrequency(i);
         rightEncoder->SetFrequency(i);
@@ -44,6 +42,38 @@ BOOST_AUTO_TEST_CASE(TestGetLinearVelocity) {
         float rightSpeed = rightEncoder->GetFrequency() * wheelCircumference;
         int speedShouldBe = 50/2 * (leftSpeed + rightSpeed);
 
+        BOOST_CHECK_EQUAL(speedShouldBe, odometryManager.GetLinearVelocity());
+    }
+
+    // turning
+    leftEncoder->SetFrequency(1);
+    for(float i = 0; i < 2; i += 0.1) {
+        rightEncoder->SetFrequency(i);
+        float leftSpeed = leftEncoder->GetFrequency() * wheelCircumference;
+        float rightSpeed = rightEncoder->GetFrequency() * wheelCircumference;
+        int speedShouldBe = 50/2 * (leftSpeed + rightSpeed);
+
+        BOOST_CHECK_EQUAL(speedShouldBe, odometryManager.GetLinearVelocity());
+    }
+
+    // turning on spot
+    leftEncoder->SetDirection(Encoder::Direction::FORWARDS);
+    rightEncoder->SetDirection(Encoder::Direction::BACKWARDS);
+    for(float i = 0; i < 2; i += 0.1) {
+        leftEncoder->SetFrequency(i);
+        rightEncoder->SetFrequency(i);
+        BOOST_CHECK_EQUAL(0, odometryManager.GetLinearVelocity());
+    }
+
+    // backing up
+    leftEncoder->SetDirection(Encoder::Direction::BACKWARDS);
+    rightEncoder->SetDirection(Encoder::Direction::BACKWARDS);
+    for(float i = 0; i < 2; i += 0.1) {
+        leftEncoder->SetFrequency(i);
+        rightEncoder->SetFrequency(i);
+        float leftSpeed = -leftEncoder->GetFrequency() * wheelCircumference;
+        float rightSpeed = -rightEncoder->GetFrequency() * wheelCircumference;
+        int speedShouldBe = 50/2 * (leftSpeed + rightSpeed);
         BOOST_CHECK_EQUAL(speedShouldBe, odometryManager.GetLinearVelocity());
     }
 }

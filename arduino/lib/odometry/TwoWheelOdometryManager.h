@@ -13,8 +13,8 @@ public:
     virtual float GetAngularVelocity() const;
 
 private:
-    float LeftWheelSpeed() const;
-    float RightWheelSpeed() const;
+    float LeftWheelVelocity() const;
+    float RightWheelVelocity() const;
 
     int m_width;
     int m_wheelRadius;

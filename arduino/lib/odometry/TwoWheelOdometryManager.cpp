@@ -13,17 +13,19 @@ TwoWheelOdometryManager::TwoWheelOdometryManager
 }
 
 int TwoWheelOdometryManager::GetLinearVelocity() const {
-    return m_wheelRadius/2.0 * (LeftWheelSpeed() + RightWheelSpeed());
+    return m_wheelRadius/2.0 * (LeftWheelVelocity() + RightWheelVelocity());
 }
 
 float TwoWheelOdometryManager::GetAngularVelocity() const {
 
 }
 
-float TwoWheelOdometryManager::LeftWheelSpeed() const {
-    return m_leftEncoder->GetFrequency() * m_wheelCircumference;
+float TwoWheelOdometryManager::LeftWheelVelocity() const {
+    float velocity = m_leftEncoder->GetFrequency() * m_wheelCircumference;
+    return velocity * (m_leftEncoder->GetDirection() == Encoder::Direction::FORWARDS ? 1 : -1);
 }
 
-float TwoWheelOdometryManager::RightWheelSpeed() const {
-    return m_rightEncoder->GetFrequency() * m_wheelCircumference;
+float TwoWheelOdometryManager::RightWheelVelocity() const {
+    float velocity = m_rightEncoder->GetFrequency() * m_wheelCircumference;
+    return velocity * (m_rightEncoder->GetDirection() == Encoder::Direction::FORWARDS ? 1 : -1);
 }
