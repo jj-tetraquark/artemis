@@ -5,7 +5,7 @@
 class MockEncoder : public Encoder
 {
 public:
-   float GetFrequency()  { return m_frequency; }
+   float GetFrequency() const { return m_frequency; }
    void SetFrequency(float newFrequency) { m_frequency = newFrequency; }
 
 private:

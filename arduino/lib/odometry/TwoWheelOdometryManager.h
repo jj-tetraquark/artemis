@@ -1,5 +1,6 @@
 #ifndef TWO_WHEEL_ODOMETRY_MANAGER_H
 #define TWO_WHEEL_ODOMETRY_MANAGER_H
+#include <memory>
 #include "OdometryManager.h"
 #include "Encoder.h"
 
