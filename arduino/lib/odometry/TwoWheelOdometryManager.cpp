@@ -13,7 +13,7 @@ TwoWheelOdometryManager::TwoWheelOdometryManager
 }
 
 int TwoWheelOdometryManager::GetLinearVelocity() const {
-    return m_wheelRadius/2.0 * (LeftWheelVelocity() + RightWheelVelocity());
+    return 1/2.0 * (LeftWheelVelocity() + RightWheelVelocity());
 }
 
 float TwoWheelOdometryManager::GetAngularVelocity() const {

@@ -30,7 +30,7 @@ BOOST_AUTO_TEST_CASE(TestGetLinearVelocity) {
     TwoWheelOdometryManager odometryManager(100, 50, leftEncoder.get(), rightEncoder.get());
     
     float wheelCircumference = 2 * M_PI * 50;
-    // implement unicylce model. v = R/2(v_l + v_r)
+    // implement unicylce model. v = 1/2(v_l + v_r)
 
     // going straight
     leftEncoder->SetDirection(Encoder::Direction::FORWARDS);
@@ -40,7 +40,7 @@ BOOST_AUTO_TEST_CASE(TestGetLinearVelocity) {
         rightEncoder->SetFrequency(i);
         float leftSpeed = leftEncoder->GetFrequency() * wheelCircumference;
         float rightSpeed = rightEncoder->GetFrequency() * wheelCircumference;
-        int speedShouldBe = 50/2 * (leftSpeed + rightSpeed);
+        int speedShouldBe = 1.0/2 * (leftSpeed + rightSpeed);
 
         BOOST_CHECK_EQUAL(speedShouldBe, odometryManager.GetLinearVelocity());
     }
@@ -51,7 +51,7 @@ BOOST_AUTO_TEST_CASE(TestGetLinearVelocity) {
         rightEncoder->SetFrequency(i);
         float leftSpeed = leftEncoder->GetFrequency() * wheelCircumference;
         float rightSpeed = rightEncoder->GetFrequency() * wheelCircumference;
-        int speedShouldBe = 50/2 * (leftSpeed + rightSpeed);
+        int speedShouldBe = 1.0/2 * (leftSpeed + rightSpeed);
 
         BOOST_CHECK_EQUAL(speedShouldBe, odometryManager.GetLinearVelocity());
     }
@@ -73,7 +73,7 @@ BOOST_AUTO_TEST_CASE(TestGetLinearVelocity) {
         rightEncoder->SetFrequency(i);
         float leftSpeed = -leftEncoder->GetFrequency() * wheelCircumference;
         float rightSpeed = -rightEncoder->GetFrequency() * wheelCircumference;
-        int speedShouldBe = 50/2 * (leftSpeed + rightSpeed);
+        int speedShouldBe = 1.0/2 * (leftSpeed + rightSpeed);
         BOOST_CHECK_EQUAL(speedShouldBe, odometryManager.GetLinearVelocity());
     }
 }
