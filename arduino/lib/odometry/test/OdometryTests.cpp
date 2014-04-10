@@ -84,16 +84,19 @@ BOOST_AUTO_TEST_CASE(TestAngularVelocity) {
     std::shared_ptr<MockEncoder> leftEncoder(new MockEncoder);
     std::shared_ptr<MockEncoder> rightEncoder(new MockEncoder);
     int robotWidth = 100;
-    int wheelCircumference = 50;
-    TwoWheelOdometryManager odometryManager(100, 50, leftEncoder, rightEncoder);
+    int wheelRadius = 50;
+    float wheelCircumference = 2 * M_PI * 50;
+    TwoWheelOdometryManager odometryManager(robotWidth, wheelRadius, leftEncoder, rightEncoder);
+    // implement unicylce model. ω = 1/L(v_l - v_r)
     
     leftEncoder->SetFrequency(0);
     rightEncoder->SetFrequency(0);
+    leftEncoder->SetDirection(Encoder::Direction::FORWARDS);
+    rightEncoder->SetDirection(Encoder::Direction::FORWARDS);
     for (float i = 0.1; i < 2; i+= 0.1) {
         leftEncoder->SetFrequency(i);
-        float leftSpeed = leftEncoder->GetFrequency() * wheelCircumference;
-        float rightSpeed = rightEncoder->GetFrequency() * wheelCircumference;
-        float angularVelocityShouldBe = 1.0/robotWidth * (leftSpeed - rightSpeed);
+        float leftSpeed = i * wheelCircumference;
+        float angularVelocityShouldBe = 1.0/robotWidth * (leftSpeed - 0);
         BOOST_CHECK_EQUAL(angularVelocityShouldBe, odometryManager.GetAngularVelocity());
     }
 

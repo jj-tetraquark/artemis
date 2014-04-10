@@ -26,7 +26,7 @@ int TwoWheelOdometryManager::GetLinearVelocity() const {
 }
 
 float TwoWheelOdometryManager::GetAngularVelocity() const {
-
+    return 1.0/m_width * (LeftWheelVelocity() - RightWheelVelocity());
 }
 
 float TwoWheelOdometryManager::LeftWheelVelocity() const {
