@@ -9,6 +9,7 @@ class TwoWheelOdometryManager : public OdometryManager
 {
 public:
     TwoWheelOdometryManager(int width, int wheelRadius, Encoder* leftEncoder, Encoder* rightEncoder);
+    TwoWheelOdometryManager(int width, int wheelRadius, const std::shared_ptr<Encoder>& leftEncoder, const std::shared_ptr<Encoder>& rightEncoder);
     virtual int GetLinearVelocity() const;
     virtual float GetAngularVelocity() const;
 

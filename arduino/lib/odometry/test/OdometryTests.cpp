@@ -26,7 +26,10 @@ BOOST_AUTO_TEST_CASE(TestOdometryManagerContructionAndInterface) {
 BOOST_AUTO_TEST_CASE(TestGetLinearVelocity) {
     std::shared_ptr<MockEncoder> leftEncoder(new MockEncoder);
     std::shared_ptr<MockEncoder> rightEncoder(new MockEncoder);
-    TwoWheelOdometryManager odometryManager(100, 50, leftEncoder.get(), rightEncoder.get());
+
+    BOOST_CHECK_EQUAL(leftEncoder.use_count(), 1);
+    TwoWheelOdometryManager odometryManager(100, 50, leftEncoder, rightEncoder);
+    BOOST_CHECK_EQUAL(leftEncoder.use_count(), 2);
     
     float wheelCircumference = 2 * M_PI * 50;
     // implement unicylce model. v = 1/2(v_l + v_r)
@@ -82,7 +85,7 @@ BOOST_AUTO_TEST_CASE(TestAngularVelocity) {
     std::shared_ptr<MockEncoder> rightEncoder(new MockEncoder);
     int robotWidth = 100;
     int wheelCircumference = 50;
-    TwoWheelOdometryManager om(100, 50, leftEncoder.get(), rightEncoder.get());
+    TwoWheelOdometryManager odometryManager(100, 50, leftEncoder, rightEncoder);
     
     leftEncoder->SetFrequency(0);
     rightEncoder->SetFrequency(0);
@@ -91,7 +94,7 @@ BOOST_AUTO_TEST_CASE(TestAngularVelocity) {
         float leftSpeed = leftEncoder->GetFrequency() * wheelCircumference;
         float rightSpeed = rightEncoder->GetFrequency() * wheelCircumference;
         float angularVelocityShouldBe = 1.0/robotWidth * (leftSpeed - rightSpeed);
-        BOOST_CHECK_EQUAL(angularVelocityShouldBe, om.GetAngularVelocity());
+        BOOST_CHECK_EQUAL(angularVelocityShouldBe, odometryManager.GetAngularVelocity());
     }
 
 }
@@ -102,6 +105,8 @@ BOOST_AUTO_TEST_CASE(TestRotaryEncoderConstructionAndInterface) {
 
     //should be able to call these methods
     encoder->GetFrequency();
+
+    delete encoder;
 }
     
 BOOST_AUTO_TEST_SUITE_END()

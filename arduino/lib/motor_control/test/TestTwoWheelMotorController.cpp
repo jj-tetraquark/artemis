@@ -7,6 +7,7 @@ BOOST_AUTO_TEST_SUITE(TestTwoWheelMotorController)
 
 BOOST_AUTO_TEST_CASE(TwoWheelMotorControllerInheritsFromBaseClass) {
     MotorController* testController = new TwoWheelMotorController();
+    delete testController;
 }
 
 BOOST_AUTO_TEST_SUITE_END();
