@@ -4,6 +4,9 @@
 #include <boost/test/unit_test.hpp>
 #include <memory>
 #include <cmath>
+#include <chrono>
+#include <thread>
+#include "Arduino.h"
 #include "OdometryManager.h"
 #include "TwoWheelOdometryManager.h"
 #include "Encoder.h"
@@ -16,7 +19,7 @@ BOOST_AUTO_TEST_CASE(TestOdometryManagerContructionAndInterface) {
     // TwoWheelOdometryManager expects two encoders and dimensions for the robot.
     // It should also be useable through the generic OdometryManager interface
 
-    OdometryManager* odoManager = new TwoWheelOdometryManager(1,1, new RotaryEncoder(0), new RotaryEncoder(1));
+    OdometryManager* odoManager = new TwoWheelOdometryManager(1,1, new RotaryEncoder(0, 1), new RotaryEncoder(1, 1));
     // should be able to call these methods
     odoManager->GetLinearVelocity();
     odoManager->GetAngularVelocity();
@@ -104,12 +107,19 @@ BOOST_AUTO_TEST_CASE(TestAngularVelocity) {
 
 BOOST_AUTO_TEST_CASE(TestRotaryEncoderConstructionAndInterface) {
     //RotaryEncoder has an Encoder interface
-    Encoder* encoder = new RotaryEncoder(0);
+    Encoder* encoder = new RotaryEncoder(0, 1000/3.0);
 
     //should be able to call these methods
     encoder->GetFrequency();
-
     delete encoder;
+}
+
+BOOST_AUTO_TEST_CASE(TestRotaryEncoderGetFreqency) {
+    RotaryEncoder(0, 1000/3.0);
+    for(int i = 0; i < 50; i++) {
+        //ArduinoUno.TriggerInterrupt(0);
+        std::this_thread::sleep_for(std::chrono::microseconds(5));
+    }
 }
     
 BOOST_AUTO_TEST_SUITE_END()

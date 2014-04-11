@@ -6,7 +6,7 @@
 class RotaryEncoder : public Encoder
 {
 public:
-    RotaryEncoder(uint8_t interrupt);
+    RotaryEncoder(uint8_t interruptPin, float ratio);
 
     virtual float GetFrequency() const;
     virtual Direction GetDirection() const;
