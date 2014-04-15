@@ -1,0 +1,3 @@
+[submodule "arduino/lib/avr-stl"]
+	path = arduino/lib/avr-stl
+	url = https://github.com/rpavlik/StandardCplusplus.git
