@@ -79,3 +79,22 @@ void Pin::SetMode(uint8_t io) {
 void Pin::SetValue(uint8_t value) {
     m_value = value;
 }
+
+
+const uint8_t EXTERNAL_NUM_INTERRUPTS = 2;
+
+static volatile voidFuncPtr intFunc[EXTERNAL_NUM_INTERRUPTS];
+
+void attachInterrupt(uint8_t interruptNum, void (*userFunc)(void), int mode) {
+  if(interruptNum < EXTERNAL_NUM_INTERRUPTS) {
+    intFunc[interruptNum] = userFunc;
+  }
+}
+
+void detachInterrupt(uint8_t interruptNum) {
+    intFunc[interruptNum] = nullptr;
+}
+
+void testTriggerInterrupt(uint8_t interruptNum) {
+    intFunc[interruptNum]();
+}

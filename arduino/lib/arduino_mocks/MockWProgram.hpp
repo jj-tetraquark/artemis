@@ -92,6 +92,7 @@
 #define bitClear(value, bit) ((value) &= ~(1UL << (bit)))
 #define bitWrite(value, bit, bitvalue) (bitvalue ? bitSet(value, bit) : bitClear(value, bit))
 
+typedef void (*voidFuncPtr)(void);
 /*
    Mock Arduino functions. 
    */
@@ -112,6 +113,11 @@ uint32_t random(uint32_t max);
 
 void clear_pins();
 void checkPinIsValid(uint8_t pin);
+
+
+void attachInterrupt(uint8_t interruptNum, void (*userFunc)(void), int mode);
+void detachInterrupt(uint8_t interruptNum);
+void testTriggerInterrupt(uint8_t interruptNum); //not part of the Arduino library, just for testing
 
 class Pin {
 public:
