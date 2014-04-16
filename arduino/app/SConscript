@@ -1,13 +1,17 @@
 Import('ardenv')
 
-ardenv.Append( CPPPATH = ['#lib/motor_control'
+ardenv.Append( CPPPATH = ['#lib/motor_control',
+                          '#lib/avr-stl'
                             ],
+                LIBPATH = [''
+                        ]
                 )
 
 ardenv.ConfigureBoard("uno")
 core = ardenv.ArduinoCore()
 
 motor_control = ardenv.ArduinoLibrary('motor_control', '#lib/motor_control')
+odometry = ardenv.ArduinoLibrary('odometry', '#lib/odometry')
 
-sketch = ardenv.Sketch("artemis_arduino", ["main.cpp", motor_control, core])
+sketch = ardenv.Sketch("artemis_arduino", ["main.cpp", motor_control, odometry, core])
 ardenv.Upload(sketch)

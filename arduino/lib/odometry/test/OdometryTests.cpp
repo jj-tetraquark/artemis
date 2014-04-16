@@ -2,7 +2,6 @@
 #define BOOST_TEST_MODULE Odometry_Tests
 #define _USE_MATH_DEFINES
 #include <boost/test/unit_test.hpp>
-#include <memory>
 #include <cmath>
 #include <chrono>
 #include <thread>
@@ -27,12 +26,10 @@ BOOST_AUTO_TEST_CASE(TestOdometryManagerContructionAndInterface) {
 }
 
 BOOST_AUTO_TEST_CASE(TestGetLinearVelocity) {
-    std::shared_ptr<MockEncoder> leftEncoder(new MockEncoder);
-    std::shared_ptr<MockEncoder> rightEncoder(new MockEncoder);
+    MockEncoder* leftEncoder = new MockEncoder;
+    MockEncoder* rightEncoder = new MockEncoder;
 
-    BOOST_CHECK_EQUAL(leftEncoder.use_count(), 1);
     TwoWheelOdometryManager odometryManager(100, 50, leftEncoder, rightEncoder);
-    BOOST_CHECK_EQUAL(leftEncoder.use_count(), 2);
     
     float wheelCircumference = 2 * M_PI * 50;
     // implement unicylce model. v = 1/2(v_l + v_r)
@@ -81,11 +78,14 @@ BOOST_AUTO_TEST_CASE(TestGetLinearVelocity) {
         int speedShouldBe = 1.0/2 * (leftSpeed + rightSpeed);
         BOOST_CHECK_EQUAL(speedShouldBe, odometryManager.GetLinearVelocity());
     }
+    delete leftEncoder;
+    delete rightEncoder;
 }
 
 BOOST_AUTO_TEST_CASE(TestAngularVelocity) {
-    std::shared_ptr<MockEncoder> leftEncoder(new MockEncoder);
-    std::shared_ptr<MockEncoder> rightEncoder(new MockEncoder);
+    MockEncoder* leftEncoder = new MockEncoder;
+    MockEncoder* rightEncoder = new MockEncoder;
+
     int robotWidth = 100;
     int wheelRadius = 50;
     float wheelCircumference = 2 * M_PI * 50;
@@ -103,6 +103,8 @@ BOOST_AUTO_TEST_CASE(TestAngularVelocity) {
         BOOST_CHECK_EQUAL(angularVelocityShouldBe, odometryManager.GetAngularVelocity());
     }
 
+    delete leftEncoder;
+    delete rightEncoder;
 }
 
 BOOST_AUTO_TEST_CASE(TestRotaryEncoderConstructionAndInterface) {
