@@ -5,13 +5,13 @@
 class MockEncoder : public Encoder
 {
 public:
-   float GetFrequency() const { return m_frequency; }
+   float RevolutionsPerSecond() const { return m_rps; }
    Direction GetDirection() const { return m_direction; }
-   void SetFrequency(const float newFrequency) { m_frequency = newFrequency; }
+   void SetRevolutionsPerSecond(const float newFrequency) { m_rps = newFrequency; }
    void SetDirection(const Direction direction) { m_direction = direction; }
 
 private:
-   float m_frequency;
+   float m_rps;
    Direction m_direction;
 };
 

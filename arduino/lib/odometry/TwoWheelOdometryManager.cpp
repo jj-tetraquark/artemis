@@ -29,6 +29,6 @@ float TwoWheelOdometryManager::RightWheelVelocity() const {
 }
 
 float TwoWheelOdometryManager::GetWheelVelocity(Encoder* encoder) const {
-    float velocity = encoder->GetFrequency() * m_wheelCircumference;
+    float velocity = encoder->RevolutionsPerSecond() * m_wheelCircumference;
     return velocity * (encoder->GetDirection() == Encoder::Direction::FORWARDS ? 1 : -1);
 }

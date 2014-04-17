@@ -5,7 +5,7 @@ env = Environment(CC = 'g++',
 
 ardenv = Environment(tools=["default", "arduino"],
                   UPLOAD_PORT="/dev/ttyACM0",
-                  CPPFLAGS='-std=gnu++11 -g'
+                  CPPFLAGS='-std=c++0x -g'
                 )
 ardenv.ConfigureBoard('uno')
 
