@@ -12,6 +12,13 @@ TwoWheelOdometryManager::TwoWheelOdometryManager
      
 }
 
+TwoWheelOdometryManager::~TwoWheelOdometryManager() {
+    delete m_leftEncoder;
+    delete m_rightEncoder;
+    m_leftEncoder = nullptr;
+    m_rightEncoder = nullptr;
+}
+
 int TwoWheelOdometryManager::GetLinearVelocity() const {
     return 1/2.0 * (LeftWheelVelocity() + RightWheelVelocity());
 }

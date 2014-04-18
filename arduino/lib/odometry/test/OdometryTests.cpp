@@ -78,8 +78,6 @@ BOOST_AUTO_TEST_CASE(TestGetLinearVelocity) {
         int speedShouldBe = 1.0/2 * (leftSpeed + rightSpeed);
         BOOST_CHECK_EQUAL(speedShouldBe, odometryManager.GetLinearVelocity());
     }
-    delete leftEncoder;
-    delete rightEncoder;
 }
 
 BOOST_AUTO_TEST_CASE(TestAngularVelocity) {
@@ -102,9 +100,6 @@ BOOST_AUTO_TEST_CASE(TestAngularVelocity) {
         float angularVelocityShouldBe = 1.0/robotWidth * (leftSpeed - 0);
         BOOST_CHECK_EQUAL(angularVelocityShouldBe, odometryManager.GetAngularVelocity());
     }
-
-    delete leftEncoder;
-    delete rightEncoder;
 }
 
 BOOST_AUTO_TEST_CASE(TestRotaryEncoderConstructionAndInterface) {
