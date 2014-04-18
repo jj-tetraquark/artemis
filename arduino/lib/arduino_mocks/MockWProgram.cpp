@@ -8,6 +8,7 @@
 
 // Delicious globals TT__TT
 Arduino ArduinoUno;
+volatile voidFuncPtr intFunc[EXTERNAL_NUM_INTERRUPTS];
 
 
 void clear_pins(void) {
@@ -81,9 +82,6 @@ void Pin::SetValue(uint8_t value) {
 }
 
 
-const uint8_t EXTERNAL_NUM_INTERRUPTS = 2;
-
-static volatile voidFuncPtr intFunc[EXTERNAL_NUM_INTERRUPTS];
 
 void attachInterrupt(uint8_t interruptNum, void (*userFunc)(void), int mode) {
   if(interruptNum < EXTERNAL_NUM_INTERRUPTS) {
@@ -96,5 +94,9 @@ void detachInterrupt(uint8_t interruptNum) {
 }
 
 void testTriggerInterrupt(uint8_t interruptNum) {
-    intFunc[interruptNum]();
+    if(intFunc[interruptNum] != nullptr) {
+        intFunc[interruptNum]();
+    } else {
+        throw InvalidValueException();
+    }
 }

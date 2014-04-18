@@ -92,6 +92,8 @@
 #define bitClear(value, bit) ((value) &= ~(1UL << (bit)))
 #define bitWrite(value, bit, bitvalue) (bitvalue ? bitSet(value, bit) : bitClear(value, bit))
 
+const uint8_t EXTERNAL_NUM_INTERRUPTS = 2;
+
 typedef void (*voidFuncPtr)(void);
 /*
    Mock Arduino functions. 
@@ -226,6 +228,8 @@ extern MockSerial Serial;
 
 extern Arduino ArduinoUno;
 
+extern volatile voidFuncPtr intFunc[EXTERNAL_NUM_INTERRUPTS];
+
 struct NoSuchPinException : public std::logic_error {
     NoSuchPinException(int pinNumber) : std::logic_error("Pin " + std::to_string(pinNumber) +  " does not exist")
     {}
@@ -238,6 +242,11 @@ struct InvalidPinValueException : public std::logic_error {
 
 struct UninitializedPinException : public std::logic_error {
     UninitializedPinException(int pinNumber) : std::logic_error("Tried to read/write to pin uninitialized pin " + std::to_string(pinNumber))
+    {}
+};
+
+struct InvalidValueException : public std::logic_error {
+    InvalidValueException() : std::logic_error("Invalid value or action")
     {}
 };
 
