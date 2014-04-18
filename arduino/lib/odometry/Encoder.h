@@ -5,7 +5,7 @@ class Encoder
 {
 public:
     enum class Direction { FORWARDS, BACKWARDS };
-    virtual float GetFrequency() const = 0;
+    virtual float RevolutionsPerSecond() const = 0;
     virtual Direction GetDirection() const = 0;
 
 };

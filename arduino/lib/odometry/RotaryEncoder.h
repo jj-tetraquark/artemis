@@ -8,7 +8,7 @@ class RotaryEncoder : public Encoder
 public:
     RotaryEncoder(uint8_t interruptPin, float ratio);
 
-    virtual float GetFrequency() const;
+    virtual float RevolutionsPerSecond() const;
     virtual Direction GetDirection() const;
 
 };

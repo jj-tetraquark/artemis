@@ -38,21 +38,21 @@ BOOST_AUTO_TEST_CASE(TestGetLinearVelocity) {
     leftEncoder->SetDirection(Encoder::Direction::FORWARDS);
     rightEncoder->SetDirection(Encoder::Direction::FORWARDS);
     for(float i = 0; i < 2; i += 0.1) {
-        leftEncoder->SetFrequency(i);
-        rightEncoder->SetFrequency(i);
-        float leftSpeed = leftEncoder->GetFrequency() * wheelCircumference;
-        float rightSpeed = rightEncoder->GetFrequency() * wheelCircumference;
+        leftEncoder->SetRevolutionsPerSecond(i);
+        rightEncoder->SetRevolutionsPerSecond(i);
+        float leftSpeed = leftEncoder->RevolutionsPerSecond() * wheelCircumference;
+        float rightSpeed = rightEncoder->RevolutionsPerSecond() * wheelCircumference;
         int speedShouldBe = 1.0/2 * (leftSpeed + rightSpeed);
 
         BOOST_CHECK_EQUAL(speedShouldBe, odometryManager.GetLinearVelocity());
     }
 
     // turning
-    leftEncoder->SetFrequency(1);
+    leftEncoder->SetRevolutionsPerSecond(1);
     for(float i = 0; i < 2; i += 0.1) {
-        rightEncoder->SetFrequency(i);
-        float leftSpeed = leftEncoder->GetFrequency() * wheelCircumference;
-        float rightSpeed = rightEncoder->GetFrequency() * wheelCircumference;
+        rightEncoder->SetRevolutionsPerSecond(i);
+        float leftSpeed = leftEncoder->RevolutionsPerSecond() * wheelCircumference;
+        float rightSpeed = rightEncoder->RevolutionsPerSecond() * wheelCircumference;
         int speedShouldBe = 1.0/2 * (leftSpeed + rightSpeed);
 
         BOOST_CHECK_EQUAL(speedShouldBe, odometryManager.GetLinearVelocity());
@@ -62,8 +62,8 @@ BOOST_AUTO_TEST_CASE(TestGetLinearVelocity) {
     leftEncoder->SetDirection(Encoder::Direction::FORWARDS);
     rightEncoder->SetDirection(Encoder::Direction::BACKWARDS);
     for(float i = 0; i < 2; i += 0.1) {
-        leftEncoder->SetFrequency(i);
-        rightEncoder->SetFrequency(i);
+        leftEncoder->SetRevolutionsPerSecond(i);
+        rightEncoder->SetRevolutionsPerSecond(i);
         BOOST_CHECK_EQUAL(0, odometryManager.GetLinearVelocity());
     }
 
@@ -71,10 +71,10 @@ BOOST_AUTO_TEST_CASE(TestGetLinearVelocity) {
     leftEncoder->SetDirection(Encoder::Direction::BACKWARDS);
     rightEncoder->SetDirection(Encoder::Direction::BACKWARDS);
     for(float i = 0; i < 2; i += 0.1) {
-        leftEncoder->SetFrequency(i);
-        rightEncoder->SetFrequency(i);
-        float leftSpeed = -leftEncoder->GetFrequency() * wheelCircumference;
-        float rightSpeed = -rightEncoder->GetFrequency() * wheelCircumference;
+        leftEncoder->SetRevolutionsPerSecond(i);
+        rightEncoder->SetRevolutionsPerSecond(i);
+        float leftSpeed = -leftEncoder->RevolutionsPerSecond() * wheelCircumference;
+        float rightSpeed = -rightEncoder->RevolutionsPerSecond() * wheelCircumference;
         int speedShouldBe = 1.0/2 * (leftSpeed + rightSpeed);
         BOOST_CHECK_EQUAL(speedShouldBe, odometryManager.GetLinearVelocity());
     }
@@ -90,12 +90,12 @@ BOOST_AUTO_TEST_CASE(TestAngularVelocity) {
     TwoWheelOdometryManager odometryManager(robotWidth, wheelRadius, leftEncoder, rightEncoder);
     // implement unicylce model. ω = 1/L(v_l - v_r)
     
-    leftEncoder->SetFrequency(0);
-    rightEncoder->SetFrequency(0);
+    leftEncoder->SetRevolutionsPerSecond(0);
+    rightEncoder->SetRevolutionsPerSecond(0);
     leftEncoder->SetDirection(Encoder::Direction::FORWARDS);
     rightEncoder->SetDirection(Encoder::Direction::FORWARDS);
     for (float i = 0.1; i < 2; i+= 0.1) {
-        leftEncoder->SetFrequency(i);
+        leftEncoder->SetRevolutionsPerSecond(i);
         float leftSpeed = i * wheelCircumference;
         float angularVelocityShouldBe = 1.0/robotWidth * (leftSpeed - 0);
         BOOST_CHECK_EQUAL(angularVelocityShouldBe, odometryManager.GetAngularVelocity());
@@ -107,7 +107,7 @@ BOOST_AUTO_TEST_CASE(TestRotaryEncoderConstructionAndInterface) {
     Encoder* encoder = new RotaryEncoder(0, 1000/3.0);
 
     //should be able to call these methods
-    encoder->GetFrequency();
+    encoder->RevolutionsPerSecond();
     delete encoder;
 }
 
