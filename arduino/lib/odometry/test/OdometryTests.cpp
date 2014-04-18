@@ -116,10 +116,10 @@ BOOST_AUTO_TEST_CASE(TestRotaryEncoderGetFreqency) {
     RotaryEncoder<LEFT> encoder(1000/3.0);
     for(int i = 0; i < 50; i++) {
         testTriggerInterrupt(0); 
-        std::this_thread::sleep_for(std::chrono::microseconds(5));
+        std::this_thread::sleep_for(std::chrono::milliseconds(20));
     }
-    BOOST_CHECK_EQUAL(encoder.GetFrequency(), 200000);
-    BOOST_CHECK_EQUAL(encoder.RevolutionsPerSecond(), 200000*(1000/3.0));
+    BOOST_CHECK_CLOSE(encoder.GetFrequency(), 50, 2.5); 
+    BOOST_CHECK_CLOSE(encoder.RevolutionsPerSecond(), 50*(1000/3.0), 2.5);
 }
     
 BOOST_AUTO_TEST_SUITE_END()
