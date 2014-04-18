@@ -1,7 +1,7 @@
 import os
 
 env = Environment(CC = 'g++',
-                  CPPFLAGS='--std=c++11')
+                  CPPFLAGS='-std=c++11')
 
 ardenv = Environment(tools=["default", "arduino"],
                   UPLOAD_PORT="/dev/ttyACM0",

@@ -68,8 +68,6 @@
 #define DEFAULT 1
 #define EXTERNAL 0
 
-#define min(a,b) ((a)<(b)?(a):(b))
-#define max(a,b) ((a)>(b)?(a):(b))
 #define constrain(amt,low,high) ((amt)<(low)?(low):((amt)>(high)?(high):(amt)))
 #define round(x)     ((x)>=0?(long)((x)+0.5):(long)((x)-0.5))
 #define radians(deg) ((deg)*DEG_TO_RAD)
@@ -112,6 +110,9 @@ void randomSeed(float seed);
 
 //TODO - implement
 uint32_t random(uint32_t max);
+
+uint32_t millis();
+uint32_t micros();
 
 void clear_pins();
 void checkPinIsValid(uint8_t pin);

@@ -1,4 +1,5 @@
 #include "MockWProgram.hpp"
+#include <chrono>
 
 /*
  * Mock functions for the various Arduino features.
@@ -6,9 +7,12 @@
  * digital_pins and analog_pins. Note that delay does nothing.
  */
 
+using namespace std::chrono;
+
 // Delicious globals TT__TT
 Arduino ArduinoUno;
 volatile voidFuncPtr intFunc[EXTERNAL_NUM_INTERRUPTS];
+const system_clock::time_point startTime = system_clock::now();
 
 
 void clear_pins(void) {
@@ -55,6 +59,14 @@ float analogRead(uint8_t pin) {
 
 void delay(uint32_t delay) {
 	// Does nothing.
+}
+
+uint32_t millis() {
+    return duration_cast<milliseconds>(system_clock::now() - startTime).count();
+}
+
+uint32_t micros() {
+    return duration_cast<microseconds>(system_clock::now() - startTime).count();
 }
 
 void init() {}
