@@ -1,5 +1,6 @@
 #ifndef ROTARY_ENCODER_H
 #define ROTARY_ENCODER_H
+
 #include <inttypes.h>
 #include "Encoder.h"
 #include <Arduino.h>

@@ -3,7 +3,8 @@
 
 class MotorController {
 public:
-
+    void SetLinearVelocity(const int velocity);
+    void SetAngularVelocity(const float angularVelocity);
 private:
 };
 

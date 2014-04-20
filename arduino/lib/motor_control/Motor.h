@@ -9,7 +9,7 @@ public:
         BACKWARDS
     };
 
-    Motor(int directionPin, int pwmPin);
+    Motor(const int directionPin, const int pwmPin);
 
     void ChangeDirection();
     void SetDirectionForwards();

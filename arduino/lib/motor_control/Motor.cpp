@@ -1,7 +1,7 @@
 #include <Arduino.h>
 #include "Motor.h"
 
-Motor::Motor(int directionPin, int pwmPin) 
+Motor::Motor(const int directionPin, const int pwmPin) 
     : m_directionPin(directionPin),
       m_pwmPin(pwmPin),
       m_direction(Direction::FORWARDS) {

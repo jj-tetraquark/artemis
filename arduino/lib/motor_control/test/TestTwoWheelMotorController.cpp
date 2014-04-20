@@ -5,8 +5,10 @@
 
 BOOST_AUTO_TEST_SUITE(TestTwoWheelMotorController)
 
-BOOST_AUTO_TEST_CASE(TwoWheelMotorControllerInheritsFromBaseClass) {
+BOOST_AUTO_TEST_CASE(TwoWheelMotorControllerConstructionAndInterface) {
     MotorController* testController = new TwoWheelMotorController();
+    testController->SetLinearVelocity(30);
+    testController->SetAngularVelocity(2.3);
     delete testController;
 }
 
