@@ -25,7 +25,7 @@ private:
     static RotaryEncoder*   m_instance; 
     unsigned int            m_pulseCount;
     unsigned long           m_lastTimeStamp;
-    unsigned long           m_lastFrequency;
+    float                   m_lastFrequency;
     float                   m_ratio;
 
 };
@@ -36,7 +36,7 @@ RotaryEncoder<interrupt>* RotaryEncoder<interrupt>::m_instance = nullptr;
 template<Wheel interrupt>
 RotaryEncoder<interrupt>::RotaryEncoder(float ratio) : m_pulseCount(0), m_lastTimeStamp(micros()), m_ratio(ratio) {
     m_instance = this;
-    attachInterrupt(0, Handler, RISING);
+    attachInterrupt(interrupt, Handler, RISING);
 }
 
 template<Wheel interrupt>
@@ -48,7 +48,6 @@ template<Wheel interrupt>
 float RotaryEncoder<interrupt>::GetFrequency() {
     unsigned long currentTime = micros();
     float period = (currentTime - m_lastTimeStamp)/1000000.0; // convert to seconds
-
     if (period < FREQUENCY_POLL_TIMEOUT_S) { 
         return m_lastFrequency;
     }

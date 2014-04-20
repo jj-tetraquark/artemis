@@ -5,6 +5,7 @@
 #include <cmath>
 #include <chrono>
 #include <thread>
+
 #include "Arduino.h"
 #include "OdometryManager.h"
 #include "TwoWheelOdometryManager.h"
@@ -113,13 +114,22 @@ BOOST_AUTO_TEST_CASE(TestRotaryEncoderConstructionAndInterface) {
 }
 
 BOOST_AUTO_TEST_CASE(TestRotaryEncoderGetFreqency) {
-    RotaryEncoder<LEFT> encoder(1000/3.0);
+    RotaryEncoder<LEFT> encoderLeft(1000/3.0);
+    RotaryEncoder<RIGHT> encoderRight(1000/3.0);
     for(int i = 0; i < 50; i++) {
-        testTriggerInterrupt(0); 
+        testTriggerInterrupt(0); // left
+        // Trigger the right one at half speed
+        if(i%2 == 0) {
+            testTriggerInterrupt(1);
+        }
+
         std::this_thread::sleep_for(std::chrono::milliseconds(20));
     }
-    BOOST_CHECK_CLOSE(encoder.GetFrequency(), 50, 2.5); 
-    BOOST_CHECK_CLOSE(encoder.RevolutionsPerSecond(), 50*(1000/3.0), 2.5);
+    BOOST_CHECK_CLOSE(encoderLeft.GetFrequency(), 50, 2.5);
+    BOOST_CHECK_CLOSE(encoderLeft.RevolutionsPerSecond(), 50*(1000/3.0), 1);
+
+    BOOST_CHECK_CLOSE(encoderRight.GetFrequency(), 25, 2.5);
+    BOOST_CHECK_CLOSE(encoderRight.RevolutionsPerSecond(), 25*(1000/3.0), 1);
 }
     
 BOOST_AUTO_TEST_SUITE_END()
