@@ -23,7 +23,10 @@ public:
 
     static void Handler();
 
-    static constexpr int RotaryEncoderMatrix[] = {0,-1,1,2, 1,0,2,-1, -1,2,0,1, 2,1,-1,0};   
+    static constexpr int RotaryEncoderMatrix[] = {0,BACKWARDS,FORWARDS,2, 
+                                                  FORWARDS,0,2,BACKWARDS, 
+                                                  BACKWARDS,2,0,FORWARDS, 
+                                                  2,FORWARDS, BACKWARDS,0};   
 
 private:
     void IncreasePulseCount();
@@ -93,12 +96,10 @@ template<Wheel interrupt>
 void RotaryEncoder<interrupt>::InferDirection() {
     int const newReading = digitalRead(m_inputA) * 2 + digitalRead(m_inputB); // read and convert to binary representation
     int const direction = RotaryEncoder::RotaryEncoderMatrix[m_previousEncoderReading * 4 + newReading];
-    
-    if(direction == 1) {
-        m_direction = FORWARDS;
-    } else if (direction == -1) {
-        m_direction = BACKWARDS;
+    if(direction == FORWARDS || direction == BACKWARDS) { // ignore errors, basically
+        m_direction = static_cast<Encoder::Direction>(direction);
     }
+
     m_previousEncoderReading = newReading; 
 }
 #endif /* end of include guard: ROTARY_ENCODER_H */
