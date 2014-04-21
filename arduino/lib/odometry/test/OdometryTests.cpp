@@ -113,6 +113,47 @@ BOOST_AUTO_TEST_CASE(TestRotaryEncoderConstructionAndInterface) {
     delete encoder;
 }
 
+/*
+ * Encoder Input A
+ *  |‾‾‾|   |‾‾‾|   |‾‾‾|
+ * _|   |___|   |___|   |___
+ *
+ * Encoder Input B
+ *    |‾‾‾|   |‾‾‾|   |‾‾‾|
+ * ___|   |___|   |___|   |_
+ *
+ * Interrupt [XOR(A+B)]
+ *  |‾| |‾| |‾| |‾| |‾| |‾|
+ * _| |_| |_| |_| |_| |_| |_
+*/
+
+BOOST_AUTO_TEST_CASE(TestRotaryEncoderDirection) {
+    RotaryEncoder<LEFT> encoderLeft(4, 5, 1000/3.0);
+
+    // Mock the square wave pattern as in ascii above
+    digitalWrite(4, HIGH);
+    digitalWrite(5, LOW);
+    testTriggerInterrupt(0);
+    digitalWrite(4, HIGH);
+    digitalWrite(5, HIGH);
+    testTriggerInterrupt(0);
+    
+    BOOST_CHECK(encoderLeft.GetDirection() == Encoder::Direction::FORWARDS);
+    BOOST_CHECK_GT(encoderLeft.RevolutionsPerSecond(), 0);
+
+    // now go backwards
+    digitalWrite(4, HIGH);
+    digitalWrite(5, LOW);
+    testTriggerInterrupt(0);
+    digitalWrite(4, LOW);
+    digitalWrite(5, LOW);
+    testTriggerInterrupt(0);
+    
+    BOOST_CHECK(encoderLeft.GetDirection() == Encoder::Direction::BACKWARDS);
+    BOOST_CHECK_LT(encoderLeft.RevolutionsPerSecond(), 0);
+
+}
+
 BOOST_AUTO_TEST_CASE(TestRotaryEncoderGetFreqency) {
     RotaryEncoder<LEFT> encoderLeft(4, 5, 1000/3.0);
     RotaryEncoder<RIGHT> encoderRight(6, 7, 1000/3.0);
