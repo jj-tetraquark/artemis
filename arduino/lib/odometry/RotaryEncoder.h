@@ -12,8 +12,7 @@ const float FREQUENCY_POLL_TIMEOUT_S = 0.2;
 
 
 template<Wheel interruptPin>
-class RotaryEncoder : public Encoder
-{
+class RotaryEncoder : public Encoder {
 public:
     RotaryEncoder(uint8_t encoderInputA, uint8_t encoderInputB, float ratio);
 

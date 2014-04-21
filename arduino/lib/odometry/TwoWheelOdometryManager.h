@@ -4,8 +4,7 @@
 #include "Encoder.h"
 
 
-class TwoWheelOdometryManager : public OdometryManager
-{
+class TwoWheelOdometryManager : public OdometryManager {
 public:
     TwoWheelOdometryManager(int width, int wheelRadius, Encoder* leftEncoder, Encoder* rightEncoder);
     ~TwoWheelOdometryManager();

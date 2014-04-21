@@ -3,8 +3,7 @@
 
 #include "MotorController.h"
 
-class TwoWheelMotorController : public MotorController
-{
+class TwoWheelMotorController : public MotorController {
 public:
 
 private:
