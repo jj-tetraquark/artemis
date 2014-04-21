@@ -99,6 +99,7 @@ typedef void (*voidFuncPtr)(void);
 
 void pinMode(uint8_t pin, uint8_t mode);
 void digitalWrite(uint8_t pin, uint8_t level);
+int digitalRead(uint8_t);
 void analogWrite(uint8_t pin, uint8_t level);
 float analogRead(uint8_t pin);
 
@@ -129,6 +130,7 @@ public:
     void     SetValue(uint8_t newValue);
     void     Reset();
     uint8_t  GetValue() { return m_value; }
+    uint8_t  GetMode() { return m_IO; }
     bool     IsInitialized() { return m_initialized; }
      
 private:

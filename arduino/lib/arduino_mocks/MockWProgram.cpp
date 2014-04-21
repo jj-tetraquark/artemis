@@ -45,6 +45,15 @@ void digitalWrite(uint8_t pin, uint8_t level) {
     ArduinoUno.DigitalPins[pin].SetValue(level);
 }
 
+int digitalRead(uint8_t pin) {
+    checkPinIsValid(pin);
+    if (!ArduinoUno.DigitalPins[pin].IsInitialized())
+        throw UninitializedPinException(pin);
+    if (ArduinoUno.DigitalPins[pin].GetMode() != INPUT)
+        throw std::logic_error("Tried to read from pin initialized to OUTPUT. (pin " + std::to_string(pin) + ")");
+    return ArduinoUno.DigitalPins[pin].GetValue();
+}
+
 void analogWrite(uint8_t pin, uint8_t level) {
     checkPinIsValid(pin);
     if (level < 0 || level > 255) {
