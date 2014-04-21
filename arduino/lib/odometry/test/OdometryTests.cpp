@@ -128,29 +128,33 @@ BOOST_AUTO_TEST_CASE(TestRotaryEncoderConstructionAndInterface) {
 */
 
 BOOST_AUTO_TEST_CASE(TestRotaryEncoderDirection) {
-    RotaryEncoder<LEFT> encoderLeft(4, 5, 1000/3.0);
+    RotaryEncoder<LEFT> encoder(4, 5, 1000/3.0);
 
     // Mock the square wave pattern as in ascii above
     digitalWrite(4, HIGH);
     digitalWrite(5, LOW);
+    std::this_thread::sleep_for(std::chrono::milliseconds(100));
     testTriggerInterrupt(0);
     digitalWrite(4, HIGH);
     digitalWrite(5, HIGH);
+    std::this_thread::sleep_for(std::chrono::milliseconds(100));
     testTriggerInterrupt(0);
     
-    BOOST_CHECK(encoderLeft.GetDirection() == Encoder::Direction::FORWARDS);
-    BOOST_CHECK_GT(encoderLeft.RevolutionsPerSecond(), 0);
+    BOOST_CHECK(encoder.GetDirection() == Encoder::Direction::FORWARDS);
+    BOOST_CHECK_GT(encoder.RevolutionsPerSecond(), 0);
 
     // now go backwards
     digitalWrite(4, HIGH);
     digitalWrite(5, LOW);
+    std::this_thread::sleep_for(std::chrono::milliseconds(100));
     testTriggerInterrupt(0);
     digitalWrite(4, LOW);
     digitalWrite(5, LOW);
+    std::this_thread::sleep_for(std::chrono::milliseconds(100));
     testTriggerInterrupt(0);
     
-    BOOST_CHECK(encoderLeft.GetDirection() == Encoder::Direction::BACKWARDS);
-    BOOST_CHECK_LT(encoderLeft.RevolutionsPerSecond(), 0);
+    BOOST_CHECK(encoder.GetDirection() == Encoder::Direction::BACKWARDS);
+    BOOST_CHECK_LT(encoder.RevolutionsPerSecond(), 0);
 
 }
 
