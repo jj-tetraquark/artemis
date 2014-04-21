@@ -12,7 +12,7 @@ template<Wheel interruptPin>
 class RotaryEncoder : public Encoder
 {
 public:
-    RotaryEncoder(float ratio);
+    RotaryEncoder(uint8_t encoderInputA, uint8_t encoderInputB, float ratio);
 
     virtual float RevolutionsPerSecond();
     virtual float GetFrequency();
@@ -35,7 +35,8 @@ template<Wheel interrupt>
 RotaryEncoder<interrupt>* RotaryEncoder<interrupt>::m_instance = nullptr;
 
 template<Wheel interrupt>
-RotaryEncoder<interrupt>::RotaryEncoder(float ratio) : m_pulseCount(0), m_lastTimeStamp(micros()), m_ratio(ratio) {
+RotaryEncoder<interrupt>::RotaryEncoder(uint8_t encoderInputA, uint8_t encoderInputB, float ratio) 
+    : m_pulseCount(0), m_lastTimeStamp(micros()), m_ratio(ratio) {
     m_instance = this;
     attachInterrupt(interrupt, Handler, RISING);
 }

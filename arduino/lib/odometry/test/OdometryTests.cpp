@@ -19,7 +19,7 @@ BOOST_AUTO_TEST_CASE(TestOdometryManagerContructionAndInterface) {
     // TwoWheelOdometryManager expects two encoders and dimensions for the robot.
     // It should also be useable through the generic OdometryManager interface
 
-    OdometryManager* odoManager = new TwoWheelOdometryManager(1,1, new RotaryEncoder<LEFT>(1), new RotaryEncoder<RIGHT>(1));
+    OdometryManager* odoManager = new TwoWheelOdometryManager(1,1, new RotaryEncoder<LEFT>(4, 5, 1), new RotaryEncoder<RIGHT>(6, 7, 1));
     // should be able to call these methods
     odoManager->GetLinearVelocity();
     odoManager->GetAngularVelocity();
@@ -105,7 +105,7 @@ BOOST_AUTO_TEST_CASE(TestAngularVelocity) {
 
 BOOST_AUTO_TEST_CASE(TestRotaryEncoderConstructionAndInterface) {
     //RotaryEncoder has an Encoder interface
-    Encoder* encoder = new RotaryEncoder<LEFT>(1000/3.0);
+    Encoder* encoder = new RotaryEncoder<LEFT>(4, 5, 1000/3.0);
 
     //should be able to call these methods
     encoder->RevolutionsPerSecond();
@@ -114,8 +114,8 @@ BOOST_AUTO_TEST_CASE(TestRotaryEncoderConstructionAndInterface) {
 }
 
 BOOST_AUTO_TEST_CASE(TestRotaryEncoderGetFreqency) {
-    RotaryEncoder<LEFT> encoderLeft(1000/3.0);
-    RotaryEncoder<RIGHT> encoderRight(1000/3.0);
+    RotaryEncoder<LEFT> encoderLeft(4, 5, 1000/3.0);
+    RotaryEncoder<RIGHT> encoderRight(6, 7, 1000/3.0);
     for(int i = 0; i < 50; i++) {
         testTriggerInterrupt(0); // left
         // Trigger the right one at half speed
