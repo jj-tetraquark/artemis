@@ -51,7 +51,7 @@ constexpr int RotaryEncoder<interrupt>::RotaryEncoderMatrix[];
 template<Wheel interrupt>
 RotaryEncoder<interrupt>::RotaryEncoder(uint8_t encoderInputA, uint8_t encoderInputB, float ratio) 
     : m_pulseCount(0), m_lastTimeStamp(micros()), m_ratio(ratio), m_previousEncoderReading(0), 
-    m_inputA(encoderInputA), m_inputB(encoderInputB) {
+    m_inputA(encoderInputA), m_inputB(encoderInputB), m_direction(FORWARDS) {
     m_instance = this;
     attachInterrupt(interrupt, Handler, RISING);
     pinMode(encoderInputA, INPUT); 
@@ -60,7 +60,7 @@ RotaryEncoder<interrupt>::RotaryEncoder(uint8_t encoderInputA, uint8_t encoderIn
 
 template<Wheel interrupt>
 float RotaryEncoder<interrupt>::RevolutionsPerSecond() {
-    return GetFrequency() * m_ratio * (m_direction == Direction::FORWARDS ? 1 : -1);
+    return GetFrequency() * m_ratio * m_direction;
 }
 
 template<Wheel interrupt>
@@ -95,9 +95,9 @@ void RotaryEncoder<interrupt>::InferDirection() {
     int const direction = RotaryEncoder::RotaryEncoderMatrix[m_previousEncoderReading * 4 + newReading];
     
     if(direction == 1) {
-        m_direction = Direction::FORWARDS;
+        m_direction = FORWARDS;
     } else if (direction == -1) {
-        m_direction = Direction::BACKWARDS;
+        m_direction = BACKWARDS;
     }
     m_previousEncoderReading = newReading; 
 }
