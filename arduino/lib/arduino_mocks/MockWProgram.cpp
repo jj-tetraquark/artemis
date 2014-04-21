@@ -1,5 +1,6 @@
 #include "MockWProgram.hpp"
 #include <chrono>
+#include <iostream>
 
 /*
  * Mock functions for the various Arduino features.
@@ -16,7 +17,7 @@ const system_clock::time_point startTime = system_clock::now();
 
 
 void clear_pins(void) {
-    for(auto pin : ArduinoUno.DigitalPins) {
+    for(auto &pin : ArduinoUno.DigitalPins) {
         pin.Reset();
     }
 }

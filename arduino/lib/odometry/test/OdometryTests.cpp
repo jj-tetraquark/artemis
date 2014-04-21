@@ -144,18 +144,19 @@ BOOST_AUTO_TEST_CASE(TestRotaryEncoderDirection) {
     BOOST_CHECK_GT(encoder.RevolutionsPerSecond(), 0);
 
     // now go backwards
-    digitalWrite(4, HIGH);
+    digitalWrite(4, LOW);
     digitalWrite(5, LOW);
     std::this_thread::sleep_for(std::chrono::milliseconds(100));
     testTriggerInterrupt(0);
     digitalWrite(4, LOW);
-    digitalWrite(5, LOW);
+    digitalWrite(5, HIGH);
     std::this_thread::sleep_for(std::chrono::milliseconds(100));
     testTriggerInterrupt(0);
     
     BOOST_CHECK(encoder.GetDirection() == Encoder::Direction::BACKWARDS);
     BOOST_CHECK_LT(encoder.RevolutionsPerSecond(), 0);
 
+    clear_pins();
 }
 
 BOOST_AUTO_TEST_CASE(TestRotaryEncoderGetFreqency) {
