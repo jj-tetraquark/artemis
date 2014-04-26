@@ -6,7 +6,8 @@
 class PIDControlledMotor 
 {
 public:
-    PIDControlledMotor(const Encoder* encoder);
+    PIDControlledMotor(const unsigned int wheelRadius, const Encoder* encoder);
+    void SetVelocity(const int velocity);
 private:
     /* data */
 };

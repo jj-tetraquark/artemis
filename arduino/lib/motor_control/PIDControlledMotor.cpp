@@ -1,4 +1,7 @@
 #include "PIDControlledMotor.h"
 
-PIDControlledMotor::PIDControlledMotor(const Encoder* encoder) {
+PIDControlledMotor::PIDControlledMotor(const unsigned int wheelRadius, const Encoder* encoder) {
+}
+
+void PIDControlledMotor::SetVelocity(const int velocity) {
 }

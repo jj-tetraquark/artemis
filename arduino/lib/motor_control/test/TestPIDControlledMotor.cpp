@@ -4,8 +4,9 @@
 
 BOOST_AUTO_TEST_SUITE(TestPIDControlledMotor)
 
-BOOST_AUTO_TEST_CASE(TestPIDControlledMotorConstructor) {
-    PIDControlledMotor testControlledMotor(new RotaryEncoder<LEFT>(4,5,6));
+BOOST_AUTO_TEST_CASE(TestPIDControlledMotorConstructorAndInterface) {
+    PIDControlledMotor testControlledMotor(20, new RotaryEncoder<LEFT>(4,5,6));
+    testControlledMotor.SetVelocity(100);
 }
 
 BOOST_AUTO_TEST_SUITE_END();
