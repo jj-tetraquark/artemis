@@ -3,36 +3,29 @@
 
 Motor::Motor(const int directionPin, const int pwmPin) 
     : m_directionPin(directionPin),
-      m_pwmPin(pwmPin),
-      m_direction(Direction::FORWARDS) {
+      m_pwmPin(pwmPin) {
     pinMode(m_directionPin, OUTPUT);
     pinMode(m_pwmPin, OUTPUT);
 }
 
-void Motor::ChangeDirection() {
-    if (m_direction == Direction::FORWARDS) {
-        SetDirectionBackwards();
-    } else {
-        SetDirectionForwards();
-    }
-}
-
 void Motor::SetDirectionForwards() {
-    m_direction = Direction::FORWARDS;
     digitalWrite(m_directionPin, LOW);
 }
 
 void Motor::SetDirectionBackwards() {
-    m_direction = Direction::BACKWARDS;
     digitalWrite(m_directionPin, HIGH);
 }
 
 // Motor speed is taken as a percentage
 void Motor::SetSpeed(int speed) {
-    // protect against wraparound
-    if (speed < 0) {
-        speed = 0;
+    if(speed > 0) {
+        SetDirectionForwards();
+    } else {
+        SetDirectionBackwards();
+        speed *= -1; // abs value;
     }
+
+    // protect against wraparound
     if (speed > 100) {
         speed = 100;
     }

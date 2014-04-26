@@ -4,11 +4,6 @@
 
 class Motor {
 public:
-    enum class Direction {
-        FORWARDS,
-        BACKWARDS
-    };
-
     Motor(const int directionPin, const int pwmPin);
 
     void ChangeDirection();
@@ -18,7 +13,6 @@ public:
     void Stop();
 
 private:
-    Direction m_direction;
     const uint8_t m_directionPin;
     const uint8_t m_pwmPin;
 };

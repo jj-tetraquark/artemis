@@ -33,11 +33,6 @@ BOOST_AUTO_TEST_CASE(TestConstruction) {
 BOOST_AUTO_TEST_CASE(TestMotorDirectionControl) {
     Motor testMotor(2, 3);
 
-    uint8_t initialDirection = ArduinoUno.DigitalPins[2].GetValue();
-    testMotor.ChangeDirection();
-    uint8_t changedDirection = ArduinoUno.DigitalPins[2].GetValue();
-    BOOST_CHECK_NE(initialDirection, changedDirection);
-    
     // Forwards is LOW
     testMotor.SetDirectionForwards();
     BOOST_CHECK_EQUAL(ArduinoUno.DigitalPins[2].GetValue(), LOW);
@@ -61,10 +56,13 @@ BOOST_AUTO_TEST_CASE(TestMotorSetSpeed) {
 BOOST_AUTO_TEST_CASE(TestMotorSetSpeedWrapAround) {
     Motor testMotor(2, 3);
 
-    testMotor.SetSpeed(-42);
-    BOOST_CHECK_EQUAL(ArduinoUno.DigitalPins[3].GetValue(), 0);
     testMotor.SetSpeed(500);
     BOOST_CHECK_EQUAL(ArduinoUno.DigitalPins[3].GetValue(), 255);
+    BOOST_CHECK_EQUAL(ArduinoUno.DigitalPins[2].GetValue(), LOW);
+
+    testMotor.SetSpeed(-500);
+    BOOST_CHECK_EQUAL(ArduinoUno.DigitalPins[3].GetValue(), 255);
+    BOOST_CHECK_EQUAL(ArduinoUno.DigitalPins[2].GetValue(), HIGH);
 }
 
 BOOST_AUTO_TEST_CASE(TestMotorStop) {
