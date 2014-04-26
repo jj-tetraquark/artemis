@@ -30,6 +30,8 @@ BOOST_AUTO_TEST_CASE(TestPIDFunction) {
 
     std::ofstream outputDataFile("pid_data.dat");
     
+    // Simulate 600 'ticks' and let the PID controller modulate motor speed
+    // should get up to speed before it reaches the end (depending on calibration)
     for(int i = 0; i < 600; i++) {
         testControlledMotor.Update();
         int rawArduinoOutput = ArduinoUno.DigitalPins[3].GetValue();
