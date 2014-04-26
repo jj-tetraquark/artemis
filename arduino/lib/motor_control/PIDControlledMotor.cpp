@@ -7,9 +7,6 @@ PIDControlledMotor::PIDControlledMotor
     : m_wheelCircumference(2 * PI * wheelRadius), m_motor(motor), m_encoder(encoder) {
 }
 
-void PIDControlledMotor::SetVelocity(const int velocity) {
-}
-
 void PIDControlledMotor::Update() {
 
 }
