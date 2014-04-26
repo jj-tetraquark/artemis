@@ -9,8 +9,6 @@
 enum Wheel { LEFT, RIGHT };
 const float FREQUENCY_POLL_TIMEOUT_S = 0.2;
 
-
-
 template<Wheel interruptPin>
 class RotaryEncoder : public Encoder {
 public:
@@ -43,6 +41,9 @@ private:
     int                     m_previousEncoderReading;
 
 };
+
+
+
 
 template<Wheel interrupt>
 RotaryEncoder<interrupt>* RotaryEncoder<interrupt>::m_instance = nullptr;

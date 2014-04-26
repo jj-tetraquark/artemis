@@ -1,7 +1,8 @@
 Import('ardenv')
 
 ardenv.Append( CPPPATH = ['#lib/motor_control',
-                          '#lib/avr-stl'
+                          '#lib/avr-stl',
+                          '#lib/odometry'
                             ],
                 LIBPATH = [''
                         ]
