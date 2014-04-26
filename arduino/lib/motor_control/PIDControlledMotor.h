@@ -7,6 +7,8 @@ class Encoder;
 class PIDControlledMotor 
 {
 public:
+    PIDControlledMotor(const unsigned int wheelRadius, const Motor& motor, Encoder* const encoder,
+            const float kP, const float kI, const float kD);
     PIDControlledMotor(const unsigned int wheelRadius, const Motor& motor, Encoder* const encoder);
     void SetVelocity(const float velocity) { m_targetVelocity = velocity; }
     void Update();

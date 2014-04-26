@@ -22,7 +22,7 @@ BOOST_AUTO_TEST_CASE(TestPIDFunction) {
 
     clear_pins();
 
-    PIDControlledMotor testControlledMotor(wheelRadius, Motor(2,3), testEncoder);
+    PIDControlledMotor testControlledMotor(wheelRadius, Motor(2,3), testEncoder, 0.1, 0.1, 0.01);
 
     const int targetVelocity = 100;
     float currentVelocity;

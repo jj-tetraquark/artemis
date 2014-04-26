@@ -3,7 +3,8 @@
 #include "Encoder.h"
 
 PIDControlledMotor::PIDControlledMotor
-    (const unsigned int wheelRadius, const Motor& motor, Encoder* const encoder)
+    (const unsigned int wheelRadius, const Motor& motor, Encoder* const encoder,
+     const float kP, const float kI, const float kD)
     : m_wheelCircumference(2 * PI * wheelRadius), 
       m_motor(motor),
       m_encoder(encoder),
@@ -11,9 +12,14 @@ PIDControlledMotor::PIDControlledMotor
       m_previousError(0),
       m_errorIntegral(0),
       m_errorDerivative(0),
-      m_proportionalGain(0.1), 
-      m_derivativeGain(0.01),
-      m_integralGain(0.1) {
+      m_proportionalGain(kP), 
+      m_integralGain(kI),
+      m_derivativeGain(kD) {
+}
+
+PIDControlledMotor::PIDControlledMotor
+    (const unsigned int wheelRadius, const Motor& motor, Encoder* const encoder): 
+    PIDControlledMotor(wheelRadius, motor, encoder, 1, 0, 0) { // @todo make these load from a config
 }
 
 void PIDControlledMotor::Update() {
