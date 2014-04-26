@@ -5,15 +5,16 @@
 class MockEncoder : public Encoder
 {
 public:
-   float RevolutionsPerSecond() { return m_rps; }
-   Direction GetDirection() const { return m_direction; }
-   void SetRevolutionsPerSecond(const float newFrequency) { m_rps = newFrequency; }
-   void SetDirection(const Direction direction) { m_direction = direction; }
-   float GetFrequency() { return 0; } // not implemented
+    MockEncoder() : m_rps(0), m_direction(FORWARDS) {}
+    float RevolutionsPerSecond() { return m_rps; }
+    Direction GetDirection() const { return m_direction; }
+    void SetRevolutionsPerSecond(const float newFrequency) { m_rps = newFrequency; }
+    void SetDirection(const Direction direction) { m_direction = direction; }
+    float GetFrequency() { return 0; } // not implemented
 
 private:
-   float m_rps;
-   Direction m_direction;
+    float m_rps;
+    Direction m_direction;
 };
 
 
