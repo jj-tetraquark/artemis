@@ -1,4 +1,5 @@
 #include "Arduino.h"
+#include "Config.h"
 #include "PIDControlledMotor.h"
 #include "Encoder.h"
 
@@ -19,7 +20,12 @@ PIDControlledMotor::PIDControlledMotor
 
 PIDControlledMotor::PIDControlledMotor
     (const unsigned int wheelRadius, const Motor& motor, Encoder* const encoder): 
-    PIDControlledMotor(wheelRadius, motor, encoder, 1, 0, 0) { // @todo make these load from a config
+    PIDControlledMotor(wheelRadius, 
+                       motor,
+                       encoder,
+                       Config::PID::K_Proportional,
+                       Config::PID::K_Integral, 
+                       Config::PID::K_Differential) { 
 }
 
 void PIDControlledMotor::Update() {

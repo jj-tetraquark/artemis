@@ -1,11 +1,14 @@
 import os
 
 env = Environment(CC = 'g++',
-                  CPPFLAGS='-std=c++11')
+                  CPPFLAGS='-std=c++11',
+                  CPPPATH = ['#config']
+                  )
 
 ardenv = Environment(tools=["default", "arduino"],
                   UPLOAD_PORT="/dev/ttyACM0",
-                  CPPFLAGS='-std=c++0x -g'
+                  CPPFLAGS='-std=c++0x -g',
+                  CPPPATH = ['#config']
                 )
 ardenv.ConfigureBoard('uno')
 
