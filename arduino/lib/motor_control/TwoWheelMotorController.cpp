@@ -1,4 +1,5 @@
 #include "TwoWheelMotorController.h"
+#include "FeedbackControlledMotor.h"
 
 TwoWheelMotorController::TwoWheelMotorController
     (FeedbackControlledMotor* const left, FeedbackControlledMotor* const right) {

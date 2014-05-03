@@ -2,11 +2,14 @@
 #define TWOWHEELMOTORCONTROLLER_H
 
 #include "MotorController.h"
-#include "FeedbackControlledMotor.h"
+
+class FeedbackControlledMotor;
 
 class TwoWheelMotorController : public MotorController {
 public:
-    TwoWheelMotorController(FeedbackControlledMotor* const left, FeedbackControlledMotor* right);
+    TwoWheelMotorController
+        (FeedbackControlledMotor* const left, FeedbackControlledMotor* right);
+
     void SetLinearVelocity(const int velocity);
     void SetAngularVelocity(const float angularVelocity);
 private:
