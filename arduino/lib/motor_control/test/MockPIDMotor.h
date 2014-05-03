@@ -5,12 +5,15 @@
 class MockPIDMotor : public FeedbackControlledMotor
 {
 public:
+    MockPIDMotor() : m_updateCallCount(0), m_targetVelocity(0) {}
     void SetVelocity(const float velocity) { m_targetVelocity = velocity; }
-    void Update() {}
+    void Update() { m_updateCallCount++; }
 
     float GetVelocity() const { return m_targetVelocity; }
+    int GetUpdateCallCount() const { return m_updateCallCount; }
 
 private:
+    int m_updateCallCount;
     float m_targetVelocity;
 };
 

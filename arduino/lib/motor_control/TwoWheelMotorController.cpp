@@ -21,3 +21,7 @@ void TwoWheelMotorController::SetVelocities
     m_rightMotor->SetVelocity(v_r);
 }
 
+void TwoWheelMotorController::OnTick() {
+    m_leftMotor->Update();
+    m_rightMotor->Update();
+}

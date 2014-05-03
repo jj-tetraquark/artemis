@@ -13,6 +13,7 @@ public:
          const int width);
 
     void SetVelocities(const int linearVelocity, const float angularVelocity);
+    void OnTick();
 
 private:
     const int m_axelWidth;

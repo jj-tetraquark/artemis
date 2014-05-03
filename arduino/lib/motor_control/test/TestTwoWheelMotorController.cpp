@@ -11,6 +11,7 @@ BOOST_AUTO_TEST_CASE(TwoWheelMotorControllerConstructionAndInterface) {
     MockPIDMotor rightMotor;
     MotorController* testController = new TwoWheelMotorController(&leftMotor, &rightMotor, 10);
     testController->SetVelocities(30, 1.5);
+    testController->OnTick();
     delete testController;
 }
 
@@ -37,6 +38,22 @@ BOOST_AUTO_TEST_CASE(TestSetVelocities) {
             BOOST_CHECK_CLOSE(w, W, 0.1);
         }
     }
+}
+
+BOOST_AUTO_TEST_CASE(TestOnTick) {
+    // On commander tick, motor controller should call Update() on its motors
+    MockPIDMotor leftMotor;
+    MockPIDMotor rightMotor;
+    const int axelWidth = 10;
+    TwoWheelMotorController motorController(&leftMotor, &rightMotor, axelWidth);
+
+    BOOST_CHECK_EQUAL(leftMotor.GetUpdateCallCount(), 0);
+    BOOST_CHECK_EQUAL(rightMotor.GetUpdateCallCount(), 0);
+
+    motorController.OnTick();
+
+    BOOST_CHECK_EQUAL(leftMotor.GetUpdateCallCount(), 1);
+    BOOST_CHECK_EQUAL(rightMotor.GetUpdateCallCount(), 1);
 }
 
 

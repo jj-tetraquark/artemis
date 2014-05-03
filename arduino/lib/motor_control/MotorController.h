@@ -4,6 +4,7 @@
 class MotorController {
 public:
     virtual void SetVelocities(const int linearVelocity, const float angularVelocity) = 0;
+    virtual void OnTick() = 0;
 };
 
 
