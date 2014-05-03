@@ -8,10 +8,15 @@ class FeedbackControlledMotor;
 class TwoWheelMotorController : public MotorController {
 public:
     TwoWheelMotorController
-        (FeedbackControlledMotor* const left, FeedbackControlledMotor* right);
+        (FeedbackControlledMotor* const left, 
+         FeedbackControlledMotor* const right,
+         const int width);
 
     void SetVelocities(const int linearVelocity, const float angularVelocity);
+
 private:
+    const int m_axelWidth;
+
     FeedbackControlledMotor* const m_leftMotor;
     FeedbackControlledMotor* const m_rightMotor;
 };
