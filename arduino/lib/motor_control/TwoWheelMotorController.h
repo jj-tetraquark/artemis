@@ -11,5 +11,4 @@ private:
     /* data */
 };
 
-#include "TwoWheelMotorController.hpp"
 #endif /* end of include guard: TWOWHEELMOTORCONTROLLER_H */

@@ -11,7 +11,7 @@
 BOOST_AUTO_TEST_SUITE(TestPIDControlledMotor)
 
 BOOST_AUTO_TEST_CASE(TestPIDControlledMotorConstructorAndInterface) {
-    PIDMotorInterface* testControlledMotor = new PIDControlledMotor(20, Motor(7,8), new RotaryEncoder<LEFT>(4,5,6));
+    FeedbackControlledMotor* testControlledMotor = new PIDControlledMotor(20, Motor(7,8), new RotaryEncoder<LEFT>(4,5,6));
     testControlledMotor->SetVelocity(100);
     testControlledMotor->Update();
     delete testControlledMotor;

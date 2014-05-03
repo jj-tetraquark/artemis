@@ -1,11 +1,11 @@
 #ifndef PID_CONTROLLED_MOTOR_H
 #define PID_CONTROLLED_MOTOR_H
-#include "PIDMotorInterface.h"
+#include "FeedbackControlledMotor.h"
 #include "Motor.h"
 
 class Encoder;
 
-class PIDControlledMotor : public PIDMotorInterface
+class PIDControlledMotor : public FeedbackControlledMotor
 {
 public:
     PIDControlledMotor(const unsigned int wheelRadius, const Motor& motor, Encoder* const encoder,

@@ -1,7 +1,7 @@
 #ifndef PID_MOTOR_INTERFACE
 #define PID_MOTOR_INTERFACE
 
-class PIDMotorInterface 
+class FeedbackControlledMotor
 {
 public:
     virtual void SetVelocity(const float velocity) = 0;
