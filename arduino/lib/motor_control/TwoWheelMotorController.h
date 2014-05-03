@@ -10,10 +10,10 @@ public:
     TwoWheelMotorController
         (FeedbackControlledMotor* const left, FeedbackControlledMotor* right);
 
-    void SetLinearVelocity(const int velocity);
-    void SetAngularVelocity(const float angularVelocity);
+    void SetVelocities(const int linearVelocity, const float angularVelocity);
 private:
-    /* data */
+    FeedbackControlledMotor* const m_leftMotor;
+    FeedbackControlledMotor* const m_rightMotor;
 };
 
 #endif /* end of include guard: TWOWHEELMOTORCONTROLLER_H */

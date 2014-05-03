@@ -8,6 +8,8 @@ public:
     void SetVelocity(const float velocity) { m_targetVelocity = velocity; }
     void Update() {}
 
+    float GetVelocity() const { return m_targetVelocity; }
+
 private:
     float m_targetVelocity;
 };

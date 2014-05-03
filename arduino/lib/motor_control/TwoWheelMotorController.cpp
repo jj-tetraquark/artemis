@@ -2,14 +2,14 @@
 #include "FeedbackControlledMotor.h"
 
 TwoWheelMotorController::TwoWheelMotorController
-    (FeedbackControlledMotor* const left, FeedbackControlledMotor* const right) {
-    //TODO: Implement
+    (FeedbackControlledMotor* const left, FeedbackControlledMotor* const right)
+    : m_leftMotor(left),
+      m_rightMotor(right) {
 }
 
-void TwoWheelMotorController::SetLinearVelocity(const int velocity) {
-    //TODO: Implement
+void TwoWheelMotorController::SetVelocities
+    (const int linearVelocity, const float angularVelocity) {
+    m_leftMotor->SetVelocity(linearVelocity); 
+    m_rightMotor->SetVelocity(linearVelocity); 
 }
 
-void TwoWheelMotorController::SetAngularVelocity(const float angularVelocity) {
-    //TODO: Implement
-}
