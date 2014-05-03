@@ -3,6 +3,7 @@
 
 #include "MotorController.h"
 
+template<typename PIDMotor>
 class TwoWheelMotorController : public MotorController {
 public:
 
