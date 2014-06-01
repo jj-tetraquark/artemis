@@ -23,9 +23,9 @@ PIDControlledMotor::PIDControlledMotor
     PIDControlledMotor(wheelRadius, 
                        motor,
                        encoder,
-                       Config::PID::K_Proportional,
-                       Config::PID::K_Integral, 
-                       Config::PID::K_Differential) { 
+                       Config::PID::K_PROPORTIONAL,
+                       Config::PID::K_INTEGRAL, 
+                       Config::PID::K_DIFFERENTIAL) { 
 }
 
 void PIDControlledMotor::Update() {
