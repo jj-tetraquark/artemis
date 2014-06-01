@@ -1,0 +1,82 @@
+\hypertarget{_test_p_i_d_controlled_motor_8cpp}{\section{lib/motor\-\_\-control/test/\-Test\-P\-I\-D\-Controlled\-Motor.cpp File Reference}
+\label{_test_p_i_d_controlled_motor_8cpp}\index{lib/motor\-\_\-control/test/\-Test\-P\-I\-D\-Controlled\-Motor.\-cpp@{lib/motor\-\_\-control/test/\-Test\-P\-I\-D\-Controlled\-Motor.\-cpp}}
+}
+{\ttfamily \#include $<$boost/test/unit\-\_\-test.\-hpp$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include \char`\"{}Arduino.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}P\-I\-D\-Controlled\-Motor.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Rotary\-Encoder.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Motor.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}test/\-Mock\-Encoder.\-h\char`\"{}}\\*
+Include dependency graph for Test\-P\-I\-D\-Controlled\-Motor.\-cpp\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_test_p_i_d_controlled_motor_8cpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{_test_p_i_d_controlled_motor_8cpp__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_test_p_i_d_controlled_motor_8cpp_a8c993dce15d939d807cfb5c8f9e9d58b}{B\-O\-O\-S\-T\-\_\-\-A\-U\-T\-O\-\_\-\-T\-E\-S\-T\-\_\-\-C\-A\-S\-E} (Test\-P\-I\-D\-Controlled\-Motor\-Constructor\-And\-Interface)
+\item 
+\hyperlink{_test_p_i_d_controlled_motor_8cpp_a4a724ef1992a1a51b3981d561a373af0}{B\-O\-O\-S\-T\-\_\-\-A\-U\-T\-O\-\_\-\-T\-E\-S\-T\-\_\-\-C\-A\-S\-E} (Test\-P\-I\-D\-Function)
+\item 
+\hyperlink{_test_p_i_d_controlled_motor_8cpp_af7f71af5c6c124222dd1c42c5df892f4}{B\-O\-O\-S\-T\-\_\-\-A\-U\-T\-O\-\_\-\-T\-E\-S\-T\-\_\-\-S\-U\-I\-T\-E\-\_\-\-E\-N\-D} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_test_p_i_d_controlled_motor_8cpp_a8c993dce15d939d807cfb5c8f9e9d58b}{\index{Test\-P\-I\-D\-Controlled\-Motor.\-cpp@{Test\-P\-I\-D\-Controlled\-Motor.\-cpp}!B\-O\-O\-S\-T\-\_\-\-A\-U\-T\-O\-\_\-\-T\-E\-S\-T\-\_\-\-C\-A\-S\-E@{B\-O\-O\-S\-T\-\_\-\-A\-U\-T\-O\-\_\-\-T\-E\-S\-T\-\_\-\-C\-A\-S\-E}}
+\index{B\-O\-O\-S\-T\-\_\-\-A\-U\-T\-O\-\_\-\-T\-E\-S\-T\-\_\-\-C\-A\-S\-E@{B\-O\-O\-S\-T\-\_\-\-A\-U\-T\-O\-\_\-\-T\-E\-S\-T\-\_\-\-C\-A\-S\-E}!TestPIDControlledMotor.cpp@{Test\-P\-I\-D\-Controlled\-Motor.\-cpp}}
+\subsubsection[{B\-O\-O\-S\-T\-\_\-\-A\-U\-T\-O\-\_\-\-T\-E\-S\-T\-\_\-\-C\-A\-S\-E}]{\setlength{\rightskip}{0pt plus 5cm}B\-O\-O\-S\-T\-\_\-\-A\-U\-T\-O\-\_\-\-T\-E\-S\-T\-\_\-\-C\-A\-S\-E (
+\begin{DoxyParamCaption}
+\item[{Test\-P\-I\-D\-Controlled\-Motor\-Constructor\-And\-Interface}]{}
+\end{DoxyParamCaption}
+)}}\label{_test_p_i_d_controlled_motor_8cpp_a8c993dce15d939d807cfb5c8f9e9d58b}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_test_p_i_d_controlled_motor_8cpp_a8c993dce15d939d807cfb5c8f9e9d58b_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_test_p_i_d_controlled_motor_8cpp_a4a724ef1992a1a51b3981d561a373af0}{\index{Test\-P\-I\-D\-Controlled\-Motor.\-cpp@{Test\-P\-I\-D\-Controlled\-Motor.\-cpp}!B\-O\-O\-S\-T\-\_\-\-A\-U\-T\-O\-\_\-\-T\-E\-S\-T\-\_\-\-C\-A\-S\-E@{B\-O\-O\-S\-T\-\_\-\-A\-U\-T\-O\-\_\-\-T\-E\-S\-T\-\_\-\-C\-A\-S\-E}}
+\index{B\-O\-O\-S\-T\-\_\-\-A\-U\-T\-O\-\_\-\-T\-E\-S\-T\-\_\-\-C\-A\-S\-E@{B\-O\-O\-S\-T\-\_\-\-A\-U\-T\-O\-\_\-\-T\-E\-S\-T\-\_\-\-C\-A\-S\-E}!TestPIDControlledMotor.cpp@{Test\-P\-I\-D\-Controlled\-Motor.\-cpp}}
+\subsubsection[{B\-O\-O\-S\-T\-\_\-\-A\-U\-T\-O\-\_\-\-T\-E\-S\-T\-\_\-\-C\-A\-S\-E}]{\setlength{\rightskip}{0pt plus 5cm}B\-O\-O\-S\-T\-\_\-\-A\-U\-T\-O\-\_\-\-T\-E\-S\-T\-\_\-\-C\-A\-S\-E (
+\begin{DoxyParamCaption}
+\item[{Test\-P\-I\-D\-Function}]{}
+\end{DoxyParamCaption}
+)}}\label{_test_p_i_d_controlled_motor_8cpp_a4a724ef1992a1a51b3981d561a373af0}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_test_p_i_d_controlled_motor_8cpp_a4a724ef1992a1a51b3981d561a373af0_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_test_p_i_d_controlled_motor_8cpp_af7f71af5c6c124222dd1c42c5df892f4}{\index{Test\-P\-I\-D\-Controlled\-Motor.\-cpp@{Test\-P\-I\-D\-Controlled\-Motor.\-cpp}!B\-O\-O\-S\-T\-\_\-\-A\-U\-T\-O\-\_\-\-T\-E\-S\-T\-\_\-\-S\-U\-I\-T\-E\-\_\-\-E\-N\-D@{B\-O\-O\-S\-T\-\_\-\-A\-U\-T\-O\-\_\-\-T\-E\-S\-T\-\_\-\-S\-U\-I\-T\-E\-\_\-\-E\-N\-D}}
+\index{B\-O\-O\-S\-T\-\_\-\-A\-U\-T\-O\-\_\-\-T\-E\-S\-T\-\_\-\-S\-U\-I\-T\-E\-\_\-\-E\-N\-D@{B\-O\-O\-S\-T\-\_\-\-A\-U\-T\-O\-\_\-\-T\-E\-S\-T\-\_\-\-S\-U\-I\-T\-E\-\_\-\-E\-N\-D}!TestPIDControlledMotor.cpp@{Test\-P\-I\-D\-Controlled\-Motor.\-cpp}}
+\subsubsection[{B\-O\-O\-S\-T\-\_\-\-A\-U\-T\-O\-\_\-\-T\-E\-S\-T\-\_\-\-S\-U\-I\-T\-E\-\_\-\-E\-N\-D}]{\setlength{\rightskip}{0pt plus 5cm}B\-O\-O\-S\-T\-\_\-\-A\-U\-T\-O\-\_\-\-T\-E\-S\-T\-\_\-\-S\-U\-I\-T\-E\-\_\-\-E\-N\-D (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{_test_p_i_d_controlled_motor_8cpp_af7f71af5c6c124222dd1c42c5df892f4}

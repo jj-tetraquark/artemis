@@ -1,0 +1,5 @@
+<map id="Motor::Motor" name="Motor::Motor">
+<area shape="rect" id="node3" href="$_mock_w_program_8cpp.html#abf453c1659ee9fafa5af689523ac71e7" title="pinMode" alt="" coords="151,32,220,61"/>
+<area shape="rect" id="node5" href="$_mock_w_program_8cpp.html#a2e945bc480ef828618a421e96b9f8f2c" title="checkPinIsValid" alt="" coords="271,5,385,35"/>
+<area shape="rect" id="node7" href="$class_pin.html#a818cf19e4b42d2777326c52a56ae4ea9" title="Pin::SetMode" alt="" coords="277,59,379,88"/>
+</map>

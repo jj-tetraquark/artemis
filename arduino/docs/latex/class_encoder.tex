@@ -1,0 +1,132 @@
+\hypertarget{class_encoder}{\section{Encoder Class Reference}
+\label{class_encoder}\index{Encoder@{Encoder}}
+}
+
+
+{\ttfamily \#include $<$Encoder.\-h$>$}
+
+
+
+Inheritance diagram for Encoder\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_encoder__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Encoder\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=210pt]{class_encoder__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_encoder_aa7c4648a7ebc9e651c25c2d450a58213}{Direction} \{ \hyperlink{class_encoder_aa7c4648a7ebc9e651c25c2d450a58213a75ee06096317d25b47119647e33622cf}{F\-O\-R\-W\-A\-R\-D\-S} = 1, 
+\hyperlink{class_encoder_aa7c4648a7ebc9e651c25c2d450a58213a9fb277421175dd4894688e30dd757253}{B\-A\-C\-K\-W\-A\-R\-D\-S} = -\/1
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual float \hyperlink{class_encoder_a758adfad11078f8dec0ca672929a4189}{Revolutions\-Per\-Second} ()=0
+\item 
+virtual float \hyperlink{class_encoder_ab52587693b386731fcdef289e590fc40}{Get\-Frequency} ()=0
+\item 
+virtual \hyperlink{class_encoder_aa7c4648a7ebc9e651c25c2d450a58213}{Direction} \hyperlink{class_encoder_ab4faff630f313bc0e5b8718df3175fe1}{Get\-Direction} () const =0
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_encoder_aa7c4648a7ebc9e651c25c2d450a58213}{\index{Encoder@{Encoder}!Direction@{Direction}}
+\index{Direction@{Direction}!Encoder@{Encoder}}
+\subsubsection[{Direction}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Encoder\-::\-Direction}}}\label{class_encoder_aa7c4648a7ebc9e651c25c2d450a58213}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{F\-O\-R\-W\-A\-R\-D\-S@{F\-O\-R\-W\-A\-R\-D\-S}!Encoder@{Encoder}}\index{Encoder@{Encoder}!F\-O\-R\-W\-A\-R\-D\-S@{F\-O\-R\-W\-A\-R\-D\-S}}\item[{\em 
+\hypertarget{class_encoder_aa7c4648a7ebc9e651c25c2d450a58213a75ee06096317d25b47119647e33622cf}{F\-O\-R\-W\-A\-R\-D\-S}\label{class_encoder_aa7c4648a7ebc9e651c25c2d450a58213a75ee06096317d25b47119647e33622cf}
+}]\index{B\-A\-C\-K\-W\-A\-R\-D\-S@{B\-A\-C\-K\-W\-A\-R\-D\-S}!Encoder@{Encoder}}\index{Encoder@{Encoder}!B\-A\-C\-K\-W\-A\-R\-D\-S@{B\-A\-C\-K\-W\-A\-R\-D\-S}}\item[{\em 
+\hypertarget{class_encoder_aa7c4648a7ebc9e651c25c2d450a58213a9fb277421175dd4894688e30dd757253}{B\-A\-C\-K\-W\-A\-R\-D\-S}\label{class_encoder_aa7c4648a7ebc9e651c25c2d450a58213a9fb277421175dd4894688e30dd757253}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_encoder_ab4faff630f313bc0e5b8718df3175fe1}{\index{Encoder@{Encoder}!Get\-Direction@{Get\-Direction}}
+\index{Get\-Direction@{Get\-Direction}!Encoder@{Encoder}}
+\subsubsection[{Get\-Direction}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Direction} Encoder\-::\-Get\-Direction (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_encoder_ab4faff630f313bc0e5b8718df3175fe1}
+
+
+Implemented in \hyperlink{class_rotary_encoder_aa62141a77e01d0d44706f3b421e3ae25}{Rotary\-Encoder$<$ interrupt\-Pin $>$}, and \hyperlink{class_mock_encoder_a167ec4aad9f3f00217c25cec301f26b3}{Mock\-Encoder}.
+
+
+
+Here is the caller graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_encoder_ab4faff630f313bc0e5b8718df3175fe1_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_encoder_ab52587693b386731fcdef289e590fc40}{\index{Encoder@{Encoder}!Get\-Frequency@{Get\-Frequency}}
+\index{Get\-Frequency@{Get\-Frequency}!Encoder@{Encoder}}
+\subsubsection[{Get\-Frequency}]{\setlength{\rightskip}{0pt plus 5cm}virtual float Encoder\-::\-Get\-Frequency (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_encoder_ab52587693b386731fcdef289e590fc40}
+
+
+Implemented in \hyperlink{class_rotary_encoder_a3dea9166b76dad99ee708c4ff1fde9f8}{Rotary\-Encoder$<$ interrupt\-Pin $>$}, and \hyperlink{class_mock_encoder_a586614c42fbf173f3809dea3e1b9c126}{Mock\-Encoder}.
+
+
+
+Here is the caller graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_encoder_ab52587693b386731fcdef289e590fc40_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_encoder_a758adfad11078f8dec0ca672929a4189}{\index{Encoder@{Encoder}!Revolutions\-Per\-Second@{Revolutions\-Per\-Second}}
+\index{Revolutions\-Per\-Second@{Revolutions\-Per\-Second}!Encoder@{Encoder}}
+\subsubsection[{Revolutions\-Per\-Second}]{\setlength{\rightskip}{0pt plus 5cm}virtual float Encoder\-::\-Revolutions\-Per\-Second (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_encoder_a758adfad11078f8dec0ca672929a4189}
+
+
+Implemented in \hyperlink{class_rotary_encoder_a7ec02990f0ffb7bb62a3a76f0fd64ade}{Rotary\-Encoder$<$ interrupt\-Pin $>$}, and \hyperlink{class_mock_encoder_ad44313dd4a038f09084f04c908fa9a00}{Mock\-Encoder}.
+
+
+
+Here is the caller graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_encoder_a758adfad11078f8dec0ca672929a4189_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+lib/odometry/\hyperlink{_encoder_8h}{Encoder.\-h}\end{DoxyCompactItemize}

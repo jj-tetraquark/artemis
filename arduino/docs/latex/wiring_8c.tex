@@ -1,0 +1,148 @@
+\hypertarget{wiring_8c}{\section{app/build/build/uno/core/wiring.c File Reference}
+\label{wiring_8c}\index{app/build/build/uno/core/wiring.\-c@{app/build/build/uno/core/wiring.\-c}}
+}
+{\ttfamily \#include \char`\"{}wiring\-\_\-private.\-h\char`\"{}}\\*
+Include dependency graph for wiring.\-c\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{wiring_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{wiring_8c_ab1d369d575d0937b2064adbaab91594d}{M\-I\-C\-R\-O\-S\-E\-C\-O\-N\-D\-S\-\_\-\-P\-E\-R\-\_\-\-T\-I\-M\-E\-R0\-\_\-\-O\-V\-E\-R\-F\-L\-O\-W}~(\hyperlink{_mock_w_program_8hpp_a262d28355fa4b64b12743b5e93f7516b}{clock\-Cycles\-To\-Microseconds}(64 $\ast$ 256))
+\item 
+\#define \hyperlink{wiring_8c_ab640966289e34d6fe31434f37090e6e6}{M\-I\-L\-L\-I\-S\-\_\-\-I\-N\-C}~(\hyperlink{wiring_8c_ab1d369d575d0937b2064adbaab91594d}{M\-I\-C\-R\-O\-S\-E\-C\-O\-N\-D\-S\-\_\-\-P\-E\-R\-\_\-\-T\-I\-M\-E\-R0\-\_\-\-O\-V\-E\-R\-F\-L\-O\-W} / 1000)
+\item 
+\#define \hyperlink{wiring_8c_a5647e40017bbd34a202f6a672ca116e4}{F\-R\-A\-C\-T\-\_\-\-I\-N\-C}~((\hyperlink{wiring_8c_ab1d369d575d0937b2064adbaab91594d}{M\-I\-C\-R\-O\-S\-E\-C\-O\-N\-D\-S\-\_\-\-P\-E\-R\-\_\-\-T\-I\-M\-E\-R0\-\_\-\-O\-V\-E\-R\-F\-L\-O\-W} \% 1000) $>$$>$ 3)
+\item 
+\#define \hyperlink{wiring_8c_a3d5262b0f828700a2ce29198838e0d9e}{F\-R\-A\-C\-T\-\_\-\-M\-A\-X}~(1000 $>$$>$ 3)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{wiring_8c_a4b3aa3ca41aae80581b58e3db57c7eac}{if} (\hyperlink{wiring_8c_a633de4b0c14ca52ea2432a3c8a5c4c31}{f} $>$=\hyperlink{wiring_8c_a3d5262b0f828700a2ce29198838e0d9e}{F\-R\-A\-C\-T\-\_\-\-M\-A\-X})
+\item 
+unsigned long \hyperlink{wiring_8c_a6ff7f2532a22366f0013bc41397129fd}{millis} ()
+\item 
+unsigned long \hyperlink{wiring_8c_a8b24cbb7c3486e1bfa05c86db83ecb01}{micros} ()
+\item 
+void \hyperlink{wiring_8c_a6bc5f943544a887f8b23cadfb26a5e30}{delay} (unsigned long ms)
+\item 
+void \hyperlink{wiring_8c_a62e0a53bc261f9de8700cc5a92307e85}{delay\-Microseconds} (unsigned int us)
+\item 
+void \hyperlink{wiring_8c_a02fd73d861ef2e4aabb38c0c9ff82947}{init} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+volatile unsigned long \hyperlink{wiring_8c_abf2ce1def7e96f8b18edbb75220ca207}{timer0\-\_\-overflow\-\_\-count} = 0
+\item 
+volatile unsigned long \hyperlink{wiring_8c_ac4f9864544f6e6b331dc31efa6e8db7a}{timer0\-\_\-millis} = 0
+\item 
+unsigned long \hyperlink{wiring_8c_ab3cd915d758008bd19d0f2428fbb354a}{m} = \hyperlink{wiring_8c_ac4f9864544f6e6b331dc31efa6e8db7a}{timer0\-\_\-millis}
+\item 
+unsigned char \hyperlink{wiring_8c_a633de4b0c14ca52ea2432a3c8a5c4c31}{f} = timer0\-\_\-fract
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{wiring_8c_a5647e40017bbd34a202f6a672ca116e4}{\index{wiring.\-c@{wiring.\-c}!F\-R\-A\-C\-T\-\_\-\-I\-N\-C@{F\-R\-A\-C\-T\-\_\-\-I\-N\-C}}
+\index{F\-R\-A\-C\-T\-\_\-\-I\-N\-C@{F\-R\-A\-C\-T\-\_\-\-I\-N\-C}!wiring.c@{wiring.\-c}}
+\subsubsection[{F\-R\-A\-C\-T\-\_\-\-I\-N\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-R\-A\-C\-T\-\_\-\-I\-N\-C~(({\bf M\-I\-C\-R\-O\-S\-E\-C\-O\-N\-D\-S\-\_\-\-P\-E\-R\-\_\-\-T\-I\-M\-E\-R0\-\_\-\-O\-V\-E\-R\-F\-L\-O\-W} \% 1000) $>$$>$ 3)}}\label{wiring_8c_a5647e40017bbd34a202f6a672ca116e4}
+\hypertarget{wiring_8c_a3d5262b0f828700a2ce29198838e0d9e}{\index{wiring.\-c@{wiring.\-c}!F\-R\-A\-C\-T\-\_\-\-M\-A\-X@{F\-R\-A\-C\-T\-\_\-\-M\-A\-X}}
+\index{F\-R\-A\-C\-T\-\_\-\-M\-A\-X@{F\-R\-A\-C\-T\-\_\-\-M\-A\-X}!wiring.c@{wiring.\-c}}
+\subsubsection[{F\-R\-A\-C\-T\-\_\-\-M\-A\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-R\-A\-C\-T\-\_\-\-M\-A\-X~(1000 $>$$>$ 3)}}\label{wiring_8c_a3d5262b0f828700a2ce29198838e0d9e}
+\hypertarget{wiring_8c_ab1d369d575d0937b2064adbaab91594d}{\index{wiring.\-c@{wiring.\-c}!M\-I\-C\-R\-O\-S\-E\-C\-O\-N\-D\-S\-\_\-\-P\-E\-R\-\_\-\-T\-I\-M\-E\-R0\-\_\-\-O\-V\-E\-R\-F\-L\-O\-W@{M\-I\-C\-R\-O\-S\-E\-C\-O\-N\-D\-S\-\_\-\-P\-E\-R\-\_\-\-T\-I\-M\-E\-R0\-\_\-\-O\-V\-E\-R\-F\-L\-O\-W}}
+\index{M\-I\-C\-R\-O\-S\-E\-C\-O\-N\-D\-S\-\_\-\-P\-E\-R\-\_\-\-T\-I\-M\-E\-R0\-\_\-\-O\-V\-E\-R\-F\-L\-O\-W@{M\-I\-C\-R\-O\-S\-E\-C\-O\-N\-D\-S\-\_\-\-P\-E\-R\-\_\-\-T\-I\-M\-E\-R0\-\_\-\-O\-V\-E\-R\-F\-L\-O\-W}!wiring.c@{wiring.\-c}}
+\subsubsection[{M\-I\-C\-R\-O\-S\-E\-C\-O\-N\-D\-S\-\_\-\-P\-E\-R\-\_\-\-T\-I\-M\-E\-R0\-\_\-\-O\-V\-E\-R\-F\-L\-O\-W}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-I\-C\-R\-O\-S\-E\-C\-O\-N\-D\-S\-\_\-\-P\-E\-R\-\_\-\-T\-I\-M\-E\-R0\-\_\-\-O\-V\-E\-R\-F\-L\-O\-W~({\bf clock\-Cycles\-To\-Microseconds}(64 $\ast$ 256))}}\label{wiring_8c_ab1d369d575d0937b2064adbaab91594d}
+\hypertarget{wiring_8c_ab640966289e34d6fe31434f37090e6e6}{\index{wiring.\-c@{wiring.\-c}!M\-I\-L\-L\-I\-S\-\_\-\-I\-N\-C@{M\-I\-L\-L\-I\-S\-\_\-\-I\-N\-C}}
+\index{M\-I\-L\-L\-I\-S\-\_\-\-I\-N\-C@{M\-I\-L\-L\-I\-S\-\_\-\-I\-N\-C}!wiring.c@{wiring.\-c}}
+\subsubsection[{M\-I\-L\-L\-I\-S\-\_\-\-I\-N\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-I\-L\-L\-I\-S\-\_\-\-I\-N\-C~({\bf M\-I\-C\-R\-O\-S\-E\-C\-O\-N\-D\-S\-\_\-\-P\-E\-R\-\_\-\-T\-I\-M\-E\-R0\-\_\-\-O\-V\-E\-R\-F\-L\-O\-W} / 1000)}}\label{wiring_8c_ab640966289e34d6fe31434f37090e6e6}
+
+
+\subsection{Function Documentation}
+\hypertarget{wiring_8c_a6bc5f943544a887f8b23cadfb26a5e30}{\index{wiring.\-c@{wiring.\-c}!delay@{delay}}
+\index{delay@{delay}!wiring.c@{wiring.\-c}}
+\subsubsection[{delay}]{\setlength{\rightskip}{0pt plus 5cm}void delay (
+\begin{DoxyParamCaption}
+\item[{unsigned long}]{ms}
+\end{DoxyParamCaption}
+)}}\label{wiring_8c_a6bc5f943544a887f8b23cadfb26a5e30}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{wiring_8c_a6bc5f943544a887f8b23cadfb26a5e30_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=266pt]{wiring_8c_a6bc5f943544a887f8b23cadfb26a5e30_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{wiring_8c_a62e0a53bc261f9de8700cc5a92307e85}{\index{wiring.\-c@{wiring.\-c}!delay\-Microseconds@{delay\-Microseconds}}
+\index{delay\-Microseconds@{delay\-Microseconds}!wiring.c@{wiring.\-c}}
+\subsubsection[{delay\-Microseconds}]{\setlength{\rightskip}{0pt plus 5cm}void delay\-Microseconds (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{us}
+\end{DoxyParamCaption}
+)}}\label{wiring_8c_a62e0a53bc261f9de8700cc5a92307e85}
+\hypertarget{wiring_8c_a4b3aa3ca41aae80581b58e3db57c7eac}{\index{wiring.\-c@{wiring.\-c}!if@{if}}
+\index{if@{if}!wiring.c@{wiring.\-c}}
+\subsubsection[{if}]{\setlength{\rightskip}{0pt plus 5cm}if (
+\begin{DoxyParamCaption}
+\item[{{\bf f} $>$=}]{F\-R\-A\-C\-T\-\_\-\-M\-A\-X}
+\end{DoxyParamCaption}
+)}}\label{wiring_8c_a4b3aa3ca41aae80581b58e3db57c7eac}
+\hypertarget{wiring_8c_a02fd73d861ef2e4aabb38c0c9ff82947}{\index{wiring.\-c@{wiring.\-c}!init@{init}}
+\index{init@{init}!wiring.c@{wiring.\-c}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{wiring_8c_a02fd73d861ef2e4aabb38c0c9ff82947}
+\hypertarget{wiring_8c_a8b24cbb7c3486e1bfa05c86db83ecb01}{\index{wiring.\-c@{wiring.\-c}!micros@{micros}}
+\index{micros@{micros}!wiring.c@{wiring.\-c}}
+\subsubsection[{micros}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long micros (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{wiring_8c_a8b24cbb7c3486e1bfa05c86db83ecb01}
+\hypertarget{wiring_8c_a6ff7f2532a22366f0013bc41397129fd}{\index{wiring.\-c@{wiring.\-c}!millis@{millis}}
+\index{millis@{millis}!wiring.c@{wiring.\-c}}
+\subsubsection[{millis}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long millis (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{wiring_8c_a6ff7f2532a22366f0013bc41397129fd}
+
+
+\subsection{Variable Documentation}
+\hypertarget{wiring_8c_a633de4b0c14ca52ea2432a3c8a5c4c31}{\index{wiring.\-c@{wiring.\-c}!f@{f}}
+\index{f@{f}!wiring.c@{wiring.\-c}}
+\subsubsection[{f}]{\setlength{\rightskip}{0pt plus 5cm}f = timer0\-\_\-fract}}\label{wiring_8c_a633de4b0c14ca52ea2432a3c8a5c4c31}
+\hypertarget{wiring_8c_ab3cd915d758008bd19d0f2428fbb354a}{\index{wiring.\-c@{wiring.\-c}!m@{m}}
+\index{m@{m}!wiring.c@{wiring.\-c}}
+\subsubsection[{m}]{\setlength{\rightskip}{0pt plus 5cm}m = {\bf timer0\-\_\-millis}}}\label{wiring_8c_ab3cd915d758008bd19d0f2428fbb354a}
+\hypertarget{wiring_8c_ac4f9864544f6e6b331dc31efa6e8db7a}{\index{wiring.\-c@{wiring.\-c}!timer0\-\_\-millis@{timer0\-\_\-millis}}
+\index{timer0\-\_\-millis@{timer0\-\_\-millis}!wiring.c@{wiring.\-c}}
+\subsubsection[{timer0\-\_\-millis}]{\setlength{\rightskip}{0pt plus 5cm}timer0\-\_\-millis = 0}}\label{wiring_8c_ac4f9864544f6e6b331dc31efa6e8db7a}
+\hypertarget{wiring_8c_abf2ce1def7e96f8b18edbb75220ca207}{\index{wiring.\-c@{wiring.\-c}!timer0\-\_\-overflow\-\_\-count@{timer0\-\_\-overflow\-\_\-count}}
+\index{timer0\-\_\-overflow\-\_\-count@{timer0\-\_\-overflow\-\_\-count}!wiring.c@{wiring.\-c}}
+\subsubsection[{timer0\-\_\-overflow\-\_\-count}]{\setlength{\rightskip}{0pt plus 5cm}timer0\-\_\-overflow\-\_\-count = 0}}\label{wiring_8c_abf2ce1def7e96f8b18edbb75220ca207}

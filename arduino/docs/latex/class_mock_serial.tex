@@ -1,0 +1,228 @@
+\hypertarget{class_mock_serial}{\section{Mock\-Serial Class Reference}
+\label{class_mock_serial}\index{Mock\-Serial@{Mock\-Serial}}
+}
+
+
+{\ttfamily \#include $<$Mock\-W\-Program.\-hpp$>$}
+
+
+
+Collaboration diagram for Mock\-Serial\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{class_mock_serial__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_mock_serial_a48e85d202f87e4b8cd5309b022f38cf6}{set\-\_\-input\-\_\-buffer} (uint8\-\_\-t $\ast$new\-\_\-buf, uint16\-\_\-t size)
+\begin{DoxyCompactList}\small\item\em Set the input buffer data. \end{DoxyCompactList}\item 
+void \hyperlink{class_mock_serial_a12583e99c566cf006102367830a88495}{reset} (void)
+\item 
+\hyperlink{class_mock_serial_a59607f7ccbb19c4d1d6f89370dc65468}{Mock\-Serial} ()
+\item 
+void \hyperlink{class_mock_serial_a4cb7a5cdda45fa933d7cc9414b404b18}{end} (void)
+\item 
+void \hyperlink{class_mock_serial_a094ec60b8ccc49ce444e2abfc9de4396}{begin} (uint32\-\_\-t baud)
+\begin{DoxyCompactList}\small\item\em Begin serial communications. \end{DoxyCompactList}\item 
+uint32\-\_\-t \hyperlink{class_mock_serial_a590ebe7857593eeeabed3bbef6eb0906}{available} ()
+\begin{DoxyCompactList}\small\item\em Check the number of bytes available in the input buffer. \end{DoxyCompactList}\item 
+int \hyperlink{class_mock_serial_a24882d7f86bed46d72dce80abc7ff49b}{read} ()
+\begin{DoxyCompactList}\small\item\em Read a byte from the input buffer. \end{DoxyCompactList}\item 
+void \hyperlink{class_mock_serial_aa10ceb982bfbc533d94fbd0558d5c0a6}{write} (uint8\-\_\-t value)
+\begin{DoxyCompactList}\small\item\em Write a byte to the output buffer. \end{DoxyCompactList}\item 
+void \hyperlink{class_mock_serial_a98bdd77ce2c62ad05e271d828bbb81b2}{write} (uint8\-\_\-t $\ast$values, uint32\-\_\-t length)
+\begin{DoxyCompactList}\small\item\em Write a byte array to the output buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint8\-\_\-t $\ast$ \hyperlink{class_mock_serial_af89e1c5936fd7d382175ae57a5c34bf6}{\-\_\-out\-\_\-buf}
+\item 
+uint16\-\_\-t \hyperlink{class_mock_serial_a0d4616ef10a3e6dbac58922ef972a448}{\-\_\-out\-\_\-ptr}
+\item 
+uint8\-\_\-t $\ast$ \hyperlink{class_mock_serial_a5516617e3418d21180c2f2c0cb3dbd15}{\-\_\-in\-\_\-buf}
+\item 
+uint16\-\_\-t \hyperlink{class_mock_serial_a4c3f74b6cef52501833158c064395b0a}{\-\_\-in\-\_\-ptr}
+\item 
+uint32\-\_\-t \hyperlink{class_mock_serial_abbb8ad8b05cf475e6e34ba591a753146}{\-\_\-baud}
+\item 
+uint16\-\_\-t \hyperlink{class_mock_serial_a2a26571f236f963d4d1e87cc17d75bda}{\-\_\-size}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_mock_serial_a59607f7ccbb19c4d1d6f89370dc65468}{\index{Mock\-Serial@{Mock\-Serial}!Mock\-Serial@{Mock\-Serial}}
+\index{Mock\-Serial@{Mock\-Serial}!MockSerial@{Mock\-Serial}}
+\subsubsection[{Mock\-Serial}]{\setlength{\rightskip}{0pt plus 5cm}Mock\-Serial\-::\-Mock\-Serial (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_mock_serial_a59607f7ccbb19c4d1d6f89370dc65468}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{class_mock_serial_a59607f7ccbb19c4d1d6f89370dc65468_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_mock_serial_a590ebe7857593eeeabed3bbef6eb0906}{\index{Mock\-Serial@{Mock\-Serial}!available@{available}}
+\index{available@{available}!MockSerial@{Mock\-Serial}}
+\subsubsection[{available}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t Mock\-Serial\-::available (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_mock_serial_a590ebe7857593eeeabed3bbef6eb0906}
+
+
+Check the number of bytes available in the input buffer. 
+
+\begin{DoxyReturn}{Returns}
+The number of bytes available for read. 
+\end{DoxyReturn}
+\hypertarget{class_mock_serial_a094ec60b8ccc49ce444e2abfc9de4396}{\index{Mock\-Serial@{Mock\-Serial}!begin@{begin}}
+\index{begin@{begin}!MockSerial@{Mock\-Serial}}
+\subsubsection[{begin}]{\setlength{\rightskip}{0pt plus 5cm}void Mock\-Serial\-::begin (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{baud}
+\end{DoxyParamCaption}
+)}}\label{class_mock_serial_a094ec60b8ccc49ce444e2abfc9de4396}
+
+
+Begin serial communications. 
+
+This sets the current baud rate, but is otherwise a no-\/op.
+
+
+\begin{DoxyParams}{Parameters}
+{\em baud} & The baud rate to communicate at. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_mock_serial_a4cb7a5cdda45fa933d7cc9414b404b18}{\index{Mock\-Serial@{Mock\-Serial}!end@{end}}
+\index{end@{end}!MockSerial@{Mock\-Serial}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}void Mock\-Serial\-::end (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{class_mock_serial_a4cb7a5cdda45fa933d7cc9414b404b18}
+\hypertarget{class_mock_serial_a24882d7f86bed46d72dce80abc7ff49b}{\index{Mock\-Serial@{Mock\-Serial}!read@{read}}
+\index{read@{read}!MockSerial@{Mock\-Serial}}
+\subsubsection[{read}]{\setlength{\rightskip}{0pt plus 5cm}int Mock\-Serial\-::read (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_mock_serial_a24882d7f86bed46d72dce80abc7ff49b}
+
+
+Read a byte from the input buffer. 
+
+\begin{DoxyReturn}{Returns}
+The next byte from the input buffer. 
+\end{DoxyReturn}
+\hypertarget{class_mock_serial_a12583e99c566cf006102367830a88495}{\index{Mock\-Serial@{Mock\-Serial}!reset@{reset}}
+\index{reset@{reset}!MockSerial@{Mock\-Serial}}
+\subsubsection[{reset}]{\setlength{\rightskip}{0pt plus 5cm}void Mock\-Serial\-::reset (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{class_mock_serial_a12583e99c566cf006102367830a88495}
+
+
+Here is the caller graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{class_mock_serial_a12583e99c566cf006102367830a88495_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_mock_serial_a48e85d202f87e4b8cd5309b022f38cf6}{\index{Mock\-Serial@{Mock\-Serial}!set\-\_\-input\-\_\-buffer@{set\-\_\-input\-\_\-buffer}}
+\index{set\-\_\-input\-\_\-buffer@{set\-\_\-input\-\_\-buffer}!MockSerial@{Mock\-Serial}}
+\subsubsection[{set\-\_\-input\-\_\-buffer}]{\setlength{\rightskip}{0pt plus 5cm}void Mock\-Serial\-::set\-\_\-input\-\_\-buffer (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t $\ast$}]{new\-\_\-buf, }
+\item[{uint16\-\_\-t}]{size}
+\end{DoxyParamCaption}
+)}}\label{class_mock_serial_a48e85d202f87e4b8cd5309b022f38cf6}
+
+
+Set the input buffer data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\-\_\-buf} & A pointer to a byte array containing the input data. \\
+\hline
+{\em size} & The size of the input array. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_mock_serial_aa10ceb982bfbc533d94fbd0558d5c0a6}{\index{Mock\-Serial@{Mock\-Serial}!write@{write}}
+\index{write@{write}!MockSerial@{Mock\-Serial}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}void Mock\-Serial\-::write (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{value}
+\end{DoxyParamCaption}
+)}}\label{class_mock_serial_aa10ceb982bfbc533d94fbd0558d5c0a6}
+
+
+Write a byte to the output buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The byte to write. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_mock_serial_a98bdd77ce2c62ad05e271d828bbb81b2}{\index{Mock\-Serial@{Mock\-Serial}!write@{write}}
+\index{write@{write}!MockSerial@{Mock\-Serial}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}void Mock\-Serial\-::write (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t $\ast$}]{values, }
+\item[{uint32\-\_\-t}]{length}
+\end{DoxyParamCaption}
+)}}\label{class_mock_serial_a98bdd77ce2c62ad05e271d828bbb81b2}
+
+
+Write a byte array to the output buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em values} & An array of values to write. \\
+\hline
+{\em length} & The length of the array. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_mock_serial_abbb8ad8b05cf475e6e34ba591a753146}{\index{Mock\-Serial@{Mock\-Serial}!\-\_\-baud@{\-\_\-baud}}
+\index{\-\_\-baud@{\-\_\-baud}!MockSerial@{Mock\-Serial}}
+\subsubsection[{\-\_\-baud}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t Mock\-Serial\-::\-\_\-baud}}\label{class_mock_serial_abbb8ad8b05cf475e6e34ba591a753146}
+\hypertarget{class_mock_serial_a5516617e3418d21180c2f2c0cb3dbd15}{\index{Mock\-Serial@{Mock\-Serial}!\-\_\-in\-\_\-buf@{\-\_\-in\-\_\-buf}}
+\index{\-\_\-in\-\_\-buf@{\-\_\-in\-\_\-buf}!MockSerial@{Mock\-Serial}}
+\subsubsection[{\-\_\-in\-\_\-buf}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t$\ast$ Mock\-Serial\-::\-\_\-in\-\_\-buf}}\label{class_mock_serial_a5516617e3418d21180c2f2c0cb3dbd15}
+\hypertarget{class_mock_serial_a4c3f74b6cef52501833158c064395b0a}{\index{Mock\-Serial@{Mock\-Serial}!\-\_\-in\-\_\-ptr@{\-\_\-in\-\_\-ptr}}
+\index{\-\_\-in\-\_\-ptr@{\-\_\-in\-\_\-ptr}!MockSerial@{Mock\-Serial}}
+\subsubsection[{\-\_\-in\-\_\-ptr}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t Mock\-Serial\-::\-\_\-in\-\_\-ptr}}\label{class_mock_serial_a4c3f74b6cef52501833158c064395b0a}
+\hypertarget{class_mock_serial_af89e1c5936fd7d382175ae57a5c34bf6}{\index{Mock\-Serial@{Mock\-Serial}!\-\_\-out\-\_\-buf@{\-\_\-out\-\_\-buf}}
+\index{\-\_\-out\-\_\-buf@{\-\_\-out\-\_\-buf}!MockSerial@{Mock\-Serial}}
+\subsubsection[{\-\_\-out\-\_\-buf}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t$\ast$ Mock\-Serial\-::\-\_\-out\-\_\-buf}}\label{class_mock_serial_af89e1c5936fd7d382175ae57a5c34bf6}
+\hypertarget{class_mock_serial_a0d4616ef10a3e6dbac58922ef972a448}{\index{Mock\-Serial@{Mock\-Serial}!\-\_\-out\-\_\-ptr@{\-\_\-out\-\_\-ptr}}
+\index{\-\_\-out\-\_\-ptr@{\-\_\-out\-\_\-ptr}!MockSerial@{Mock\-Serial}}
+\subsubsection[{\-\_\-out\-\_\-ptr}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t Mock\-Serial\-::\-\_\-out\-\_\-ptr}}\label{class_mock_serial_a0d4616ef10a3e6dbac58922ef972a448}
+\hypertarget{class_mock_serial_a2a26571f236f963d4d1e87cc17d75bda}{\index{Mock\-Serial@{Mock\-Serial}!\-\_\-size@{\-\_\-size}}
+\index{\-\_\-size@{\-\_\-size}!MockSerial@{Mock\-Serial}}
+\subsubsection[{\-\_\-size}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t Mock\-Serial\-::\-\_\-size}}\label{class_mock_serial_a2a26571f236f963d4d1e87cc17d75bda}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+lib/arduino\-\_\-mocks/\hyperlink{_mock_w_program_8hpp}{Mock\-W\-Program.\-hpp}\item 
+lib/arduino\-\_\-mocks/\hyperlink{_mock_serial_8cpp}{Mock\-Serial.\-cpp}\end{DoxyCompactItemize}

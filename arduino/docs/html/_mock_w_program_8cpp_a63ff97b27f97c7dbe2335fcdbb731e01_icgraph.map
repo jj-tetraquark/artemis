@@ -1,0 +1,8 @@
+<map id="analogWrite" name="analogWrite">
+<area shape="rect" id="node3" href="$class_motor.html#afe04b2b18bd3e6e300ee14e3648c40bf" title="Motor::SetSpeed" alt="" coords="144,67,264,96"/>
+<area shape="rect" id="node5" href="$class_motor.html#a8f0fdb6c977ea11e89281c51534850ca" title="Motor::Stop" alt="" coords="365,5,456,35"/>
+<area shape="rect" id="node9" href="$class_p_i_d_controlled_motor.html#a7ab5288c0d1df6540475634c9a150df2" title="PIDControlledMotor\l::Update" alt="" coords="343,58,479,105"/>
+<area shape="rect" id="node13" href="$_test_motor_8cpp.html#ac3c76e3908837c7a06d970f3ab86b2a5" title="BOOST_AUTO_TEST_CASE" alt="" coords="312,128,509,157"/>
+<area shape="rect" id="node7" href="$_test_motor_8cpp.html#ad1315711aa863272672d3630cbeed467" title="BOOST_AUTO_TEST_CASE" alt="" coords="557,5,755,35"/>
+<area shape="rect" id="node11" href="$_test_p_i_d_controlled_motor_8cpp.html#a4a724ef1992a1a51b3981d561a373af0" title="BOOST_AUTO_TEST_CASE" alt="" coords="557,67,755,96"/>
+</map>

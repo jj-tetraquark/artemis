@@ -1,0 +1,10 @@
+<map id="lib/odometry/Encoder.h" name="lib/odometry/Encoder.h">
+<area shape="rect" id="node3" href="$_p_i_d_controlled_motor_8cpp.html" title="lib/motor_control/PIDControlled\lMotor.cpp" alt="" coords="5,83,208,130"/>
+<area shape="rect" id="node5" href="$_rotary_encoder_8h.html" title="lib/odometry/RotaryEncoder.h" alt="" coords="469,92,664,121"/>
+<area shape="rect" id="node11" href="$_odometry_tests_8cpp.html" title="lib/odometry/test/Odometry\lTests.cpp" alt="" coords="507,179,685,226"/>
+<area shape="rect" id="node13" href="$_mock_encoder_8h.html" title="lib/odometry/test/MockEncoder.h" alt="" coords="232,92,445,121"/>
+<area shape="rect" id="node18" href="$_two_wheel_odometry_manager_8h.html" title="lib/odometry/TwoWheelOdometry\lManager.h" alt="" coords="739,83,955,130"/>
+<area shape="rect" id="node7" href="$_test_p_i_d_controlled_motor_8cpp.html" title="lib/motor_control/test\l/TestPIDControlledMotor.cpp" alt="" coords="252,179,444,226"/>
+<area shape="rect" id="node9" href="$_motor_controller_tests_8cpp.html" title="lib/motor_control/test\l/MotorControllerTests.cpp" alt="" coords="261,275,435,322"/>
+<area shape="rect" id="node21" href="$_two_wheel_odometry_manager_8cpp.html" title="lib/odometry/TwoWheelOdometry\lManager.cpp" alt="" coords="739,179,955,226"/>
+</map>

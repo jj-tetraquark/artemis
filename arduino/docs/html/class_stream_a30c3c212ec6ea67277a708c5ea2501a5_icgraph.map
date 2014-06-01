@@ -1,0 +1,6 @@
+<map id="Stream::peek" name="Stream::peek">
+<area shape="rect" id="node3" href="$class_stream.html#ae326bf60a3c5276836526710871046fe" title="Stream::timedPeek" alt="" coords="156,44,289,73"/>
+<area shape="rect" id="node5" href="$class_stream.html#ab31c533ddc422c8d8df07986e5920534" title="Stream::peekNextDigit" alt="" coords="339,44,493,73"/>
+<area shape="rect" id="node7" href="$class_stream.html#a4578615defade6c4ce7daeb6578bb62d" title="Stream::parseInt" alt="" coords="549,5,667,35"/>
+<area shape="rect" id="node9" href="$class_stream.html#a14a98cdbb166008f25dd044d836b1864" title="Stream::parseFloat" alt="" coords="541,71,675,100"/>
+</map>

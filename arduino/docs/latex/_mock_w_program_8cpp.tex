@@ -1,0 +1,308 @@
+\hypertarget{_mock_w_program_8cpp}{\section{lib/arduino\-\_\-mocks/\-Mock\-W\-Program.cpp File Reference}
+\label{_mock_w_program_8cpp}\index{lib/arduino\-\_\-mocks/\-Mock\-W\-Program.\-cpp@{lib/arduino\-\_\-mocks/\-Mock\-W\-Program.\-cpp}}
+}
+{\ttfamily \#include \char`\"{}Mock\-W\-Program.\-hpp\char`\"{}}\\*
+{\ttfamily \#include $<$chrono$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+Include dependency graph for Mock\-W\-Program.\-cpp\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_mock_w_program_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_mock_w_program_8cpp_a43b3d45be6de81f12495d84338a231c2}{clear\-\_\-pins} (void)
+\item 
+void \hyperlink{_mock_w_program_8cpp_a2e945bc480ef828618a421e96b9f8f2c}{check\-Pin\-Is\-Valid} (uint8\-\_\-t pin)
+\item 
+void \hyperlink{_mock_w_program_8cpp_abf453c1659ee9fafa5af689523ac71e7}{pin\-Mode} (uint8\-\_\-t pin, uint8\-\_\-t mode)
+\item 
+void \hyperlink{_mock_w_program_8cpp_ae95385f26505c5c686a5129f580b884c}{digital\-Write} (uint8\-\_\-t pin, uint8\-\_\-t level)
+\item 
+int \hyperlink{_mock_w_program_8cpp_ab3e9bc73864eb6276f87aa94078224b6}{digital\-Read} (uint8\-\_\-t pin)
+\item 
+void \hyperlink{_mock_w_program_8cpp_a63ff97b27f97c7dbe2335fcdbb731e01}{analog\-Write} (uint8\-\_\-t pin, uint8\-\_\-t level)
+\item 
+float \hyperlink{_mock_w_program_8cpp_a515d965f2e2d407aab53753fb1b29e19}{analog\-Read} (uint8\-\_\-t pin)
+\item 
+void \hyperlink{_mock_w_program_8cpp_ab08497f80e933a6a6171b89f1e524d37}{delay} (uint32\-\_\-t delay)
+\item 
+uint32\-\_\-t \hyperlink{_mock_w_program_8cpp_adb94fbd930038e1510574dd4bcf07fe1}{millis} ()
+\item 
+uint32\-\_\-t \hyperlink{_mock_w_program_8cpp_a2b97cb2cd2661deade2d301d38c4ebe8}{micros} ()
+\item 
+void \hyperlink{_mock_w_program_8cpp_a02fd73d861ef2e4aabb38c0c9ff82947}{init} ()
+\item 
+void \hyperlink{_mock_w_program_8cpp_ad0d73becebba7c663f8e9ed73efee544}{attach\-Interrupt} (uint8\-\_\-t interrupt\-Num, void($\ast$user\-Func)(void), int mode)
+\item 
+void \hyperlink{_mock_w_program_8cpp_aa47ad728b5e830ac48f4085affea7d1c}{detach\-Interrupt} (uint8\-\_\-t interrupt\-Num)
+\item 
+void \hyperlink{_mock_w_program_8cpp_a5a39326b80e598449878dd5002a87821}{test\-Trigger\-Interrupt} (uint8\-\_\-t interrupt\-Num)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_arduino}{Arduino} \hyperlink{_mock_w_program_8cpp_a1e3745e3b1295ebdf228d6fdaf58eae9}{Arduino\-Uno}
+\item 
+volatile \hyperlink{_mock_w_program_8hpp_a44181537ab6ea5631069dcd97b51bcff}{void\-Func\-Ptr} \hyperlink{_mock_w_program_8cpp_aeb4ebff5fa3ae9c843479cf02ddb6994}{int\-Func} \mbox{[}\hyperlink{_mock_w_program_8hpp_a7dc85bf4f9fe2bd6abbfac2a65a04aff}{E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-N\-U\-M\-\_\-\-I\-N\-T\-E\-R\-R\-U\-P\-T\-S}\mbox{]}
+\item 
+const system\-\_\-clock\-::time\-\_\-point \hyperlink{_mock_w_program_8cpp_ac44983427f57c7f4476d25846b37a00a}{start\-Time} = system\-\_\-clock\-::now()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_mock_w_program_8cpp_a515d965f2e2d407aab53753fb1b29e19}{\index{Mock\-W\-Program.\-cpp@{Mock\-W\-Program.\-cpp}!analog\-Read@{analog\-Read}}
+\index{analog\-Read@{analog\-Read}!MockWProgram.cpp@{Mock\-W\-Program.\-cpp}}
+\subsubsection[{analog\-Read}]{\setlength{\rightskip}{0pt plus 5cm}float analog\-Read (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{pin}
+\end{DoxyParamCaption}
+)}}\label{_mock_w_program_8cpp_a515d965f2e2d407aab53753fb1b29e19}
+\hypertarget{_mock_w_program_8cpp_a63ff97b27f97c7dbe2335fcdbb731e01}{\index{Mock\-W\-Program.\-cpp@{Mock\-W\-Program.\-cpp}!analog\-Write@{analog\-Write}}
+\index{analog\-Write@{analog\-Write}!MockWProgram.cpp@{Mock\-W\-Program.\-cpp}}
+\subsubsection[{analog\-Write}]{\setlength{\rightskip}{0pt plus 5cm}void analog\-Write (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{pin, }
+\item[{uint8\-\_\-t}]{level}
+\end{DoxyParamCaption}
+)}}\label{_mock_w_program_8cpp_a63ff97b27f97c7dbe2335fcdbb731e01}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{_mock_w_program_8cpp_a63ff97b27f97c7dbe2335fcdbb731e01_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_mock_w_program_8cpp_a63ff97b27f97c7dbe2335fcdbb731e01_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_mock_w_program_8cpp_ad0d73becebba7c663f8e9ed73efee544}{\index{Mock\-W\-Program.\-cpp@{Mock\-W\-Program.\-cpp}!attach\-Interrupt@{attach\-Interrupt}}
+\index{attach\-Interrupt@{attach\-Interrupt}!MockWProgram.cpp@{Mock\-W\-Program.\-cpp}}
+\subsubsection[{attach\-Interrupt}]{\setlength{\rightskip}{0pt plus 5cm}void attach\-Interrupt (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{interrupt\-Num, }
+\item[{void($\ast$)(void)}]{user\-Func, }
+\item[{int}]{mode}
+\end{DoxyParamCaption}
+)}}\label{_mock_w_program_8cpp_ad0d73becebba7c663f8e9ed73efee544}
+
+
+Here is the caller graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_mock_w_program_8cpp_ad0d73becebba7c663f8e9ed73efee544_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_mock_w_program_8cpp_a2e945bc480ef828618a421e96b9f8f2c}{\index{Mock\-W\-Program.\-cpp@{Mock\-W\-Program.\-cpp}!check\-Pin\-Is\-Valid@{check\-Pin\-Is\-Valid}}
+\index{check\-Pin\-Is\-Valid@{check\-Pin\-Is\-Valid}!MockWProgram.cpp@{Mock\-W\-Program.\-cpp}}
+\subsubsection[{check\-Pin\-Is\-Valid}]{\setlength{\rightskip}{0pt plus 5cm}void check\-Pin\-Is\-Valid (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{pin}
+\end{DoxyParamCaption}
+)}}\label{_mock_w_program_8cpp_a2e945bc480ef828618a421e96b9f8f2c}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_mock_w_program_8cpp_a2e945bc480ef828618a421e96b9f8f2c_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_mock_w_program_8cpp_a43b3d45be6de81f12495d84338a231c2}{\index{Mock\-W\-Program.\-cpp@{Mock\-W\-Program.\-cpp}!clear\-\_\-pins@{clear\-\_\-pins}}
+\index{clear\-\_\-pins@{clear\-\_\-pins}!MockWProgram.cpp@{Mock\-W\-Program.\-cpp}}
+\subsubsection[{clear\-\_\-pins}]{\setlength{\rightskip}{0pt plus 5cm}void clear\-\_\-pins (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{_mock_w_program_8cpp_a43b3d45be6de81f12495d84338a231c2}
+
+
+Here is the caller graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=326pt]{_mock_w_program_8cpp_a43b3d45be6de81f12495d84338a231c2_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_mock_w_program_8cpp_ab08497f80e933a6a6171b89f1e524d37}{\index{Mock\-W\-Program.\-cpp@{Mock\-W\-Program.\-cpp}!delay@{delay}}
+\index{delay@{delay}!MockWProgram.cpp@{Mock\-W\-Program.\-cpp}}
+\subsubsection[{delay}]{\setlength{\rightskip}{0pt plus 5cm}void delay (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{delay}
+\end{DoxyParamCaption}
+)}}\label{_mock_w_program_8cpp_ab08497f80e933a6a6171b89f1e524d37}
+\hypertarget{_mock_w_program_8cpp_aa47ad728b5e830ac48f4085affea7d1c}{\index{Mock\-W\-Program.\-cpp@{Mock\-W\-Program.\-cpp}!detach\-Interrupt@{detach\-Interrupt}}
+\index{detach\-Interrupt@{detach\-Interrupt}!MockWProgram.cpp@{Mock\-W\-Program.\-cpp}}
+\subsubsection[{detach\-Interrupt}]{\setlength{\rightskip}{0pt plus 5cm}void detach\-Interrupt (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{interrupt\-Num}
+\end{DoxyParamCaption}
+)}}\label{_mock_w_program_8cpp_aa47ad728b5e830ac48f4085affea7d1c}
+\hypertarget{_mock_w_program_8cpp_ab3e9bc73864eb6276f87aa94078224b6}{\index{Mock\-W\-Program.\-cpp@{Mock\-W\-Program.\-cpp}!digital\-Read@{digital\-Read}}
+\index{digital\-Read@{digital\-Read}!MockWProgram.cpp@{Mock\-W\-Program.\-cpp}}
+\subsubsection[{digital\-Read}]{\setlength{\rightskip}{0pt plus 5cm}int digital\-Read (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{pin}
+\end{DoxyParamCaption}
+)}}\label{_mock_w_program_8cpp_ab3e9bc73864eb6276f87aa94078224b6}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{_mock_w_program_8cpp_ab3e9bc73864eb6276f87aa94078224b6_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_mock_w_program_8cpp_ae95385f26505c5c686a5129f580b884c}{\index{Mock\-W\-Program.\-cpp@{Mock\-W\-Program.\-cpp}!digital\-Write@{digital\-Write}}
+\index{digital\-Write@{digital\-Write}!MockWProgram.cpp@{Mock\-W\-Program.\-cpp}}
+\subsubsection[{digital\-Write}]{\setlength{\rightskip}{0pt plus 5cm}void digital\-Write (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{pin, }
+\item[{uint8\-\_\-t}]{level}
+\end{DoxyParamCaption}
+)}}\label{_mock_w_program_8cpp_ae95385f26505c5c686a5129f580b884c}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{_mock_w_program_8cpp_ae95385f26505c5c686a5129f580b884c_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_mock_w_program_8cpp_ae95385f26505c5c686a5129f580b884c_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_mock_w_program_8cpp_a02fd73d861ef2e4aabb38c0c9ff82947}{\index{Mock\-W\-Program.\-cpp@{Mock\-W\-Program.\-cpp}!init@{init}}
+\index{init@{init}!MockWProgram.cpp@{Mock\-W\-Program.\-cpp}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{_mock_w_program_8cpp_a02fd73d861ef2e4aabb38c0c9ff82947}
+\hypertarget{_mock_w_program_8cpp_a2b97cb2cd2661deade2d301d38c4ebe8}{\index{Mock\-W\-Program.\-cpp@{Mock\-W\-Program.\-cpp}!micros@{micros}}
+\index{micros@{micros}!MockWProgram.cpp@{Mock\-W\-Program.\-cpp}}
+\subsubsection[{micros}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t micros (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{_mock_w_program_8cpp_a2b97cb2cd2661deade2d301d38c4ebe8}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_mock_w_program_8cpp_a2b97cb2cd2661deade2d301d38c4ebe8_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_mock_w_program_8cpp_adb94fbd930038e1510574dd4bcf07fe1}{\index{Mock\-W\-Program.\-cpp@{Mock\-W\-Program.\-cpp}!millis@{millis}}
+\index{millis@{millis}!MockWProgram.cpp@{Mock\-W\-Program.\-cpp}}
+\subsubsection[{millis}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t millis (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{_mock_w_program_8cpp_adb94fbd930038e1510574dd4bcf07fe1}
+\hypertarget{_mock_w_program_8cpp_abf453c1659ee9fafa5af689523ac71e7}{\index{Mock\-W\-Program.\-cpp@{Mock\-W\-Program.\-cpp}!pin\-Mode@{pin\-Mode}}
+\index{pin\-Mode@{pin\-Mode}!MockWProgram.cpp@{Mock\-W\-Program.\-cpp}}
+\subsubsection[{pin\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}void pin\-Mode (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{pin, }
+\item[{uint8\-\_\-t}]{mode}
+\end{DoxyParamCaption}
+)}}\label{_mock_w_program_8cpp_abf453c1659ee9fafa5af689523ac71e7}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{_mock_w_program_8cpp_abf453c1659ee9fafa5af689523ac71e7_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{_mock_w_program_8cpp_abf453c1659ee9fafa5af689523ac71e7_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_mock_w_program_8cpp_a5a39326b80e598449878dd5002a87821}{\index{Mock\-W\-Program.\-cpp@{Mock\-W\-Program.\-cpp}!test\-Trigger\-Interrupt@{test\-Trigger\-Interrupt}}
+\index{test\-Trigger\-Interrupt@{test\-Trigger\-Interrupt}!MockWProgram.cpp@{Mock\-W\-Program.\-cpp}}
+\subsubsection[{test\-Trigger\-Interrupt}]{\setlength{\rightskip}{0pt plus 5cm}void test\-Trigger\-Interrupt (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{interrupt\-Num}
+\end{DoxyParamCaption}
+)}}\label{_mock_w_program_8cpp_a5a39326b80e598449878dd5002a87821}
+
+
+Here is the caller graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_mock_w_program_8cpp_a5a39326b80e598449878dd5002a87821_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{_mock_w_program_8cpp_a1e3745e3b1295ebdf228d6fdaf58eae9}{\index{Mock\-W\-Program.\-cpp@{Mock\-W\-Program.\-cpp}!Arduino\-Uno@{Arduino\-Uno}}
+\index{Arduino\-Uno@{Arduino\-Uno}!MockWProgram.cpp@{Mock\-W\-Program.\-cpp}}
+\subsubsection[{Arduino\-Uno}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Arduino} Arduino\-Uno}}\label{_mock_w_program_8cpp_a1e3745e3b1295ebdf228d6fdaf58eae9}
+\hypertarget{_mock_w_program_8cpp_aeb4ebff5fa3ae9c843479cf02ddb6994}{\index{Mock\-W\-Program.\-cpp@{Mock\-W\-Program.\-cpp}!int\-Func@{int\-Func}}
+\index{int\-Func@{int\-Func}!MockWProgram.cpp@{Mock\-W\-Program.\-cpp}}
+\subsubsection[{int\-Func}]{\setlength{\rightskip}{0pt plus 5cm}volatile {\bf void\-Func\-Ptr} int\-Func\mbox{[}{\bf E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-N\-U\-M\-\_\-\-I\-N\-T\-E\-R\-R\-U\-P\-T\-S}\mbox{]}}}\label{_mock_w_program_8cpp_aeb4ebff5fa3ae9c843479cf02ddb6994}
+\hypertarget{_mock_w_program_8cpp_ac44983427f57c7f4476d25846b37a00a}{\index{Mock\-W\-Program.\-cpp@{Mock\-W\-Program.\-cpp}!start\-Time@{start\-Time}}
+\index{start\-Time@{start\-Time}!MockWProgram.cpp@{Mock\-W\-Program.\-cpp}}
+\subsubsection[{start\-Time}]{\setlength{\rightskip}{0pt plus 5cm}const system\-\_\-clock\-::time\-\_\-point start\-Time = system\-\_\-clock\-::now()}}\label{_mock_w_program_8cpp_ac44983427f57c7f4476d25846b37a00a}

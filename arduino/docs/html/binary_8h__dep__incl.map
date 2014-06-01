@@ -1,0 +1,20 @@
+<map id="app/build/build/uno/core/binary.h" name="app/build/build/uno/core/binary.h">
+<area shape="rect" id="node3" href="$app_2build_2build_2uno_2core_2_arduino_8h.html" title="app/build/build/uno\l/core/Arduino.h" alt="" coords="1072,102,1203,149"/>
+<area shape="rect" id="node5" href="$_platform_8h.html" title="app/build/build/uno\l/core/Platform.h" alt="" coords="239,198,369,245"/>
+<area shape="rect" id="node13" href="$_hardware_serial_8cpp.html" title="app/build/build/uno\l/core/HardwareSerial.cpp" alt="" coords="475,294,643,341"/>
+<area shape="rect" id="node15" href="$wiring__private_8h.html" title="app/build/build/uno\l/core/wiring_private.h" alt="" coords="816,198,963,245"/>
+<area shape="rect" id="node30" href="$_i_p_address_8cpp.html" title="app/build/build/uno\l/core/IPAddress.cpp" alt="" coords="987,198,1128,245"/>
+<area shape="rect" id="node32" href="$build_2build_2uno_2core_2main_8cpp.html" title="app/build/build/uno\l/core/main.cpp" alt="" coords="1152,198,1283,245"/>
+<area shape="rect" id="node34" href="$_print_8cpp.html" title="app/build/build/uno\l/core/Print.cpp" alt="" coords="1307,198,1437,245"/>
+<area shape="rect" id="node36" href="$_stream_8cpp.html" title="app/build/build/uno\l/core/Stream.cpp" alt="" coords="1461,198,1592,245"/>
+<area shape="rect" id="node38" href="$_tone_8cpp.html" title="app/build/build/uno\l/core/Tone.cpp" alt="" coords="1616,198,1747,245"/>
+<area shape="rect" id="node7" href="$_c_d_c_8cpp.html" title="app/build/build/uno\l/core/CDC.cpp" alt="" coords="5,294,136,341"/>
+<area shape="rect" id="node9" href="$_h_i_d_8cpp.html" title="app/build/build/uno\l/core/HID.cpp" alt="" coords="160,294,291,341"/>
+<area shape="rect" id="node11" href="$_u_s_b_core_8cpp.html" title="app/build/build/uno\l/core/USBCore.cpp" alt="" coords="315,294,451,341"/>
+<area shape="rect" id="node18" href="$_w_interrupts_8c.html" title="app/build/build/uno\l/core/WInterrupts.c" alt="" coords="667,294,800,341"/>
+<area shape="rect" id="node20" href="$wiring_8c.html" title="app/build/build/uno\l/core/wiring.c" alt="" coords="824,294,955,341"/>
+<area shape="rect" id="node22" href="$wiring__analog_8c.html" title="app/build/build/uno\l/core/wiring_analog.c" alt="" coords="979,294,1123,341"/>
+<area shape="rect" id="node24" href="$wiring__digital_8c.html" title="app/build/build/uno\l/core/wiring_digital.c" alt="" coords="1147,294,1288,341"/>
+<area shape="rect" id="node26" href="$wiring__pulse_8c.html" title="app/build/build/uno\l/core/wiring_pulse.c" alt="" coords="1312,294,1451,341"/>
+<area shape="rect" id="node28" href="$wiring__shift_8c.html" title="app/build/build/uno\l/core/wiring_shift.c" alt="" coords="1475,294,1605,341"/>
+</map>

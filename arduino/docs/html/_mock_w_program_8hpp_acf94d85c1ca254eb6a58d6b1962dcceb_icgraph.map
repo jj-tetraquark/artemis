@@ -1,0 +1,5 @@
+<map id="clear_pins" name="clear_pins">
+<area shape="rect" id="node3" href="$struct_arduino_setup.html#a4f042a0574fc29c3e6800d77db394b26" title="ArduinoSetup::ArduinoSetup" alt="" coords="141,5,328,35"/>
+<area shape="rect" id="node5" href="$struct_arduino_setup.html#ae5f1cafc910b2fa73692adaeed874e7a" title="ArduinoSetup::~ArduinoSetup" alt="" coords="137,59,332,88"/>
+<area shape="rect" id="node7" href="$_test_p_i_d_controlled_motor_8cpp.html#a4a724ef1992a1a51b3981d561a373af0" title="BOOST_AUTO_TEST_CASE" alt="" coords="136,112,333,141"/>
+</map>

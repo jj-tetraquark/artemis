@@ -1,0 +1,106 @@
+\hypertarget{wiring__private_8h}{\section{app/build/build/uno/core/wiring\-\_\-private.h File Reference}
+\label{wiring__private_8h}\index{app/build/build/uno/core/wiring\-\_\-private.\-h@{app/build/build/uno/core/wiring\-\_\-private.\-h}}
+}
+{\ttfamily \#include $<$avr/io.\-h$>$}\\*
+{\ttfamily \#include $<$avr/interrupt.\-h$>$}\\*
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$stdarg.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}Arduino.\-h\char`\"{}}\\*
+Include dependency graph for wiring\-\_\-private.\-h\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{wiring__private_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{wiring__private_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{wiring__private_8h_ae70baf5399951da1e7ad45a0ed890832}{cbi}(sfr, \hyperlink{app_2build_2build_2uno_2core_2_arduino_8h_af419eea95c24741f969fbe9eb534404e}{bit})~(\-\_\-\-S\-F\-R\-\_\-\-B\-Y\-T\-E(sfr) \&= $\sim$\-\_\-\-B\-V(\hyperlink{app_2build_2build_2uno_2core_2_arduino_8h_af419eea95c24741f969fbe9eb534404e}{bit}))
+\item 
+\#define \hyperlink{wiring__private_8h_ac4a5536d9bf092116f88b94797ddc882}{sbi}(sfr, \hyperlink{app_2build_2build_2uno_2core_2_arduino_8h_af419eea95c24741f969fbe9eb534404e}{bit})~(\-\_\-\-S\-F\-R\-\_\-\-B\-Y\-T\-E(sfr) $|$= \-\_\-\-B\-V(\hyperlink{app_2build_2build_2uno_2core_2_arduino_8h_af419eea95c24741f969fbe9eb534404e}{bit}))
+\item 
+\#define \hyperlink{wiring__private_8h_ae5fd0cb8976ac0c88ec4b1fc954132c0}{E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-I\-N\-T\-\_\-0}~0
+\item 
+\#define \hyperlink{wiring__private_8h_a8c2c195748bb5496b510a201f1c57c08}{E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-I\-N\-T\-\_\-1}~1
+\item 
+\#define \hyperlink{wiring__private_8h_a934a70c53ad0fb697134ff64bc7bf5df}{E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-I\-N\-T\-\_\-2}~2
+\item 
+\#define \hyperlink{wiring__private_8h_ac5041114b634c03558741a0ae7439be7}{E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-I\-N\-T\-\_\-3}~3
+\item 
+\#define \hyperlink{wiring__private_8h_a715be2c5d2474b26366616943537d9df}{E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-I\-N\-T\-\_\-4}~4
+\item 
+\#define \hyperlink{wiring__private_8h_a553812a383ca304c6e1709aea750cc1b}{E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-I\-N\-T\-\_\-5}~5
+\item 
+\#define \hyperlink{wiring__private_8h_a0464af4de80670cce58e82c5d2aa6979}{E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-I\-N\-T\-\_\-6}~6
+\item 
+\#define \hyperlink{wiring__private_8h_a1865700db9dfb6627f79d3f3fcedbda4}{E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-I\-N\-T\-\_\-7}~7
+\item 
+\#define \hyperlink{wiring__private_8h_a3dab12da9f749340b6fc78148a7e3bd7}{E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-N\-U\-M\-\_\-\-I\-N\-T\-E\-R\-R\-U\-P\-T\-S}~2
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($\ast$ \hyperlink{wiring__private_8h_a44181537ab6ea5631069dcd97b51bcff}{void\-Func\-Ptr} )(void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{wiring__private_8h_ae70baf5399951da1e7ad45a0ed890832}{\index{wiring\-\_\-private.\-h@{wiring\-\_\-private.\-h}!cbi@{cbi}}
+\index{cbi@{cbi}!wiring_private.h@{wiring\-\_\-private.\-h}}
+\subsubsection[{cbi}]{\setlength{\rightskip}{0pt plus 5cm}\#define cbi(
+\begin{DoxyParamCaption}
+\item[{}]{sfr, }
+\item[{}]{{\bf bit}}
+\end{DoxyParamCaption}
+)~(\-\_\-\-S\-F\-R\-\_\-\-B\-Y\-T\-E(sfr) \&= $\sim$\-\_\-\-B\-V({\bf bit}))}}\label{wiring__private_8h_ae70baf5399951da1e7ad45a0ed890832}
+\hypertarget{wiring__private_8h_ae5fd0cb8976ac0c88ec4b1fc954132c0}{\index{wiring\-\_\-private.\-h@{wiring\-\_\-private.\-h}!E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-I\-N\-T\-\_\-0@{E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-I\-N\-T\-\_\-0}}
+\index{E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-I\-N\-T\-\_\-0@{E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-I\-N\-T\-\_\-0}!wiring_private.h@{wiring\-\_\-private.\-h}}
+\subsubsection[{E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-I\-N\-T\-\_\-0}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-I\-N\-T\-\_\-0~0}}\label{wiring__private_8h_ae5fd0cb8976ac0c88ec4b1fc954132c0}
+\hypertarget{wiring__private_8h_a8c2c195748bb5496b510a201f1c57c08}{\index{wiring\-\_\-private.\-h@{wiring\-\_\-private.\-h}!E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-I\-N\-T\-\_\-1@{E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-I\-N\-T\-\_\-1}}
+\index{E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-I\-N\-T\-\_\-1@{E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-I\-N\-T\-\_\-1}!wiring_private.h@{wiring\-\_\-private.\-h}}
+\subsubsection[{E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-I\-N\-T\-\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-I\-N\-T\-\_\-1~1}}\label{wiring__private_8h_a8c2c195748bb5496b510a201f1c57c08}
+\hypertarget{wiring__private_8h_a934a70c53ad0fb697134ff64bc7bf5df}{\index{wiring\-\_\-private.\-h@{wiring\-\_\-private.\-h}!E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-I\-N\-T\-\_\-2@{E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-I\-N\-T\-\_\-2}}
+\index{E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-I\-N\-T\-\_\-2@{E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-I\-N\-T\-\_\-2}!wiring_private.h@{wiring\-\_\-private.\-h}}
+\subsubsection[{E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-I\-N\-T\-\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-I\-N\-T\-\_\-2~2}}\label{wiring__private_8h_a934a70c53ad0fb697134ff64bc7bf5df}
+\hypertarget{wiring__private_8h_ac5041114b634c03558741a0ae7439be7}{\index{wiring\-\_\-private.\-h@{wiring\-\_\-private.\-h}!E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-I\-N\-T\-\_\-3@{E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-I\-N\-T\-\_\-3}}
+\index{E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-I\-N\-T\-\_\-3@{E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-I\-N\-T\-\_\-3}!wiring_private.h@{wiring\-\_\-private.\-h}}
+\subsubsection[{E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-I\-N\-T\-\_\-3}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-I\-N\-T\-\_\-3~3}}\label{wiring__private_8h_ac5041114b634c03558741a0ae7439be7}
+\hypertarget{wiring__private_8h_a715be2c5d2474b26366616943537d9df}{\index{wiring\-\_\-private.\-h@{wiring\-\_\-private.\-h}!E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-I\-N\-T\-\_\-4@{E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-I\-N\-T\-\_\-4}}
+\index{E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-I\-N\-T\-\_\-4@{E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-I\-N\-T\-\_\-4}!wiring_private.h@{wiring\-\_\-private.\-h}}
+\subsubsection[{E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-I\-N\-T\-\_\-4}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-I\-N\-T\-\_\-4~4}}\label{wiring__private_8h_a715be2c5d2474b26366616943537d9df}
+\hypertarget{wiring__private_8h_a553812a383ca304c6e1709aea750cc1b}{\index{wiring\-\_\-private.\-h@{wiring\-\_\-private.\-h}!E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-I\-N\-T\-\_\-5@{E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-I\-N\-T\-\_\-5}}
+\index{E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-I\-N\-T\-\_\-5@{E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-I\-N\-T\-\_\-5}!wiring_private.h@{wiring\-\_\-private.\-h}}
+\subsubsection[{E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-I\-N\-T\-\_\-5}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-I\-N\-T\-\_\-5~5}}\label{wiring__private_8h_a553812a383ca304c6e1709aea750cc1b}
+\hypertarget{wiring__private_8h_a0464af4de80670cce58e82c5d2aa6979}{\index{wiring\-\_\-private.\-h@{wiring\-\_\-private.\-h}!E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-I\-N\-T\-\_\-6@{E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-I\-N\-T\-\_\-6}}
+\index{E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-I\-N\-T\-\_\-6@{E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-I\-N\-T\-\_\-6}!wiring_private.h@{wiring\-\_\-private.\-h}}
+\subsubsection[{E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-I\-N\-T\-\_\-6}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-I\-N\-T\-\_\-6~6}}\label{wiring__private_8h_a0464af4de80670cce58e82c5d2aa6979}
+\hypertarget{wiring__private_8h_a1865700db9dfb6627f79d3f3fcedbda4}{\index{wiring\-\_\-private.\-h@{wiring\-\_\-private.\-h}!E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-I\-N\-T\-\_\-7@{E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-I\-N\-T\-\_\-7}}
+\index{E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-I\-N\-T\-\_\-7@{E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-I\-N\-T\-\_\-7}!wiring_private.h@{wiring\-\_\-private.\-h}}
+\subsubsection[{E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-I\-N\-T\-\_\-7}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-I\-N\-T\-\_\-7~7}}\label{wiring__private_8h_a1865700db9dfb6627f79d3f3fcedbda4}
+\hypertarget{wiring__private_8h_a3dab12da9f749340b6fc78148a7e3bd7}{\index{wiring\-\_\-private.\-h@{wiring\-\_\-private.\-h}!E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-N\-U\-M\-\_\-\-I\-N\-T\-E\-R\-R\-U\-P\-T\-S@{E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-N\-U\-M\-\_\-\-I\-N\-T\-E\-R\-R\-U\-P\-T\-S}}
+\index{E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-N\-U\-M\-\_\-\-I\-N\-T\-E\-R\-R\-U\-P\-T\-S@{E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-N\-U\-M\-\_\-\-I\-N\-T\-E\-R\-R\-U\-P\-T\-S}!wiring_private.h@{wiring\-\_\-private.\-h}}
+\subsubsection[{E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-N\-U\-M\-\_\-\-I\-N\-T\-E\-R\-R\-U\-P\-T\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-N\-U\-M\-\_\-\-I\-N\-T\-E\-R\-R\-U\-P\-T\-S~2}}\label{wiring__private_8h_a3dab12da9f749340b6fc78148a7e3bd7}
+\hypertarget{wiring__private_8h_ac4a5536d9bf092116f88b94797ddc882}{\index{wiring\-\_\-private.\-h@{wiring\-\_\-private.\-h}!sbi@{sbi}}
+\index{sbi@{sbi}!wiring_private.h@{wiring\-\_\-private.\-h}}
+\subsubsection[{sbi}]{\setlength{\rightskip}{0pt plus 5cm}\#define sbi(
+\begin{DoxyParamCaption}
+\item[{}]{sfr, }
+\item[{}]{{\bf bit}}
+\end{DoxyParamCaption}
+)~(\-\_\-\-S\-F\-R\-\_\-\-B\-Y\-T\-E(sfr) $|$= \-\_\-\-B\-V({\bf bit}))}}\label{wiring__private_8h_ac4a5536d9bf092116f88b94797ddc882}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{wiring__private_8h_a44181537ab6ea5631069dcd97b51bcff}{\index{wiring\-\_\-private.\-h@{wiring\-\_\-private.\-h}!void\-Func\-Ptr@{void\-Func\-Ptr}}
+\index{void\-Func\-Ptr@{void\-Func\-Ptr}!wiring_private.h@{wiring\-\_\-private.\-h}}
+\subsubsection[{void\-Func\-Ptr}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ void\-Func\-Ptr)(void)}}\label{wiring__private_8h_a44181537ab6ea5631069dcd97b51bcff}

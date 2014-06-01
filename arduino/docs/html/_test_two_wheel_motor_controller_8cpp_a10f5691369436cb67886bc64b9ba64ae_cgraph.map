@@ -1,0 +1,5 @@
+<map id="BOOST_AUTO_TEST_CASE" name="BOOST_AUTO_TEST_CASE">
+<area shape="rect" id="node3" href="$class_mock_p_i_d_motor.html#af3357dd729cb90a594da62c374c3e3d3" title="MockPIDMotor::GetUpdateCall\lCount" alt="" coords="252,5,455,51"/>
+<area shape="rect" id="node5" href="$class_two_wheel_motor_controller.html#a48648184a02f823f44b6b44e84ca9c47" title="TwoWheelMotorController\l::OnTick" alt="" coords="267,74,440,121"/>
+<area shape="rect" id="node7" href="$class_feedback_controlled_motor.html#a54668f85a8dadb66971ee8c8a76be802" title="FeedbackControlledMotor\l::Update" alt="" coords="504,74,675,121"/>
+</map>

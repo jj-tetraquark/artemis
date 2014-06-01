@@ -1,0 +1,12 @@
+<map id="main" name="main">
+<area shape="rect" id="node3" href="$class_motor.html#aa98ff82632c1be028f76173094fc9eae" title="Motor::SetDirectionForwards" alt="" coords="373,5,563,35"/>
+<area shape="rect" id="node7" href="$class_motor.html#a81a6ae7005ee0f21fc04d3b8303448f7" title="Motor::SetDirectionBackwards" alt="" coords="368,59,568,88"/>
+<area shape="rect" id="node10" href="$app_2build_2build_2uno_2core_2_arduino_8h.html#af597f6dc5a6a96d14d5409b48254b8fb" title="init" alt="" coords="109,164,147,193"/>
+<area shape="rect" id="node12" href="$app_2build_2build_2uno_2core_2_arduino_8h.html#a0b33edabd7f1c4e4a0bf32c67269be2f" title="loop" alt="" coords="105,111,151,140"/>
+<area shape="rect" id="node5" href="$app_2build_2build_2uno_2core_2_arduino_8h.html#a9d505fa07341c65c11e2c236550b748f" title="digitalWrite" alt="" coords="617,59,703,88"/>
+<area shape="rect" id="node14" href="$app_2build_2build_2uno_2core_2_arduino_8h.html#ab074fe18b447a055b6dbcd5f9a484db5" title="delay" alt="" coords="233,164,287,193"/>
+<area shape="rect" id="node18" href="$class_motor.html#afe04b2b18bd3e6e300ee14e3648c40bf" title="Motor::SetSpeed" alt="" coords="200,111,320,140"/>
+<area shape="rect" id="node16" href="$app_2build_2build_2uno_2core_2_arduino_8h.html#a705e7f8e2a34e0e2447e933ebf56b4d4" title="micros" alt="" coords="437,165,499,195"/>
+<area shape="rect" id="node22" href="$app_2build_2build_2uno_2core_2_arduino_8h.html#a428477da35f3b1cf51bc2653125d9d9d" title="analogWrite" alt="" coords="423,112,513,141"/>
+<area shape="rect" id="node24" href="$app_2build_2build_2uno_2core_2_arduino_8h.html#aedf28437b0c388082e19f9f6e4f47cf0" title="pinMode" alt="" coords="625,112,695,141"/>
+</map>

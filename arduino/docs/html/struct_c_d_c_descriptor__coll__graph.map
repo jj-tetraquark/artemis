@@ -1,0 +1,8 @@
+<map id="CDCDescriptor" name="CDCDescriptor">
+<area shape="rect" id="node2" href="$struct_i_a_d_descriptor.html" title="{IADDescriptor\n|+ len\l+ dtype\l+ firstInterface\l+ interfaceCount\l+ functionClass\l+ funtionSubClass\l+ functionProtocol\l+ iInterface\l|}" alt="" coords="5,14,136,221"/>
+<area shape="rect" id="node4" href="$struct_endpoint_descriptor.html" title="{EndpointDescriptor\n|+ len\l+ dtype\l+ addr\l+ attr\l+ packetSize\l+ interval\l|}" alt="" coords="160,31,293,203"/>
+<area shape="rect" id="node6" href="$struct_interface_descriptor.html" title="{InterfaceDescriptor\n|+ len\l+ dtype\l+ number\l+ alternate\l+ numEndpoints\l+ interfaceClass\l+ interfaceSubClass\l+ protocol\l+ iInterface\l|}" alt="" coords="317,5,459,229"/>
+<area shape="rect" id="node8" href="$struct_a_c_m_functional_descriptor.html" title="{ACMFunctionalDescriptor\n|+ len\l+ dtype\l+ subtype\l+ bmCapabilities\l|}" alt="" coords="483,49,653,186"/>
+<area shape="rect" id="node10" href="$struct_c_d_c_c_s_interface_descriptor.html" title="{CDCCSInterfaceDescriptor\n|+ len\l+ dtype\l+ subtype\l+ d0\l+ d1\l|}" alt="" coords="677,40,859,195"/>
+<area shape="rect" id="node12" href="$struct_c_m_functional_descriptor.html" title="{CMFunctionalDescriptor\n|+ len\l+ dtype\l+ subtype\l+ bmCapabilities\l+ bDataInterface\l|}" alt="" coords="883,40,1045,195"/>
+</map>

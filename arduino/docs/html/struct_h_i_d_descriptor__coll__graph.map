@@ -1,0 +1,5 @@
+<map id="HIDDescriptor" name="HIDDescriptor">
+<area shape="rect" id="node2" href="$struct_endpoint_descriptor.html" title="{EndpointDescriptor\n|+ len\l+ dtype\l+ addr\l+ attr\l+ packetSize\l+ interval\l|}" alt="" coords="5,31,139,203"/>
+<area shape="rect" id="node4" href="$struct_interface_descriptor.html" title="{InterfaceDescriptor\n|+ len\l+ dtype\l+ number\l+ alternate\l+ numEndpoints\l+ interfaceClass\l+ interfaceSubClass\l+ protocol\l+ iInterface\l|}" alt="" coords="163,5,304,229"/>
+<area shape="rect" id="node6" href="$struct_h_i_d_desc_descriptor.html" title="{HIDDescDescriptor\n|+ len\l+ dtype\l+ addr\l+ versionL\l+ versionH\l+ country\l+ desctype\l+ descLenL\l+ descLenH\l|}" alt="" coords="328,5,464,229"/>
+</map>

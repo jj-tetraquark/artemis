@@ -1,0 +1,20 @@
+<map id="digitalWrite" name="digitalWrite">
+<area shape="rect" id="node3" href="$_tone_8cpp.html#aeb6515d3e5c6a2079e5bccb03fc6c4f7" title="noTone" alt="" coords="209,36,273,65"/>
+<area shape="rect" id="node7" href="$wiring__analog_8c.html#a62a628c40d93ea1823a1cdb8cae9e7be" title="analogWrite" alt="" coords="196,89,287,119"/>
+<area shape="rect" id="node25" href="$wiring__shift_8c.html#a1efecc975119046403adc60af645015d" title="shiftIn" alt="" coords="212,249,271,279"/>
+<area shape="rect" id="node27" href="$wiring__shift_8c.html#ac44afc7b9d1ec5feb1179b2e3454690a" title="shiftOut" alt="" coords="208,303,275,332"/>
+<area shape="rect" id="node29" href="$class_motor.html#aa98ff82632c1be028f76173094fc9eae" title="Motor::SetDirectionForwards" alt="" coords="147,196,336,225"/>
+<area shape="rect" id="node36" href="$class_motor.html#a81a6ae7005ee0f21fc04d3b8303448f7" title="Motor::SetDirectionBackwards" alt="" coords="141,143,341,172"/>
+<area shape="rect" id="node41" href="$_odometry_tests_8cpp.html#aa5a53ee35db35e3c458ba7d042aa96aa" title="BOOST_AUTO_TEST_CASE" alt="" coords="143,356,340,385"/>
+<area shape="rect" id="node5" href="$_tone_8cpp.html#a5686c229bdef50123688ab6cb1404230" title="ISR" alt="" coords="465,36,511,65"/>
+<area shape="rect" id="node9" href="$class_motor.html#afe04b2b18bd3e6e300ee14e3648c40bf" title="Motor::SetSpeed" alt="" coords="428,89,548,119"/>
+<area shape="rect" id="node11" href="$main_8cpp.html#afe461d27b9c48d5921c00d521181f12f" title="loop" alt="" coords="711,5,756,35"/>
+<area shape="rect" id="node15" href="$class_motor.html#a8f0fdb6c977ea11e89281c51534850ca" title="Motor::Stop" alt="" coords="688,59,779,88"/>
+<area shape="rect" id="node19" href="$class_p_i_d_controlled_motor.html#a7ab5288c0d1df6540475634c9a150df2" title="PIDControlledMotor\l::Update" alt="" coords="665,111,801,158"/>
+<area shape="rect" id="node23" href="$_test_motor_8cpp.html#ac3c76e3908837c7a06d970f3ab86b2a5" title="BOOST_AUTO_TEST_CASE" alt="" coords="635,181,832,211"/>
+<area shape="rect" id="node13" href="$build_2build_2uno_2core_2main_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="953,5,1004,35"/>
+<area shape="rect" id="node17" href="$_test_motor_8cpp.html#ad1315711aa863272672d3630cbeed467" title="BOOST_AUTO_TEST_CASE" alt="" coords="880,59,1077,88"/>
+<area shape="rect" id="node21" href="$_test_p_i_d_controlled_motor_8cpp.html#a4a724ef1992a1a51b3981d561a373af0" title="BOOST_AUTO_TEST_CASE" alt="" coords="880,120,1077,149"/>
+<area shape="rect" id="node31" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="463,143,513,172"/>
+<area shape="rect" id="node34" href="$_test_motor_8cpp.html#a3b7d25aab85a730a059908d458355eaa" title="BOOST_AUTO_TEST_CASE" alt="" coords="389,196,587,225"/>
+</map>

@@ -1,0 +1,191 @@
+\hypertarget{_tone_8cpp}{\section{app/build/build/uno/core/\-Tone.cpp File Reference}
+\label{_tone_8cpp}\index{app/build/build/uno/core/\-Tone.\-cpp@{app/build/build/uno/core/\-Tone.\-cpp}}
+}
+{\ttfamily \#include $<$avr/interrupt.\-h$>$}\\*
+{\ttfamily \#include $<$avr/pgmspace.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}Arduino.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}pins\-\_\-arduino.\-h\char`\"{}}\\*
+Include dependency graph for Tone.\-cpp\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_tone_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_tone_8cpp_ac1557def0ecf88cd9bb498726398ec50}{A\-V\-A\-I\-L\-A\-B\-L\-E\-\_\-\-T\-O\-N\-E\-\_\-\-P\-I\-N\-S}~1
+\item 
+\#define \hyperlink{_tone_8cpp_a1967715419c17f2777f7b3778cf21173}{U\-S\-E\-\_\-\-T\-I\-M\-E\-R2}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_tone_8cpp_a62bcbbe6c995dd7de4b43b525d529cdb}{tone} (uint8\-\_\-t \-\_\-pin, unsigned int frequency, unsigned long duration)
+\item 
+void \hyperlink{_tone_8cpp_a3768cb4f8fbed3025c554248a60ce202}{disable\-Timer} (uint8\-\_\-t \-\_\-timer)
+\item 
+void \hyperlink{_tone_8cpp_aeb6515d3e5c6a2079e5bccb03fc6c4f7}{no\-Tone} (uint8\-\_\-t \-\_\-pin)
+\item 
+\hyperlink{_tone_8cpp_a5686c229bdef50123688ab6cb1404230}{I\-S\-R} (T\-I\-M\-E\-R2\-\_\-\-C\-O\-M\-P\-A\-\_\-vect)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+volatile long \hyperlink{_tone_8cpp_ad4760817d931e3de7c38da228df9a331}{timer0\-\_\-toggle\-\_\-count}
+\item 
+volatile uint8\-\_\-t $\ast$ \hyperlink{_tone_8cpp_a205ba6b597ec59632d6af3b091068fdb}{timer0\-\_\-pin\-\_\-port}
+\item 
+volatile uint8\-\_\-t \hyperlink{_tone_8cpp_a906748e28f661986a7c162ca7163f13d}{timer0\-\_\-pin\-\_\-mask}
+\item 
+volatile long \hyperlink{_tone_8cpp_abfb10b583902f7d75ac083182ec88b40}{timer1\-\_\-toggle\-\_\-count}
+\item 
+volatile uint8\-\_\-t $\ast$ \hyperlink{_tone_8cpp_a239b66a07cfc177dbc9bde599425a062}{timer1\-\_\-pin\-\_\-port}
+\item 
+volatile uint8\-\_\-t \hyperlink{_tone_8cpp_a75d650df9407f99701fb1a96bb80d78b}{timer1\-\_\-pin\-\_\-mask}
+\item 
+volatile long \hyperlink{_tone_8cpp_a4d4aba279e8106632322ed02c8d0f5f1}{timer2\-\_\-toggle\-\_\-count}
+\item 
+volatile uint8\-\_\-t $\ast$ \hyperlink{_tone_8cpp_adb53f0106b3a4295cb5162440b37f6a8}{timer2\-\_\-pin\-\_\-port}
+\item 
+volatile uint8\-\_\-t \hyperlink{_tone_8cpp_adc830a5e7410e14d1a283a8f1a31eb98}{timer2\-\_\-pin\-\_\-mask}
+\item 
+const uint8\-\_\-t P\-R\-O\-G\-M\-E\-M \hyperlink{_tone_8cpp_a184e7105c73b5285498782cdc96ba2bd}{tone\-\_\-pin\-\_\-to\-\_\-timer\-\_\-\-P\-G\-M} \mbox{[}$\,$\mbox{]} = \{ 2 \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{_tone_8cpp_ac1557def0ecf88cd9bb498726398ec50}{\index{Tone.\-cpp@{Tone.\-cpp}!A\-V\-A\-I\-L\-A\-B\-L\-E\-\_\-\-T\-O\-N\-E\-\_\-\-P\-I\-N\-S@{A\-V\-A\-I\-L\-A\-B\-L\-E\-\_\-\-T\-O\-N\-E\-\_\-\-P\-I\-N\-S}}
+\index{A\-V\-A\-I\-L\-A\-B\-L\-E\-\_\-\-T\-O\-N\-E\-\_\-\-P\-I\-N\-S@{A\-V\-A\-I\-L\-A\-B\-L\-E\-\_\-\-T\-O\-N\-E\-\_\-\-P\-I\-N\-S}!Tone.cpp@{Tone.\-cpp}}
+\subsubsection[{A\-V\-A\-I\-L\-A\-B\-L\-E\-\_\-\-T\-O\-N\-E\-\_\-\-P\-I\-N\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-V\-A\-I\-L\-A\-B\-L\-E\-\_\-\-T\-O\-N\-E\-\_\-\-P\-I\-N\-S~1}}\label{_tone_8cpp_ac1557def0ecf88cd9bb498726398ec50}
+\hypertarget{_tone_8cpp_a1967715419c17f2777f7b3778cf21173}{\index{Tone.\-cpp@{Tone.\-cpp}!U\-S\-E\-\_\-\-T\-I\-M\-E\-R2@{U\-S\-E\-\_\-\-T\-I\-M\-E\-R2}}
+\index{U\-S\-E\-\_\-\-T\-I\-M\-E\-R2@{U\-S\-E\-\_\-\-T\-I\-M\-E\-R2}!Tone.cpp@{Tone.\-cpp}}
+\subsubsection[{U\-S\-E\-\_\-\-T\-I\-M\-E\-R2}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-S\-E\-\_\-\-T\-I\-M\-E\-R2}}\label{_tone_8cpp_a1967715419c17f2777f7b3778cf21173}
+
+
+\subsection{Function Documentation}
+\hypertarget{_tone_8cpp_a3768cb4f8fbed3025c554248a60ce202}{\index{Tone.\-cpp@{Tone.\-cpp}!disable\-Timer@{disable\-Timer}}
+\index{disable\-Timer@{disable\-Timer}!Tone.cpp@{Tone.\-cpp}}
+\subsubsection[{disable\-Timer}]{\setlength{\rightskip}{0pt plus 5cm}void disable\-Timer (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{\-\_\-timer}
+\end{DoxyParamCaption}
+)}}\label{_tone_8cpp_a3768cb4f8fbed3025c554248a60ce202}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=308pt]{_tone_8cpp_a3768cb4f8fbed3025c554248a60ce202_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_tone_8cpp_a5686c229bdef50123688ab6cb1404230}{\index{Tone.\-cpp@{Tone.\-cpp}!I\-S\-R@{I\-S\-R}}
+\index{I\-S\-R@{I\-S\-R}!Tone.cpp@{Tone.\-cpp}}
+\subsubsection[{I\-S\-R}]{\setlength{\rightskip}{0pt plus 5cm}I\-S\-R (
+\begin{DoxyParamCaption}
+\item[{T\-I\-M\-E\-R2\-\_\-\-C\-O\-M\-P\-A\-\_\-vect}]{}
+\end{DoxyParamCaption}
+)}}\label{_tone_8cpp_a5686c229bdef50123688ab6cb1404230}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=308pt]{_tone_8cpp_a5686c229bdef50123688ab6cb1404230_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_tone_8cpp_aeb6515d3e5c6a2079e5bccb03fc6c4f7}{\index{Tone.\-cpp@{Tone.\-cpp}!no\-Tone@{no\-Tone}}
+\index{no\-Tone@{no\-Tone}!Tone.cpp@{Tone.\-cpp}}
+\subsubsection[{no\-Tone}]{\setlength{\rightskip}{0pt plus 5cm}void no\-Tone (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{\-\_\-pin}
+\end{DoxyParamCaption}
+)}}\label{_tone_8cpp_aeb6515d3e5c6a2079e5bccb03fc6c4f7}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{_tone_8cpp_aeb6515d3e5c6a2079e5bccb03fc6c4f7_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=200pt]{_tone_8cpp_aeb6515d3e5c6a2079e5bccb03fc6c4f7_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_tone_8cpp_a62bcbbe6c995dd7de4b43b525d529cdb}{\index{Tone.\-cpp@{Tone.\-cpp}!tone@{tone}}
+\index{tone@{tone}!Tone.cpp@{Tone.\-cpp}}
+\subsubsection[{tone}]{\setlength{\rightskip}{0pt plus 5cm}void tone (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{\-\_\-pin, }
+\item[{unsigned int}]{frequency, }
+\item[{unsigned long}]{duration}
+\end{DoxyParamCaption}
+)}}\label{_tone_8cpp_a62bcbbe6c995dd7de4b43b525d529cdb}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=206pt]{_tone_8cpp_a62bcbbe6c995dd7de4b43b525d529cdb_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{_tone_8cpp_a906748e28f661986a7c162ca7163f13d}{\index{Tone.\-cpp@{Tone.\-cpp}!timer0\-\_\-pin\-\_\-mask@{timer0\-\_\-pin\-\_\-mask}}
+\index{timer0\-\_\-pin\-\_\-mask@{timer0\-\_\-pin\-\_\-mask}!Tone.cpp@{Tone.\-cpp}}
+\subsubsection[{timer0\-\_\-pin\-\_\-mask}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint8\-\_\-t timer0\-\_\-pin\-\_\-mask}}\label{_tone_8cpp_a906748e28f661986a7c162ca7163f13d}
+\hypertarget{_tone_8cpp_a205ba6b597ec59632d6af3b091068fdb}{\index{Tone.\-cpp@{Tone.\-cpp}!timer0\-\_\-pin\-\_\-port@{timer0\-\_\-pin\-\_\-port}}
+\index{timer0\-\_\-pin\-\_\-port@{timer0\-\_\-pin\-\_\-port}!Tone.cpp@{Tone.\-cpp}}
+\subsubsection[{timer0\-\_\-pin\-\_\-port}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint8\-\_\-t$\ast$ timer0\-\_\-pin\-\_\-port}}\label{_tone_8cpp_a205ba6b597ec59632d6af3b091068fdb}
+\hypertarget{_tone_8cpp_ad4760817d931e3de7c38da228df9a331}{\index{Tone.\-cpp@{Tone.\-cpp}!timer0\-\_\-toggle\-\_\-count@{timer0\-\_\-toggle\-\_\-count}}
+\index{timer0\-\_\-toggle\-\_\-count@{timer0\-\_\-toggle\-\_\-count}!Tone.cpp@{Tone.\-cpp}}
+\subsubsection[{timer0\-\_\-toggle\-\_\-count}]{\setlength{\rightskip}{0pt plus 5cm}volatile long timer0\-\_\-toggle\-\_\-count}}\label{_tone_8cpp_ad4760817d931e3de7c38da228df9a331}
+\hypertarget{_tone_8cpp_a75d650df9407f99701fb1a96bb80d78b}{\index{Tone.\-cpp@{Tone.\-cpp}!timer1\-\_\-pin\-\_\-mask@{timer1\-\_\-pin\-\_\-mask}}
+\index{timer1\-\_\-pin\-\_\-mask@{timer1\-\_\-pin\-\_\-mask}!Tone.cpp@{Tone.\-cpp}}
+\subsubsection[{timer1\-\_\-pin\-\_\-mask}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint8\-\_\-t timer1\-\_\-pin\-\_\-mask}}\label{_tone_8cpp_a75d650df9407f99701fb1a96bb80d78b}
+\hypertarget{_tone_8cpp_a239b66a07cfc177dbc9bde599425a062}{\index{Tone.\-cpp@{Tone.\-cpp}!timer1\-\_\-pin\-\_\-port@{timer1\-\_\-pin\-\_\-port}}
+\index{timer1\-\_\-pin\-\_\-port@{timer1\-\_\-pin\-\_\-port}!Tone.cpp@{Tone.\-cpp}}
+\subsubsection[{timer1\-\_\-pin\-\_\-port}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint8\-\_\-t$\ast$ timer1\-\_\-pin\-\_\-port}}\label{_tone_8cpp_a239b66a07cfc177dbc9bde599425a062}
+\hypertarget{_tone_8cpp_abfb10b583902f7d75ac083182ec88b40}{\index{Tone.\-cpp@{Tone.\-cpp}!timer1\-\_\-toggle\-\_\-count@{timer1\-\_\-toggle\-\_\-count}}
+\index{timer1\-\_\-toggle\-\_\-count@{timer1\-\_\-toggle\-\_\-count}!Tone.cpp@{Tone.\-cpp}}
+\subsubsection[{timer1\-\_\-toggle\-\_\-count}]{\setlength{\rightskip}{0pt plus 5cm}volatile long timer1\-\_\-toggle\-\_\-count}}\label{_tone_8cpp_abfb10b583902f7d75ac083182ec88b40}
+\hypertarget{_tone_8cpp_adc830a5e7410e14d1a283a8f1a31eb98}{\index{Tone.\-cpp@{Tone.\-cpp}!timer2\-\_\-pin\-\_\-mask@{timer2\-\_\-pin\-\_\-mask}}
+\index{timer2\-\_\-pin\-\_\-mask@{timer2\-\_\-pin\-\_\-mask}!Tone.cpp@{Tone.\-cpp}}
+\subsubsection[{timer2\-\_\-pin\-\_\-mask}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint8\-\_\-t timer2\-\_\-pin\-\_\-mask}}\label{_tone_8cpp_adc830a5e7410e14d1a283a8f1a31eb98}
+\hypertarget{_tone_8cpp_adb53f0106b3a4295cb5162440b37f6a8}{\index{Tone.\-cpp@{Tone.\-cpp}!timer2\-\_\-pin\-\_\-port@{timer2\-\_\-pin\-\_\-port}}
+\index{timer2\-\_\-pin\-\_\-port@{timer2\-\_\-pin\-\_\-port}!Tone.cpp@{Tone.\-cpp}}
+\subsubsection[{timer2\-\_\-pin\-\_\-port}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint8\-\_\-t$\ast$ timer2\-\_\-pin\-\_\-port}}\label{_tone_8cpp_adb53f0106b3a4295cb5162440b37f6a8}
+\hypertarget{_tone_8cpp_a4d4aba279e8106632322ed02c8d0f5f1}{\index{Tone.\-cpp@{Tone.\-cpp}!timer2\-\_\-toggle\-\_\-count@{timer2\-\_\-toggle\-\_\-count}}
+\index{timer2\-\_\-toggle\-\_\-count@{timer2\-\_\-toggle\-\_\-count}!Tone.cpp@{Tone.\-cpp}}
+\subsubsection[{timer2\-\_\-toggle\-\_\-count}]{\setlength{\rightskip}{0pt plus 5cm}volatile long timer2\-\_\-toggle\-\_\-count}}\label{_tone_8cpp_a4d4aba279e8106632322ed02c8d0f5f1}
+\hypertarget{_tone_8cpp_a184e7105c73b5285498782cdc96ba2bd}{\index{Tone.\-cpp@{Tone.\-cpp}!tone\-\_\-pin\-\_\-to\-\_\-timer\-\_\-\-P\-G\-M@{tone\-\_\-pin\-\_\-to\-\_\-timer\-\_\-\-P\-G\-M}}
+\index{tone\-\_\-pin\-\_\-to\-\_\-timer\-\_\-\-P\-G\-M@{tone\-\_\-pin\-\_\-to\-\_\-timer\-\_\-\-P\-G\-M}!Tone.cpp@{Tone.\-cpp}}
+\subsubsection[{tone\-\_\-pin\-\_\-to\-\_\-timer\-\_\-\-P\-G\-M}]{\setlength{\rightskip}{0pt plus 5cm}const uint8\-\_\-t P\-R\-O\-G\-M\-E\-M tone\-\_\-pin\-\_\-to\-\_\-timer\-\_\-\-P\-G\-M\mbox{[}$\,$\mbox{]} = \{ 2 \}}}\label{_tone_8cpp_a184e7105c73b5285498782cdc96ba2bd}

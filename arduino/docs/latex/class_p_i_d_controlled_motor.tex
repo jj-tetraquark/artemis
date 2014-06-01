@@ -1,0 +1,127 @@
+\hypertarget{class_p_i_d_controlled_motor}{\section{P\-I\-D\-Controlled\-Motor Class Reference}
+\label{class_p_i_d_controlled_motor}\index{P\-I\-D\-Controlled\-Motor@{P\-I\-D\-Controlled\-Motor}}
+}
+
+
+{\ttfamily \#include $<$P\-I\-D\-Controlled\-Motor.\-h$>$}
+
+
+
+Inheritance diagram for P\-I\-D\-Controlled\-Motor\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{class_p_i_d_controlled_motor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for P\-I\-D\-Controlled\-Motor\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{class_p_i_d_controlled_motor__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_p_i_d_controlled_motor_a09bc1d7398c15091b44c98b29fc1f073}{P\-I\-D\-Controlled\-Motor} (const unsigned int wheel\-Radius, const \hyperlink{class_motor}{Motor} \&motor, \hyperlink{class_encoder}{Encoder} $\ast$const encoder, const float k\-P, const float k\-I, const float k\-D)
+\item 
+\hyperlink{class_p_i_d_controlled_motor_a6cb0559e4413a30318ba576d59cd3fff}{P\-I\-D\-Controlled\-Motor} (const unsigned int wheel\-Radius, const \hyperlink{class_motor}{Motor} \&motor, \hyperlink{class_encoder}{Encoder} $\ast$const encoder)
+\item 
+void \hyperlink{class_p_i_d_controlled_motor_a045762a3ef93b7b25a6339cda504e4e5}{Set\-Velocity} (const float velocity)
+\item 
+void \hyperlink{class_p_i_d_controlled_motor_a7ab5288c0d1df6540475634c9a150df2}{Update} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_p_i_d_controlled_motor_a09bc1d7398c15091b44c98b29fc1f073}{\index{P\-I\-D\-Controlled\-Motor@{P\-I\-D\-Controlled\-Motor}!P\-I\-D\-Controlled\-Motor@{P\-I\-D\-Controlled\-Motor}}
+\index{P\-I\-D\-Controlled\-Motor@{P\-I\-D\-Controlled\-Motor}!PIDControlledMotor@{P\-I\-D\-Controlled\-Motor}}
+\subsubsection[{P\-I\-D\-Controlled\-Motor}]{\setlength{\rightskip}{0pt plus 5cm}P\-I\-D\-Controlled\-Motor\-::\-P\-I\-D\-Controlled\-Motor (
+\begin{DoxyParamCaption}
+\item[{const unsigned int}]{wheel\-Radius, }
+\item[{const {\bf Motor} \&}]{motor, }
+\item[{{\bf Encoder} $\ast$const}]{encoder, }
+\item[{const float}]{k\-P, }
+\item[{const float}]{k\-I, }
+\item[{const float}]{k\-D}
+\end{DoxyParamCaption}
+)}}\label{class_p_i_d_controlled_motor_a09bc1d7398c15091b44c98b29fc1f073}
+\hypertarget{class_p_i_d_controlled_motor_a6cb0559e4413a30318ba576d59cd3fff}{\index{P\-I\-D\-Controlled\-Motor@{P\-I\-D\-Controlled\-Motor}!P\-I\-D\-Controlled\-Motor@{P\-I\-D\-Controlled\-Motor}}
+\index{P\-I\-D\-Controlled\-Motor@{P\-I\-D\-Controlled\-Motor}!PIDControlledMotor@{P\-I\-D\-Controlled\-Motor}}
+\subsubsection[{P\-I\-D\-Controlled\-Motor}]{\setlength{\rightskip}{0pt plus 5cm}P\-I\-D\-Controlled\-Motor\-::\-P\-I\-D\-Controlled\-Motor (
+\begin{DoxyParamCaption}
+\item[{const unsigned int}]{wheel\-Radius, }
+\item[{const {\bf Motor} \&}]{motor, }
+\item[{{\bf Encoder} $\ast$const}]{encoder}
+\end{DoxyParamCaption}
+)}}\label{class_p_i_d_controlled_motor_a6cb0559e4413a30318ba576d59cd3fff}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_p_i_d_controlled_motor_a045762a3ef93b7b25a6339cda504e4e5}{\index{P\-I\-D\-Controlled\-Motor@{P\-I\-D\-Controlled\-Motor}!Set\-Velocity@{Set\-Velocity}}
+\index{Set\-Velocity@{Set\-Velocity}!PIDControlledMotor@{P\-I\-D\-Controlled\-Motor}}
+\subsubsection[{Set\-Velocity}]{\setlength{\rightskip}{0pt plus 5cm}void P\-I\-D\-Controlled\-Motor\-::\-Set\-Velocity (
+\begin{DoxyParamCaption}
+\item[{const float}]{velocity}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_p_i_d_controlled_motor_a045762a3ef93b7b25a6339cda504e4e5}
+
+
+Implements \hyperlink{class_feedback_controlled_motor_a533fbeddd7edc7035d5d374e9f4ad118}{Feedback\-Controlled\-Motor}.
+
+
+
+Here is the caller graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_p_i_d_controlled_motor_a045762a3ef93b7b25a6339cda504e4e5_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_p_i_d_controlled_motor_a7ab5288c0d1df6540475634c9a150df2}{\index{P\-I\-D\-Controlled\-Motor@{P\-I\-D\-Controlled\-Motor}!Update@{Update}}
+\index{Update@{Update}!PIDControlledMotor@{P\-I\-D\-Controlled\-Motor}}
+\subsubsection[{Update}]{\setlength{\rightskip}{0pt plus 5cm}void P\-I\-D\-Controlled\-Motor\-::\-Update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_p_i_d_controlled_motor_a7ab5288c0d1df6540475634c9a150df2}
+
+
+Implements \hyperlink{class_feedback_controlled_motor_a54668f85a8dadb66971ee8c8a76be802}{Feedback\-Controlled\-Motor}.
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_p_i_d_controlled_motor_a7ab5288c0d1df6540475634c9a150df2_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_p_i_d_controlled_motor_a7ab5288c0d1df6540475634c9a150df2_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+lib/motor\-\_\-control/\hyperlink{_p_i_d_controlled_motor_8h}{P\-I\-D\-Controlled\-Motor.\-h}\item 
+lib/motor\-\_\-control/\hyperlink{_p_i_d_controlled_motor_8cpp}{P\-I\-D\-Controlled\-Motor.\-cpp}\end{DoxyCompactItemize}

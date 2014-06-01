@@ -1,0 +1,98 @@
+\hypertarget{_test_two_wheel_motor_controller_8cpp}{\section{lib/motor\-\_\-control/test/\-Test\-Two\-Wheel\-Motor\-Controller.cpp File Reference}
+\label{_test_two_wheel_motor_controller_8cpp}\index{lib/motor\-\_\-control/test/\-Test\-Two\-Wheel\-Motor\-Controller.\-cpp@{lib/motor\-\_\-control/test/\-Test\-Two\-Wheel\-Motor\-Controller.\-cpp}}
+}
+{\ttfamily \#include $<$boost/test/unit\-\_\-test.\-hpp$>$}\\*
+{\ttfamily \#include $<$Arduino.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}Motor\-Controller.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Two\-Wheel\-Motor\-Controller.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Mock\-P\-I\-D\-Motor.\-h\char`\"{}}\\*
+Include dependency graph for Test\-Two\-Wheel\-Motor\-Controller.\-cpp\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_test_two_wheel_motor_controller_8cpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{_test_two_wheel_motor_controller_8cpp__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_test_two_wheel_motor_controller_8cpp_a05748c1b0c14c636cfc695ff680a1fc9}{B\-O\-O\-S\-T\-\_\-\-A\-U\-T\-O\-\_\-\-T\-E\-S\-T\-\_\-\-C\-A\-S\-E} (Two\-Wheel\-Motor\-Controller\-Construction\-And\-Interface)
+\item 
+\hyperlink{_test_two_wheel_motor_controller_8cpp_a4c9010ca394a8141091872ec725b2825}{B\-O\-O\-S\-T\-\_\-\-A\-U\-T\-O\-\_\-\-T\-E\-S\-T\-\_\-\-C\-A\-S\-E} (Test\-Set\-Velocities)
+\item 
+\hyperlink{_test_two_wheel_motor_controller_8cpp_a10f5691369436cb67886bc64b9ba64ae}{B\-O\-O\-S\-T\-\_\-\-A\-U\-T\-O\-\_\-\-T\-E\-S\-T\-\_\-\-C\-A\-S\-E} (Test\-On\-Tick)
+\item 
+\hyperlink{_test_two_wheel_motor_controller_8cpp_af7f71af5c6c124222dd1c42c5df892f4}{B\-O\-O\-S\-T\-\_\-\-A\-U\-T\-O\-\_\-\-T\-E\-S\-T\-\_\-\-S\-U\-I\-T\-E\-\_\-\-E\-N\-D} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_test_two_wheel_motor_controller_8cpp_a05748c1b0c14c636cfc695ff680a1fc9}{\index{Test\-Two\-Wheel\-Motor\-Controller.\-cpp@{Test\-Two\-Wheel\-Motor\-Controller.\-cpp}!B\-O\-O\-S\-T\-\_\-\-A\-U\-T\-O\-\_\-\-T\-E\-S\-T\-\_\-\-C\-A\-S\-E@{B\-O\-O\-S\-T\-\_\-\-A\-U\-T\-O\-\_\-\-T\-E\-S\-T\-\_\-\-C\-A\-S\-E}}
+\index{B\-O\-O\-S\-T\-\_\-\-A\-U\-T\-O\-\_\-\-T\-E\-S\-T\-\_\-\-C\-A\-S\-E@{B\-O\-O\-S\-T\-\_\-\-A\-U\-T\-O\-\_\-\-T\-E\-S\-T\-\_\-\-C\-A\-S\-E}!TestTwoWheelMotorController.cpp@{Test\-Two\-Wheel\-Motor\-Controller.\-cpp}}
+\subsubsection[{B\-O\-O\-S\-T\-\_\-\-A\-U\-T\-O\-\_\-\-T\-E\-S\-T\-\_\-\-C\-A\-S\-E}]{\setlength{\rightskip}{0pt plus 5cm}B\-O\-O\-S\-T\-\_\-\-A\-U\-T\-O\-\_\-\-T\-E\-S\-T\-\_\-\-C\-A\-S\-E (
+\begin{DoxyParamCaption}
+\item[{Two\-Wheel\-Motor\-Controller\-Construction\-And\-Interface}]{}
+\end{DoxyParamCaption}
+)}}\label{_test_two_wheel_motor_controller_8cpp_a05748c1b0c14c636cfc695ff680a1fc9}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_test_two_wheel_motor_controller_8cpp_a05748c1b0c14c636cfc695ff680a1fc9_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_test_two_wheel_motor_controller_8cpp_a4c9010ca394a8141091872ec725b2825}{\index{Test\-Two\-Wheel\-Motor\-Controller.\-cpp@{Test\-Two\-Wheel\-Motor\-Controller.\-cpp}!B\-O\-O\-S\-T\-\_\-\-A\-U\-T\-O\-\_\-\-T\-E\-S\-T\-\_\-\-C\-A\-S\-E@{B\-O\-O\-S\-T\-\_\-\-A\-U\-T\-O\-\_\-\-T\-E\-S\-T\-\_\-\-C\-A\-S\-E}}
+\index{B\-O\-O\-S\-T\-\_\-\-A\-U\-T\-O\-\_\-\-T\-E\-S\-T\-\_\-\-C\-A\-S\-E@{B\-O\-O\-S\-T\-\_\-\-A\-U\-T\-O\-\_\-\-T\-E\-S\-T\-\_\-\-C\-A\-S\-E}!TestTwoWheelMotorController.cpp@{Test\-Two\-Wheel\-Motor\-Controller.\-cpp}}
+\subsubsection[{B\-O\-O\-S\-T\-\_\-\-A\-U\-T\-O\-\_\-\-T\-E\-S\-T\-\_\-\-C\-A\-S\-E}]{\setlength{\rightskip}{0pt plus 5cm}B\-O\-O\-S\-T\-\_\-\-A\-U\-T\-O\-\_\-\-T\-E\-S\-T\-\_\-\-C\-A\-S\-E (
+\begin{DoxyParamCaption}
+\item[{Test\-Set\-Velocities}]{}
+\end{DoxyParamCaption}
+)}}\label{_test_two_wheel_motor_controller_8cpp_a4c9010ca394a8141091872ec725b2825}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_test_two_wheel_motor_controller_8cpp_a4c9010ca394a8141091872ec725b2825_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_test_two_wheel_motor_controller_8cpp_a10f5691369436cb67886bc64b9ba64ae}{\index{Test\-Two\-Wheel\-Motor\-Controller.\-cpp@{Test\-Two\-Wheel\-Motor\-Controller.\-cpp}!B\-O\-O\-S\-T\-\_\-\-A\-U\-T\-O\-\_\-\-T\-E\-S\-T\-\_\-\-C\-A\-S\-E@{B\-O\-O\-S\-T\-\_\-\-A\-U\-T\-O\-\_\-\-T\-E\-S\-T\-\_\-\-C\-A\-S\-E}}
+\index{B\-O\-O\-S\-T\-\_\-\-A\-U\-T\-O\-\_\-\-T\-E\-S\-T\-\_\-\-C\-A\-S\-E@{B\-O\-O\-S\-T\-\_\-\-A\-U\-T\-O\-\_\-\-T\-E\-S\-T\-\_\-\-C\-A\-S\-E}!TestTwoWheelMotorController.cpp@{Test\-Two\-Wheel\-Motor\-Controller.\-cpp}}
+\subsubsection[{B\-O\-O\-S\-T\-\_\-\-A\-U\-T\-O\-\_\-\-T\-E\-S\-T\-\_\-\-C\-A\-S\-E}]{\setlength{\rightskip}{0pt plus 5cm}B\-O\-O\-S\-T\-\_\-\-A\-U\-T\-O\-\_\-\-T\-E\-S\-T\-\_\-\-C\-A\-S\-E (
+\begin{DoxyParamCaption}
+\item[{Test\-On\-Tick}]{}
+\end{DoxyParamCaption}
+)}}\label{_test_two_wheel_motor_controller_8cpp_a10f5691369436cb67886bc64b9ba64ae}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_test_two_wheel_motor_controller_8cpp_a10f5691369436cb67886bc64b9ba64ae_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_test_two_wheel_motor_controller_8cpp_af7f71af5c6c124222dd1c42c5df892f4}{\index{Test\-Two\-Wheel\-Motor\-Controller.\-cpp@{Test\-Two\-Wheel\-Motor\-Controller.\-cpp}!B\-O\-O\-S\-T\-\_\-\-A\-U\-T\-O\-\_\-\-T\-E\-S\-T\-\_\-\-S\-U\-I\-T\-E\-\_\-\-E\-N\-D@{B\-O\-O\-S\-T\-\_\-\-A\-U\-T\-O\-\_\-\-T\-E\-S\-T\-\_\-\-S\-U\-I\-T\-E\-\_\-\-E\-N\-D}}
+\index{B\-O\-O\-S\-T\-\_\-\-A\-U\-T\-O\-\_\-\-T\-E\-S\-T\-\_\-\-S\-U\-I\-T\-E\-\_\-\-E\-N\-D@{B\-O\-O\-S\-T\-\_\-\-A\-U\-T\-O\-\_\-\-T\-E\-S\-T\-\_\-\-S\-U\-I\-T\-E\-\_\-\-E\-N\-D}!TestTwoWheelMotorController.cpp@{Test\-Two\-Wheel\-Motor\-Controller.\-cpp}}
+\subsubsection[{B\-O\-O\-S\-T\-\_\-\-A\-U\-T\-O\-\_\-\-T\-E\-S\-T\-\_\-\-S\-U\-I\-T\-E\-\_\-\-E\-N\-D}]{\setlength{\rightskip}{0pt plus 5cm}B\-O\-O\-S\-T\-\_\-\-A\-U\-T\-O\-\_\-\-T\-E\-S\-T\-\_\-\-S\-U\-I\-T\-E\-\_\-\-E\-N\-D (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{_test_two_wheel_motor_controller_8cpp_af7f71af5c6c124222dd1c42c5df892f4}

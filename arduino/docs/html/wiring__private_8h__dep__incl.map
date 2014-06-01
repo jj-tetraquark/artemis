@@ -1,0 +1,9 @@
+<map id="app/build/build/uno/core/wiring_private.h" name="app/build/build/uno/core/wiring_private.h">
+<area shape="rect" id="node3" href="$_hardware_serial_8cpp.html" title="app/build/build/uno\l/core/HardwareSerial.cpp" alt="" coords="5,102,173,149"/>
+<area shape="rect" id="node5" href="$_w_interrupts_8c.html" title="app/build/build/uno\l/core/WInterrupts.c" alt="" coords="197,102,331,149"/>
+<area shape="rect" id="node7" href="$wiring_8c.html" title="app/build/build/uno\l/core/wiring.c" alt="" coords="355,102,485,149"/>
+<area shape="rect" id="node9" href="$wiring__analog_8c.html" title="app/build/build/uno\l/core/wiring_analog.c" alt="" coords="509,102,653,149"/>
+<area shape="rect" id="node11" href="$wiring__digital_8c.html" title="app/build/build/uno\l/core/wiring_digital.c" alt="" coords="677,102,819,149"/>
+<area shape="rect" id="node13" href="$wiring__pulse_8c.html" title="app/build/build/uno\l/core/wiring_pulse.c" alt="" coords="843,102,981,149"/>
+<area shape="rect" id="node15" href="$wiring__shift_8c.html" title="app/build/build/uno\l/core/wiring_shift.c" alt="" coords="1005,102,1136,149"/>
+</map>

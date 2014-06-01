@@ -1,0 +1,90 @@
+\hypertarget{pins__arduino_8h}{\section{app/build/build/uno/variant/pins\-\_\-arduino.h File Reference}
+\label{pins__arduino_8h}\index{app/build/build/uno/variant/pins\-\_\-arduino.\-h@{app/build/build/uno/variant/pins\-\_\-arduino.\-h}}
+}
+{\ttfamily \#include $<$avr/pgmspace.\-h$>$}\\*
+Include dependency graph for pins\-\_\-arduino.\-h\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{pins__arduino_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pins__arduino_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{pins__arduino_8h_a0ef783fbc452748b33c5a307d0565f7a}{N\-U\-M\-\_\-\-D\-I\-G\-I\-T\-A\-L\-\_\-\-P\-I\-N\-S}~20
+\item 
+\#define \hyperlink{pins__arduino_8h_ae5fbabd52e1f2240307dfc9bfaefb5d6}{N\-U\-M\-\_\-\-A\-N\-A\-L\-O\-G\-\_\-\-I\-N\-P\-U\-T\-S}~6
+\item 
+\#define \hyperlink{pins__arduino_8h_a45b09aac6ae2c47b64e182a626efc4fc}{analog\-Input\-To\-Digital\-Pin}(p)~((p $<$ 6) ? (p) + 14 \-: -\/1)
+\item 
+\#define \hyperlink{pins__arduino_8h_afaede01afebc78aa04e0c28dc85bcbd5}{digital\-Pin\-Has\-P\-W\-M}(p)~((p) == 3 $|$$|$ (p) == 5 $|$$|$ (p) == 6 $|$$|$ (p) == 9 $|$$|$ (p) == 10 $|$$|$ (p) == 11)
+\item 
+\#define \hyperlink{pins__arduino_8h_a7ec6d8450a396d18466150f772d3410d}{digital\-Pin\-To\-P\-C\-I\-C\-R}(p)~(((p) $>$= 0 \&\& (p) $<$= 21) ? (\&P\-C\-I\-C\-R) \-: ((uint8\-\_\-t $\ast$)0))
+\item 
+\#define \hyperlink{pins__arduino_8h_ade47a8575ce8a767144acc331a3041a5}{digital\-Pin\-To\-P\-C\-I\-C\-Rbit}(p)~(((p) $<$= 7) ? 2 \-: (((p) $<$= 13) ? 0 \-: 1))
+\item 
+\#define \hyperlink{pins__arduino_8h_a293c404bc0dbdd278e1d67ab8d6b490d}{digital\-Pin\-To\-P\-C\-M\-S\-K}(p)~(((p) $<$= 7) ? (\&P\-C\-M\-S\-K2) \-: (((p) $<$= 13) ? (\&P\-C\-M\-S\-K0) \-: (((p) $<$= 21) ? (\&P\-C\-M\-S\-K1) \-: ((uint8\-\_\-t $\ast$)0))))
+\item 
+\#define \hyperlink{pins__arduino_8h_a4b74197c080468ad7c1d260aa76d140e}{digital\-Pin\-To\-P\-C\-M\-S\-Kbit}(p)~(((p) $<$= 7) ? (p) \-: (((p) $<$= 13) ? ((p) -\/ 8) \-: ((p) -\/ 14)))
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{pins__arduino_8h_a45b09aac6ae2c47b64e182a626efc4fc}{\index{pins\-\_\-arduino.\-h@{pins\-\_\-arduino.\-h}!analog\-Input\-To\-Digital\-Pin@{analog\-Input\-To\-Digital\-Pin}}
+\index{analog\-Input\-To\-Digital\-Pin@{analog\-Input\-To\-Digital\-Pin}!pins_arduino.h@{pins\-\_\-arduino.\-h}}
+\subsubsection[{analog\-Input\-To\-Digital\-Pin}]{\setlength{\rightskip}{0pt plus 5cm}\#define analog\-Input\-To\-Digital\-Pin(
+\begin{DoxyParamCaption}
+\item[{}]{p}
+\end{DoxyParamCaption}
+)~((p $<$ 6) ? (p) + 14 \-: -\/1)}}\label{pins__arduino_8h_a45b09aac6ae2c47b64e182a626efc4fc}
+\hypertarget{pins__arduino_8h_afaede01afebc78aa04e0c28dc85bcbd5}{\index{pins\-\_\-arduino.\-h@{pins\-\_\-arduino.\-h}!digital\-Pin\-Has\-P\-W\-M@{digital\-Pin\-Has\-P\-W\-M}}
+\index{digital\-Pin\-Has\-P\-W\-M@{digital\-Pin\-Has\-P\-W\-M}!pins_arduino.h@{pins\-\_\-arduino.\-h}}
+\subsubsection[{digital\-Pin\-Has\-P\-W\-M}]{\setlength{\rightskip}{0pt plus 5cm}\#define digital\-Pin\-Has\-P\-W\-M(
+\begin{DoxyParamCaption}
+\item[{}]{p}
+\end{DoxyParamCaption}
+)~((p) == 3 $|$$|$ (p) == 5 $|$$|$ (p) == 6 $|$$|$ (p) == 9 $|$$|$ (p) == 10 $|$$|$ (p) == 11)}}\label{pins__arduino_8h_afaede01afebc78aa04e0c28dc85bcbd5}
+\hypertarget{pins__arduino_8h_a7ec6d8450a396d18466150f772d3410d}{\index{pins\-\_\-arduino.\-h@{pins\-\_\-arduino.\-h}!digital\-Pin\-To\-P\-C\-I\-C\-R@{digital\-Pin\-To\-P\-C\-I\-C\-R}}
+\index{digital\-Pin\-To\-P\-C\-I\-C\-R@{digital\-Pin\-To\-P\-C\-I\-C\-R}!pins_arduino.h@{pins\-\_\-arduino.\-h}}
+\subsubsection[{digital\-Pin\-To\-P\-C\-I\-C\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define digital\-Pin\-To\-P\-C\-I\-C\-R(
+\begin{DoxyParamCaption}
+\item[{}]{p}
+\end{DoxyParamCaption}
+)~(((p) $>$= 0 \&\& (p) $<$= 21) ? (\&P\-C\-I\-C\-R) \-: ((uint8\-\_\-t $\ast$)0))}}\label{pins__arduino_8h_a7ec6d8450a396d18466150f772d3410d}
+\hypertarget{pins__arduino_8h_ade47a8575ce8a767144acc331a3041a5}{\index{pins\-\_\-arduino.\-h@{pins\-\_\-arduino.\-h}!digital\-Pin\-To\-P\-C\-I\-C\-Rbit@{digital\-Pin\-To\-P\-C\-I\-C\-Rbit}}
+\index{digital\-Pin\-To\-P\-C\-I\-C\-Rbit@{digital\-Pin\-To\-P\-C\-I\-C\-Rbit}!pins_arduino.h@{pins\-\_\-arduino.\-h}}
+\subsubsection[{digital\-Pin\-To\-P\-C\-I\-C\-Rbit}]{\setlength{\rightskip}{0pt plus 5cm}\#define digital\-Pin\-To\-P\-C\-I\-C\-Rbit(
+\begin{DoxyParamCaption}
+\item[{}]{p}
+\end{DoxyParamCaption}
+)~(((p) $<$= 7) ? 2 \-: (((p) $<$= 13) ? 0 \-: 1))}}\label{pins__arduino_8h_ade47a8575ce8a767144acc331a3041a5}
+\hypertarget{pins__arduino_8h_a293c404bc0dbdd278e1d67ab8d6b490d}{\index{pins\-\_\-arduino.\-h@{pins\-\_\-arduino.\-h}!digital\-Pin\-To\-P\-C\-M\-S\-K@{digital\-Pin\-To\-P\-C\-M\-S\-K}}
+\index{digital\-Pin\-To\-P\-C\-M\-S\-K@{digital\-Pin\-To\-P\-C\-M\-S\-K}!pins_arduino.h@{pins\-\_\-arduino.\-h}}
+\subsubsection[{digital\-Pin\-To\-P\-C\-M\-S\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define digital\-Pin\-To\-P\-C\-M\-S\-K(
+\begin{DoxyParamCaption}
+\item[{}]{p}
+\end{DoxyParamCaption}
+)~(((p) $<$= 7) ? (\&P\-C\-M\-S\-K2) \-: (((p) $<$= 13) ? (\&P\-C\-M\-S\-K0) \-: (((p) $<$= 21) ? (\&P\-C\-M\-S\-K1) \-: ((uint8\-\_\-t $\ast$)0))))}}\label{pins__arduino_8h_a293c404bc0dbdd278e1d67ab8d6b490d}
+\hypertarget{pins__arduino_8h_a4b74197c080468ad7c1d260aa76d140e}{\index{pins\-\_\-arduino.\-h@{pins\-\_\-arduino.\-h}!digital\-Pin\-To\-P\-C\-M\-S\-Kbit@{digital\-Pin\-To\-P\-C\-M\-S\-Kbit}}
+\index{digital\-Pin\-To\-P\-C\-M\-S\-Kbit@{digital\-Pin\-To\-P\-C\-M\-S\-Kbit}!pins_arduino.h@{pins\-\_\-arduino.\-h}}
+\subsubsection[{digital\-Pin\-To\-P\-C\-M\-S\-Kbit}]{\setlength{\rightskip}{0pt plus 5cm}\#define digital\-Pin\-To\-P\-C\-M\-S\-Kbit(
+\begin{DoxyParamCaption}
+\item[{}]{p}
+\end{DoxyParamCaption}
+)~(((p) $<$= 7) ? (p) \-: (((p) $<$= 13) ? ((p) -\/ 8) \-: ((p) -\/ 14)))}}\label{pins__arduino_8h_a4b74197c080468ad7c1d260aa76d140e}
+\hypertarget{pins__arduino_8h_ae5fbabd52e1f2240307dfc9bfaefb5d6}{\index{pins\-\_\-arduino.\-h@{pins\-\_\-arduino.\-h}!N\-U\-M\-\_\-\-A\-N\-A\-L\-O\-G\-\_\-\-I\-N\-P\-U\-T\-S@{N\-U\-M\-\_\-\-A\-N\-A\-L\-O\-G\-\_\-\-I\-N\-P\-U\-T\-S}}
+\index{N\-U\-M\-\_\-\-A\-N\-A\-L\-O\-G\-\_\-\-I\-N\-P\-U\-T\-S@{N\-U\-M\-\_\-\-A\-N\-A\-L\-O\-G\-\_\-\-I\-N\-P\-U\-T\-S}!pins_arduino.h@{pins\-\_\-arduino.\-h}}
+\subsubsection[{N\-U\-M\-\_\-\-A\-N\-A\-L\-O\-G\-\_\-\-I\-N\-P\-U\-T\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\-U\-M\-\_\-\-A\-N\-A\-L\-O\-G\-\_\-\-I\-N\-P\-U\-T\-S~6}}\label{pins__arduino_8h_ae5fbabd52e1f2240307dfc9bfaefb5d6}
+\hypertarget{pins__arduino_8h_a0ef783fbc452748b33c5a307d0565f7a}{\index{pins\-\_\-arduino.\-h@{pins\-\_\-arduino.\-h}!N\-U\-M\-\_\-\-D\-I\-G\-I\-T\-A\-L\-\_\-\-P\-I\-N\-S@{N\-U\-M\-\_\-\-D\-I\-G\-I\-T\-A\-L\-\_\-\-P\-I\-N\-S}}
+\index{N\-U\-M\-\_\-\-D\-I\-G\-I\-T\-A\-L\-\_\-\-P\-I\-N\-S@{N\-U\-M\-\_\-\-D\-I\-G\-I\-T\-A\-L\-\_\-\-P\-I\-N\-S}!pins_arduino.h@{pins\-\_\-arduino.\-h}}
+\subsubsection[{N\-U\-M\-\_\-\-D\-I\-G\-I\-T\-A\-L\-\_\-\-P\-I\-N\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\-U\-M\-\_\-\-D\-I\-G\-I\-T\-A\-L\-\_\-\-P\-I\-N\-S~20}}\label{pins__arduino_8h_a0ef783fbc452748b33c5a307d0565f7a}

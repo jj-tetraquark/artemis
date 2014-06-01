@@ -1,0 +1,61 @@
+\hypertarget{_w_interrupts_8c}{\section{app/build/build/uno/core/\-W\-Interrupts.c File Reference}
+\label{_w_interrupts_8c}\index{app/build/build/uno/core/\-W\-Interrupts.\-c@{app/build/build/uno/core/\-W\-Interrupts.\-c}}
+}
+{\ttfamily \#include $<$inttypes.\-h$>$}\\*
+{\ttfamily \#include $<$avr/io.\-h$>$}\\*
+{\ttfamily \#include $<$avr/interrupt.\-h$>$}\\*
+{\ttfamily \#include $<$avr/pgmspace.\-h$>$}\\*
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}wiring\-\_\-private.\-h\char`\"{}}\\*
+Include dependency graph for W\-Interrupts.\-c\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_w_interrupts_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_w_interrupts_8c_ad0d73becebba7c663f8e9ed73efee544}{attach\-Interrupt} (uint8\-\_\-t interrupt\-Num, void($\ast$user\-Func)(void), int mode)
+\item 
+void \hyperlink{_w_interrupts_8c_aa47ad728b5e830ac48f4085affea7d1c}{detach\-Interrupt} (uint8\-\_\-t interrupt\-Num)
+\item 
+\hyperlink{_w_interrupts_8c_afea150fcd685610cb9f7672fce361e53}{I\-S\-R} (I\-N\-T0\-\_\-vect)
+\item 
+\hyperlink{_w_interrupts_8c_a22acfb428840c6d9aa212764589cf6c6}{I\-S\-R} (I\-N\-T1\-\_\-vect)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_w_interrupts_8c_ad0d73becebba7c663f8e9ed73efee544}{\index{W\-Interrupts.\-c@{W\-Interrupts.\-c}!attach\-Interrupt@{attach\-Interrupt}}
+\index{attach\-Interrupt@{attach\-Interrupt}!WInterrupts.c@{W\-Interrupts.\-c}}
+\subsubsection[{attach\-Interrupt}]{\setlength{\rightskip}{0pt plus 5cm}void attach\-Interrupt (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{interrupt\-Num, }
+\item[{void($\ast$)(void)}]{user\-Func, }
+\item[{int}]{mode}
+\end{DoxyParamCaption}
+)}}\label{_w_interrupts_8c_ad0d73becebba7c663f8e9ed73efee544}
+\hypertarget{_w_interrupts_8c_aa47ad728b5e830ac48f4085affea7d1c}{\index{W\-Interrupts.\-c@{W\-Interrupts.\-c}!detach\-Interrupt@{detach\-Interrupt}}
+\index{detach\-Interrupt@{detach\-Interrupt}!WInterrupts.c@{W\-Interrupts.\-c}}
+\subsubsection[{detach\-Interrupt}]{\setlength{\rightskip}{0pt plus 5cm}void detach\-Interrupt (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{interrupt\-Num}
+\end{DoxyParamCaption}
+)}}\label{_w_interrupts_8c_aa47ad728b5e830ac48f4085affea7d1c}
+\hypertarget{_w_interrupts_8c_afea150fcd685610cb9f7672fce361e53}{\index{W\-Interrupts.\-c@{W\-Interrupts.\-c}!I\-S\-R@{I\-S\-R}}
+\index{I\-S\-R@{I\-S\-R}!WInterrupts.c@{W\-Interrupts.\-c}}
+\subsubsection[{I\-S\-R}]{\setlength{\rightskip}{0pt plus 5cm}I\-S\-R (
+\begin{DoxyParamCaption}
+\item[{I\-N\-T0\-\_\-vect}]{}
+\end{DoxyParamCaption}
+)}}\label{_w_interrupts_8c_afea150fcd685610cb9f7672fce361e53}
+\hypertarget{_w_interrupts_8c_a22acfb428840c6d9aa212764589cf6c6}{\index{W\-Interrupts.\-c@{W\-Interrupts.\-c}!I\-S\-R@{I\-S\-R}}
+\index{I\-S\-R@{I\-S\-R}!WInterrupts.c@{W\-Interrupts.\-c}}
+\subsubsection[{I\-S\-R}]{\setlength{\rightskip}{0pt plus 5cm}I\-S\-R (
+\begin{DoxyParamCaption}
+\item[{I\-N\-T1\-\_\-vect}]{}
+\end{DoxyParamCaption}
+)}}\label{_w_interrupts_8c_a22acfb428840c6d9aa212764589cf6c6}

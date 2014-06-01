@@ -1,0 +1,6 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node3" href="$struct_invalid_pin_value_exception.html" title="InvalidPinValueException" alt="" coords="136,5,307,35"/>
+<area shape="rect" id="node5" href="$struct_invalid_value_exception.html" title="InvalidValueException" alt="" coords="147,59,296,88"/>
+<area shape="rect" id="node7" href="$struct_no_such_pin_exception.html" title="NoSuchPinException" alt="" coords="148,112,295,141"/>
+<area shape="rect" id="node9" href="$struct_uninitialized_pin_exception.html" title="UninitializedPinException" alt="" coords="136,165,307,195"/>
+</map>

@@ -1,0 +1,20 @@
+<map id="BOOST_AUTO_TEST_CASE" name="BOOST_AUTO_TEST_CASE">
+<area shape="rect" id="node3" href="$_mock_w_program_8cpp.html#a43b3d45be6de81f12495d84338a231c2" title="clear_pins" alt="" coords="311,5,391,35"/>
+<area shape="rect" id="node5" href="$class_p_i_d_controlled_motor.html#a045762a3ef93b7b25a6339cda504e4e5" title="PIDControlledMotor\l::SetVelocity" alt="" coords="283,58,419,105"/>
+<area shape="rect" id="node7" href="$class_mock_encoder.html#ad44313dd4a038f09084f04c908fa9a00" title="MockEncoder::Revolutions\lPerSecond" alt="" coords="261,127,440,174"/>
+<area shape="rect" id="node9" href="$class_mock_encoder.html#a167ec4aad9f3f00217c25cec301f26b3" title="MockEncoder::GetDirection" alt="" coords="260,197,441,227"/>
+<area shape="rect" id="node11" href="$class_p_i_d_controlled_motor.html#a7ab5288c0d1df6540475634c9a150df2" title="PIDControlledMotor\l::Update" alt="" coords="283,250,419,297"/>
+<area shape="rect" id="node36" href="$class_pin.html#a9c39b8c7ef953b40043e97fecb8b35dd" title="Pin::GetValue" alt="" coords="300,320,401,349"/>
+<area shape="rect" id="node38" href="$class_mock_encoder.html#af26e227ff275c68e4b53d7cdb8eb198c" title="MockEncoder::SetRevolutions\lPerSecond" alt="" coords="252,373,449,419"/>
+<area shape="rect" id="node40" href="$class_mock_encoder.html#a8b3c37c202dae06de65f9481f1799313" title="MockEncoder::SetDirection" alt="" coords="260,443,441,472"/>
+<area shape="rect" id="node13" href="$class_encoder.html#a758adfad11078f8dec0ca672929a4189" title="Encoder::RevolutionsPerSecond" alt="" coords="499,205,709,235"/>
+<area shape="rect" id="node15" href="$class_encoder.html#ab4faff630f313bc0e5b8718df3175fe1" title="Encoder::GetDirection" alt="" coords="529,259,679,288"/>
+<area shape="rect" id="node17" href="$class_motor.html#afe04b2b18bd3e6e300ee14e3648c40bf" title="Motor::SetSpeed" alt="" coords="544,312,664,341"/>
+<area shape="rect" id="node19" href="$class_motor.html#aa98ff82632c1be028f76173094fc9eae" title="Motor::SetDirectionForwards" alt="" coords="763,312,952,341"/>
+<area shape="rect" id="node29" href="$class_motor.html#a81a6ae7005ee0f21fc04d3b8303448f7" title="Motor::SetDirectionBackwards" alt="" coords="757,259,957,288"/>
+<area shape="rect" id="node32" href="$_mock_w_program_8cpp.html#a63ff97b27f97c7dbe2335fcdbb731e01" title="analogWrite" alt="" coords="1005,364,1096,393"/>
+<area shape="rect" id="node21" href="$_mock_w_program_8cpp.html#ae95385f26505c5c686a5129f580b884c" title="digitalWrite" alt="" coords="1008,311,1093,340"/>
+<area shape="rect" id="node23" href="$_mock_w_program_8cpp.html#a2e945bc480ef828618a421e96b9f8f2c" title="checkPinIsValid" alt="" coords="1145,364,1260,393"/>
+<area shape="rect" id="node25" href="$class_pin.html#a56f7dc430291a53b5c08df50c8f43f9a" title="Pin::IsInitialized" alt="" coords="1145,257,1260,287"/>
+<area shape="rect" id="node27" href="$class_pin.html#adc8d5cd4aeca8cce795e85b3fe1d9a20" title="Pin::SetValue" alt="" coords="1152,311,1253,340"/>
+</map>
