@@ -3,6 +3,8 @@
 
 namespace Config {
 
+constexpr static float ROTARY_ENCODER_RATIO = 1000/3.0;
+
 struct PID {
     constexpr static float K_PROPORTIONAL = 1.0;
     constexpr static float K_DIFFERENTIAL = 0.1;
@@ -18,6 +20,11 @@ struct Pins {
     constexpr static int LEFT_ENCODER_B         = 9;
     constexpr static int RIGHT_ENCODER_A        = 10;
     constexpr static int RIGHT_ENCODER_B        = 11;
+};
+
+struct Dimensions { // These are guesstimates at the moment, need to be meastured
+    constexpr static int WHEEL_RADIUS = 25;
+    constexpr static int ROBOT_WIDTH  = 200;
 };
 
 };
