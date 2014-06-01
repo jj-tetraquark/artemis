@@ -8,3 +8,5 @@ build/
 syntastic_conf
 tags
 pid_data.dat
+arduino/docs/html/
+arduino/docs/latex/
