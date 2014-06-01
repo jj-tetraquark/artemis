@@ -1,5 +1,0 @@
-<map id="FeedbackControlledMotor::Update" name="FeedbackControlledMotor::Update">
-<area shape="rect" id="node3" href="$_test_p_i_d_controlled_motor_8cpp.html#a8c993dce15d939d807cfb5c8f9e9d58b" title="BOOST_AUTO_TEST_CASE" alt="" coords="224,5,421,35"/>
-<area shape="rect" id="node5" href="$class_two_wheel_motor_controller.html#a48648184a02f823f44b6b44e84ca9c47" title="TwoWheelMotorController\l::OnTick" alt="" coords="236,58,409,105"/>
-<area shape="rect" id="node7" href="$_test_two_wheel_motor_controller_8cpp.html#a10f5691369436cb67886bc64b9ba64ae" title="BOOST_AUTO_TEST_CASE" alt="" coords="469,67,667,96"/>
-</map>

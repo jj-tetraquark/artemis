@@ -1,9 +1,0 @@
-<map id="BOOST_AUTO_TEST_CASE" name="BOOST_AUTO_TEST_CASE">
-<area shape="rect" id="node3" href="$class_motor.html#aa98ff82632c1be028f76173094fc9eae" title="Motor::SetDirectionForwards" alt="" coords="256,5,445,35"/>
-<area shape="rect" id="node13" href="$class_pin.html#a9c39b8c7ef953b40043e97fecb8b35dd" title="Pin::GetValue" alt="" coords="300,59,401,88"/>
-<area shape="rect" id="node15" href="$class_motor.html#a81a6ae7005ee0f21fc04d3b8303448f7" title="Motor::SetDirectionBackwards" alt="" coords="251,112,451,141"/>
-<area shape="rect" id="node5" href="$_mock_w_program_8cpp.html#ae95385f26505c5c686a5129f580b884c" title="digitalWrite" alt="" coords="500,59,585,88"/>
-<area shape="rect" id="node7" href="$_mock_w_program_8cpp.html#a2e945bc480ef828618a421e96b9f8f2c" title="checkPinIsValid" alt="" coords="636,5,751,35"/>
-<area shape="rect" id="node9" href="$class_pin.html#a56f7dc430291a53b5c08df50c8f43f9a" title="Pin::IsInitialized" alt="" coords="636,59,751,88"/>
-<area shape="rect" id="node11" href="$class_pin.html#adc8d5cd4aeca8cce795e85b3fe1d9a20" title="Pin::SetValue" alt="" coords="643,112,744,141"/>
-</map>

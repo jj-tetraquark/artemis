@@ -1,4 +1,0 @@
-<map id="FeedbackControlledMotor" name="FeedbackControlledMotor">
-<area shape="rect" id="node3" href="$class_mock_p_i_d_motor.html" title="{MockPIDMotor\n||+ MockPIDMotor()\l+ SetVelocity()\l+ Update()\l+ GetVelocity()\l+ GetUpdateCallCount()\l}" alt="" coords="5,157,168,312"/>
-<area shape="rect" id="node5" href="$class_p_i_d_controlled_motor.html" title="{PIDControlledMotor\n||+ PIDControlledMotor()\l+ PIDControlledMotor()\l+ SetVelocity()\l+ Update()\l}" alt="" coords="192,166,349,303"/>
-</map>

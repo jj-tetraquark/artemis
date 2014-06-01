@@ -1,4 +1,0 @@
-<map id="Print" name="Print">
-<area shape="rect" id="node3" href="$class_stream.html" title="{Stream\n|# _timeout\l# _startMillis\l|+ available()\l+ read()\l+ peek()\l+ flush()\l+ Stream()\l+ setTimeout()\l+ find()\l+ find()\l+ findUntil()\l+ findUntil()\land 6 more...\l# timedRead()\l# timedPeek()\l# peekNextDigit()\l# parseInt()\l# parseFloat()\l}" alt="" coords="9,331,132,693"/>
-<area shape="rect" id="node5" href="$class_hardware_serial.html" title="{HardwareSerial\n||+ HardwareSerial()\l+ begin()\l+ begin()\l+ end()\l+ available()\l+ peek()\l+ read()\l+ flush()\l+ write()\l+ write()\l+ write()\l+ write()\l+ write()\l+ operator bool()\l}" alt="" coords="5,742,136,1053"/>
-</map>

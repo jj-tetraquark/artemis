@@ -1,7 +1,0 @@
-<map id="RotaryEncoder::RotaryEncoder" name="RotaryEncoder::RotaryEncoder">
-<area shape="rect" id="node3" href="$_mock_w_program_8cpp.html#ad0d73becebba7c663f8e9ed73efee544" title="attachInterrupt" alt="" coords="287,5,393,35"/>
-<area shape="rect" id="node5" href="$class_rotary_encoder.html#ad884c21ff3f1c2e382bc3a72596e1ec4" title="RotaryEncoder::Handler" alt="" coords="259,59,421,88"/>
-<area shape="rect" id="node7" href="$_mock_w_program_8cpp.html#abf453c1659ee9fafa5af689523ac71e7" title="pinMode" alt="" coords="305,112,375,141"/>
-<area shape="rect" id="node9" href="$_mock_w_program_8cpp.html#a2e945bc480ef828618a421e96b9f8f2c" title="checkPinIsValid" alt="" coords="471,85,585,115"/>
-<area shape="rect" id="node11" href="$class_pin.html#a818cf19e4b42d2777326c52a56ae4ea9" title="Pin::SetMode" alt="" coords="477,139,579,168"/>
-</map>

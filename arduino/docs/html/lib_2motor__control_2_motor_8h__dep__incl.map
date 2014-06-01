@@ -1,9 +1,0 @@
-<map id="lib/motor_control/Motor.h" name="lib/motor_control/Motor.h">
-<area shape="rect" id="node3" href="$main_8cpp.html" title="app/main.cpp" alt="" coords="5,92,104,121"/>
-<area shape="rect" id="node5" href="$lib_2motor__control_2_motor_8cpp.html" title="lib/motor_control/Motor.cpp" alt="" coords="128,92,307,121"/>
-<area shape="rect" id="node7" href="$lib_2motor__control_2_p_i_d_controlled_motor_8h.html" title="lib/motor_control/PIDControlled\lMotor.h" alt="" coords="331,83,533,130"/>
-<area shape="rect" id="node11" href="$_test_p_i_d_controlled_motor_8cpp.html" title="lib/motor_control/test\l/TestPIDControlledMotor.cpp" alt="" coords="405,179,597,226"/>
-<area shape="rect" id="node15" href="$_test_motor_8cpp.html" title="lib/motor_control/test\l/TestMotor.cpp" alt="" coords="621,179,765,226"/>
-<area shape="rect" id="node9" href="$lib_2motor__control_2_p_i_d_controlled_motor_8cpp.html" title="lib/motor_control/PIDControlled\lMotor.cpp" alt="" coords="179,179,381,226"/>
-<area shape="rect" id="node13" href="$_motor_controller_tests_8cpp.html" title="lib/motor_control/test\l/MotorControllerTests.cpp" alt="" coords="511,275,684,322"/>
-</map>

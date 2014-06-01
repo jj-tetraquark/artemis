@@ -1,4 +1,0 @@
-<map id="analogWrite" name="analogWrite">
-<area shape="rect" id="node3" href="$_mock_w_program_8cpp.html#a2e945bc480ef828618a421e96b9f8f2c" title="checkPinIsValid" alt="" coords="145,5,260,35"/>
-<area shape="rect" id="node5" href="$class_pin.html#adc8d5cd4aeca8cce795e85b3fe1d9a20" title="Pin::SetValue" alt="" coords="152,59,253,88"/>
-</map>

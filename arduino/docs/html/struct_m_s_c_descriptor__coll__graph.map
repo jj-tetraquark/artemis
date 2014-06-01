@@ -1,4 +1,0 @@
-<map id="MSCDescriptor" name="MSCDescriptor">
-<area shape="rect" id="node2" href="$struct_endpoint_descriptor.html" title="{EndpointDescriptor\n|+ len\l+ dtype\l+ addr\l+ attr\l+ packetSize\l+ interval\l|}" alt="" coords="5,31,139,203"/>
-<area shape="rect" id="node4" href="$struct_interface_descriptor.html" title="{InterfaceDescriptor\n|+ len\l+ dtype\l+ number\l+ alternate\l+ numEndpoints\l+ interfaceClass\l+ interfaceSubClass\l+ protocol\l+ iInterface\l|}" alt="" coords="163,5,304,229"/>
-</map>

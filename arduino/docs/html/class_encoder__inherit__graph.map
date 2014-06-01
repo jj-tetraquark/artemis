@@ -1,4 +1,0 @@
-<map id="Encoder" name="Encoder">
-<area shape="rect" id="node3" href="$class_mock_encoder.html" title="{MockEncoder\n||+ MockEncoder()\l+ RevolutionsPerSecond()\l+ GetDirection()\l+ SetRevolutionsPerSecond()\l+ SetDirection()\l+ GetFrequency()\l}" alt="" coords="5,174,200,346"/>
-<area shape="rect" id="node5" href="$class_rotary_encoder.html" title="{RotaryEncoder\&lt; interrupt\lPin \&gt;\n|+ RotaryEncoderMatrix\l|+ RotaryEncoder()\l+ RevolutionsPerSecond()\l+ GetFrequency()\l+ GetDirection()\l+ Handler()\l}" alt="" coords="224,174,397,346"/>
-</map>

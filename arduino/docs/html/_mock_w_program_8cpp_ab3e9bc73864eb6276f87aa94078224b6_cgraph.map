@@ -1,6 +1,0 @@
-<map id="digitalRead" name="digitalRead">
-<area shape="rect" id="node3" href="$_mock_w_program_8cpp.html#a2e945bc480ef828618a421e96b9f8f2c" title="checkPinIsValid" alt="" coords="143,5,257,35"/>
-<area shape="rect" id="node5" href="$class_pin.html#a56f7dc430291a53b5c08df50c8f43f9a" title="Pin::IsInitialized" alt="" coords="143,59,257,88"/>
-<area shape="rect" id="node7" href="$class_pin.html#aae8f8b8ed2e268bfd63e7c06e1d845fd" title="Pin::GetMode" alt="" coords="149,112,251,141"/>
-<area shape="rect" id="node9" href="$class_pin.html#a9c39b8c7ef953b40043e97fecb8b35dd" title="Pin::GetValue" alt="" coords="149,165,251,195"/>
-</map>

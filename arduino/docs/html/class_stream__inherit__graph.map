@@ -1,4 +1,0 @@
-<map id="Stream" name="Stream">
-<area shape="rect" id="node5" href="$class_hardware_serial.html" title="{HardwareSerial\n||+ HardwareSerial()\l+ begin()\l+ begin()\l+ end()\l+ available()\l+ peek()\l+ read()\l+ flush()\l+ write()\l+ write()\l+ write()\l+ write()\l+ write()\l+ operator bool()\l}" alt="" coords="5,742,136,1053"/>
-<area shape="rect" id="node2" href="$class_print.html" title="{Print\n||+ Print()\l+ getWriteError()\l+ clearWriteError()\l+ write()\l+ write()\l+ write()\l+ print()\l+ print()\l+ print()\l+ print()\land 19 more...\l# setWriteError()\l}" alt="" coords="7,6,135,282"/>
-</map>

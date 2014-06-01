@@ -1,7 +1,0 @@
-<map id="Stream::timedRead" name="Stream::timedRead">
-<area shape="rect" id="node3" href="$class_stream.html#a3a9497de614792103ab8cb4759e01a69" title="Stream::findUntil" alt="" coords="209,5,329,35"/>
-<area shape="rect" id="node5" href="$class_stream.html#a45fd1336a323ea83b16e8507055f44ea" title="Stream::readBytes" alt="" coords="204,59,335,88"/>
-<area shape="rect" id="node7" href="$class_stream.html#af84672a4fb2620466958d3118d4fea00" title="Stream::readBytesUntil" alt="" coords="191,112,348,141"/>
-<area shape="rect" id="node9" href="$class_stream.html#a1c60bdda2b65d78e5a1362d51b856c5a" title="Stream::readString" alt="" coords="204,165,335,195"/>
-<area shape="rect" id="node11" href="$class_stream.html#a6a409da87c552909260d8cc428c5ca70" title="Stream::readStringUntil" alt="" coords="191,219,348,248"/>
-</map>

@@ -1,7 +1,0 @@
-<map id="Print::write" name="Print::write">
-<area shape="rect" id="node3" href="$class_print.html#ad98d820df11e2697be1e4b1ea30b4a23" title="Print::write" alt="" coords="139,5,224,35"/>
-<area shape="rect" id="node5" href="$class_print.html#aa4158dd94bc1741f92d99c427261d7c0" title="Print::print" alt="" coords="140,59,223,88"/>
-<area shape="rect" id="node7" href="$class_i_p_address.html#a2dd7f6c455c2f33e4639944f751930db" title="IPAddress::printTo" alt="" coords="272,5,403,35"/>
-<area shape="rect" id="node9" href="$class_print.html#a97bd44df9222fa4a51a1266fab8d3bc1" title="Print::print" alt="" coords="296,59,379,88"/>
-<area shape="rect" id="node11" href="$class_print.html#a4fd286b325d3b1a786cfa35072a8ef52" title="Print::println" alt="" coords="292,112,383,141"/>
-</map>

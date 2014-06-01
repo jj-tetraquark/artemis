@@ -1,6 +1,0 @@
-<map id="BOOST_AUTO_TEST_CASE" name="BOOST_AUTO_TEST_CASE">
-<area shape="rect" id="node3" href="$class_mock_encoder.html#a8b3c37c202dae06de65f9481f1799313" title="MockEncoder::SetDirection" alt="" coords="260,5,441,35"/>
-<area shape="rect" id="node5" href="$class_mock_encoder.html#af26e227ff275c68e4b53d7cdb8eb198c" title="MockEncoder::SetRevolutions\lPerSecond" alt="" coords="252,58,449,105"/>
-<area shape="rect" id="node7" href="$class_mock_encoder.html#ad44313dd4a038f09084f04c908fa9a00" title="MockEncoder::Revolutions\lPerSecond" alt="" coords="261,127,440,174"/>
-<area shape="rect" id="node9" href="$class_two_wheel_odometry_manager.html#a0221669c64b5155424c277dca2e52c2e" title="TwoWheelOdometryManager\l::GetLinearVelocity" alt="" coords="256,197,445,243"/>
-</map>

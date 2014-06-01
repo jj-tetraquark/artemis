@@ -1,7 +1,0 @@
-<map id="Stream::parseFloat" name="Stream::parseFloat">
-<area shape="rect" id="node3" href="$class_stream.html#ab31c533ddc422c8d8df07986e5920534" title="Stream::peekNextDigit" alt="" coords="187,71,341,100"/>
-<area shape="rect" id="node5" href="$class_stream.html#ae326bf60a3c5276836526710871046fe" title="Stream::timedPeek" alt="" coords="391,32,524,61"/>
-<area shape="rect" id="node11" href="$class_stream.html#aea5dee9fcb038148515b7c9212d38dc0" title="Stream::read" alt="" coords="409,97,505,127"/>
-<area shape="rect" id="node7" href="$app_2build_2build_2uno_2core_2_arduino_8h.html#a1871228c14c912ca1479cf826ddcb07f" title="millis" alt="" coords="599,5,649,35"/>
-<area shape="rect" id="node9" href="$class_stream.html#a30c3c212ec6ea67277a708c5ea2501a5" title="Stream::peek" alt="" coords="575,59,673,88"/>
-</map>
